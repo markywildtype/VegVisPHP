@@ -26,6 +26,10 @@ hr {
     margin-left: 4%;
 }
 
+#logo-full, #veg, #vis, .dropdown-item, .nav-link {
+  cursor: pointer;
+}
+
 .content {
     background-color: rgba(0, 41, 0, 0.95);
     width: 100%;

@@ -8,7 +8,10 @@
     accommodationButton.addEventListener('click', buttonClicked);
     eatingButton.addEventListener('click', buttonClicked);
 
-    //Region buttons:
+    //Nav buttons:
+    const homeButton = document.getElementById('home-button');
+    homeButton.addEventListener('click', homeButtonClicked);
+
     const loButton = document.getElementById('lo-button');
     loButton.addEventListener('click', regionButtonClicked);
 
@@ -44,6 +47,10 @@
 }
 
 //Region button handling - currently doing its thang effectively!
+const homeButtonClicked = function() {
+  console.log('Ah, the sweet feeling of being home.');
+}
+
 const regionButtonClicked = function() {
   const regions = ['london', 'southeast', 'southwest', 'thamesandchilterns', 'eastanglia', 'eastmidlands', 'heartofengland', 'northeast', 'northwest', 'scotland', 'wales']
   regions.forEach(function(region){

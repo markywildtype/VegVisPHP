@@ -27,7 +27,7 @@ $regionArray = $lonArray;
 
 
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #003100; font-family: Merriweather Sans, sans-serif;">
-        <a class="navbar-brand" href="@Url.Action("Index", "/")">
+        <a class="navbar-brand" name="home" id="home-button">
             <div id="logo-name">
                 <div><img id="logo-full" src="images/vv_logo.png" alt="Vegetarian Visitor"></div>
                 <div id="site-name">
