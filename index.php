@@ -1,6 +1,5 @@
 <?php
 require('php/main.php') ;
-// require('php/regions/london.php') ;
 $regionArray = $lonArray;
  ?>
 
@@ -57,25 +56,27 @@ $regionArray = $lonArray;
                         England
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="@Url.Action("London", "/VegVis")">London</a>
-                        <a class="dropdown-item" href="@Url.Action("SouthSouthEast", "/VegVis")">South and South East</a>
-                        <a class="dropdown-item" href="@Url.Action("SouthWest", "/VegVis")">South West</a>
-                        <a class="dropdown-item" href="@Url.Action("ThamesChilt", "/VegVis")">Thames and Chilterns</a>
-                        <a class="dropdown-item" href="@Url.Action("EastAnglia", "/VegVis")">East Anglia</a>
-                        <a class="dropdown-item" href="@Url.Action("EastMidlands", "/VegVis")">East Midlands</a>
-                        <a class="dropdown-item" href="@Url.Action("Heart", "/VegVis")">Heart of England</a>
-                        <a class="dropdown-item" href="@Url.Action("NorthEast", "/VegVis")">North East</a>
-                        <a class="dropdown-item" href="@Url.Action("NorthWest", "/VegVis")">North West</a>
+                        <a class="dropdown-item" name="london" id="lo-button">London</a>
+                        <a class="dropdown-item" name="southeast" id="se-button">South and South East</a>
+                        <a class="dropdown-item" name="southwest" id="sw-button">South West</a>
+                        <a class="dropdown-item" name="thamesandchilterns" id="tc-button">Thames and Chilterns</a>
+                        <a class="dropdown-item" name="eastanglia" id="ea-button">East Anglia</a>
+                        <a class="dropdown-item" name="eastmidlands" id="em-button">East Midlands</a>
+                        <a class="dropdown-item" name="heartofengland" id="he-button">Heart of England</a>
+                        <a class="dropdown-item" name="northeast" id="ne-button">North East</a>
+                        <a class="dropdown-item" name="northwest" id="nw-button">North West</a>
                     </div>
                 </li>
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("Scotland", "/VegVis")">Scotland</a>
+                    <!-- <a class="nav-link" href="@Url.Action("Scotland", "/VegVis")">Scotland</a> -->
+                    <a class="nav-link" name="scotland" id="sc-button">Scotland</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("Wales", "/VegVis")">Wales</a>
+                    <!-- <a class="nav-link" href="@Url.Action("Wales", "/VegVis")">Wales</a> -->
+                    <a class="nav-link" name="wales" id="wa-button">Wales</a>
                 </li>
 
                 <li class="nav-item">
