@@ -1,0 +1,65 @@
+#logo-name {
+  display: flex;
+}
+
+#logo-full {
+  position: relative;
+  top: 0.15rem;
+  height: 4rem;
+}
+
+#site-name {
+  position: relative;
+  top: 0.5rem;
+  display: grid;
+  grid-template-columns: 7rem;
+  font-family: "Satisfy", cursive;
+}
+
+#veg {
+  margin-bottom: -5px;
+  font-size: 1.3em;
+  color: lightgreen;
+}
+
+#vis {
+  margin-top: -10px;
+  color: white;
+}
+
+nav {
+    z-index: 2;
+}
+
+/* Overriden Navbar styling */
+.navbar.navbar-expand-lg.navbar-dark {
+  position: fixed;
+  width: 100%;
+}
+
+.navbar.navbar-expand-lg.navbar-dark li a {
+  color: #fffdd0;
+}
+
+.navbar.navbar-expand-lg.navbar-dark li a:hover {
+  color: white;
+}
+
+.navbar.navbar-expand-lg.navbar-dark .dropdown-menu {
+  background-color: green;
+  font-size: 0.7em;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar.navbar-expand-lg.navbar-dark .dropdown-item {
+  border-bottom: 1px solid #002400;
+  padding: 7px;
+  margin-bottom: 0;
+}
+
+.navbar.navbar-expand-lg.navbar-dark .dropdown-item:hover {
+  background-color: darkgreen;
+}

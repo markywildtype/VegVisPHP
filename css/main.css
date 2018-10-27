@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background-color: #002900 !important;
+    background: url("../images/veg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+hr {
+    background: #999;
+}
+
+#selector-div {
+    background-color: rgba(0, 41, 0, 0.95);
+    padding-top: 7rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#selector {
+    margin-left: 4%;
+}
+
+.content {
+    background-color: rgba(0, 41, 0, 0.95);
+    width: 100%;
+    max-width: 1000px;
+    color: #fffdd0;
+    padding: 4%;
+    margin: auto;
+    font-family: "Merriweather Sans", sans-serif;
+    text-justify: newspaper;
+    z-index: 0;
+}
+
+section h2 {
+    color: lightgreen;
+    margin-bottom: 3%;
+}
+
+section a {
+    color: green;
+}
+
+section a:hover {
+    color: lightgreen;
+    text-decoration: none;
+}
+
+.phone-number {
+  color: rgb(0, 41, 0);
+}
+
+.phone-number:hover {
+  color: inherit;
+}
+
+.accommodation {
+    display: block;
+    transition: display 0.5s ease-in-out;
+}
+
+.entry {
+    background-color: #fffdd0;
+    color: rgb(0, 41, 0);
+    margin-bottom: 3%;
+    padding: 2%;
+    border: solid 2px lightgreen;
+    border-radius: 1rem;
+}
+
+.description {
+    font-size: 0.8em;
+}
+
+.accom-photo {
+    width: 100%;
+    max-width: 483px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+}
+
+.restaurant-photo {
+    width: 100%;
+    max-width: 633px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+}
+
+.region-photo {
+    width: 100%;
+    max-width: 311px;
+    float: left;
+    margin: 1% 3% 3% 0%;
+
+}
+
+#footer {
+    padding-top: 0;
+    margin-bottom: 1.5%;
+    margin-top: -1.5%;
+    font-size: 0.6em;
+    color: #fffdd0
+}
