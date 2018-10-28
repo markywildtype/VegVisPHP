@@ -46,12 +46,30 @@
     waButton.addEventListener('click', regionButtonClicked);
 }
 
-//Region button handling - currently doing its thang effectively!
 const homeButtonClicked = function() {
-  console.log('Ah, the sweet feeling of being home.');
+  const selector = document.getElementById('selector-div')
+  selector.hidden = true;
+
+  const body = document.querySelector('.content');
+  body.innerHTML = '';
+
+  const homePageContent = document.createElement('div');
+  homePageContent.id = 'homepage-content';
+  homePageContent.innerHTML = '<h1>I AM HOOOOOOME!</h1>';
+
+  const footer = document.createElement('section');
+  footer.id = "footer";
+  footer.innerHTML = "<footer><hr /><p>&copy; Annemarie Weitzel 2000 - 2018, All rights reserved.</p></footer>";
+
+  body.appendChild(homePageContent);
+  body.appendChild(footer);
 }
 
+//Region button handling - currently doing its thang effectively!
 const regionButtonClicked = function() {
+  const selector = document.getElementById('selector-div')
+  selector.hidden = false;
+
   const regions = ['london', 'southeast', 'southwest', 'thamesandchilterns', 'eastanglia', 'eastmidlands', 'heartofengland', 'northeast', 'northwest', 'scotland', 'wales']
   regions.forEach(function(region){
     //change all sections other than the one matching this.name to hidden

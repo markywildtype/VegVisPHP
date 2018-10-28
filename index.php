@@ -295,6 +295,7 @@ $regionArray = $lonArray;
     </section>
     </div>
 
+</section>
 
 </body>
 </html>

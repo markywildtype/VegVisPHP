@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
     background-color: #002900 !important;
     background: url("../images/veg.jpg");
@@ -12,6 +16,11 @@ body {
 
 hr {
     background: #999;
+}
+
+#homepage-content {
+  padding-top: 6rem;
+  height: 100%;
 }
 
 #selector-div {
@@ -111,5 +120,5 @@ section a:hover {
     margin-bottom: 1.5%;
     margin-top: -1.5%;
     font-size: 0.6em;
-    color: #fffdd0
+    color: #fffdd0;
 }
