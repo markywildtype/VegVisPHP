@@ -197,8 +197,25 @@ require('php/main.php');
             <?php echo $entry['name']; ?>,
             tel <a href='tel:+44<?php echo (int)str_replace(' ', '', $entry['tel']) ?>' class="phone-number"><?php echo $entry['tel']; ?></a>,
             <?php echo $entry['address']; ?>. &nbsp;
-            <?php foreach($entry['codes'] as $code) { echo "$code "; } ?></article>
-          <?php }; ?>
+            <?php
+            $codeExplanations = []; ?>
+            <div class="code-explanation">
+
+            <?php foreach($entry['codes'] as $code) {
+              // array_push($codeExplanations, $code);
+              $codeExplanations[$code] = $allCodes[$code];
+              echo "$code ";
+            }; ?>
+              <span class="code-definition-text">
+                <!-- <?php //foreach($codeExplanations as $codeExplanation) { ?> -->
+                <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
+                  <!-- <p><?php //echo "$codeExplanation\n" ?></p> -->
+                  <p><strong class="green-code"><?php echo "$codeKey " ?></strong><?php echo " $codeExplanation\n" ?></p>
+                <?php } ?>
+              </span>
+              </div>
+          </article>
+        <?php }; ?>
           <!-- End test -->
 
           <!-- <article class="entry">Carnevale Restaurant,&nbsp;tel 020 7250 3452, 135 Whitecross Street, London EC1Y 8JL. &nbsp; R L c org F</article>

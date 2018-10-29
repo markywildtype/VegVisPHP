@@ -1,6 +1,6 @@
 <?php
 
-$codes = [
+$allCodes = [
   'H' => 'Hotel',
   'G' => 'Guest house',
   'PH' => 'Private house (B&B)',
