@@ -128,7 +128,7 @@ require('php/main.php');
         <p>Nowadays it is a sign of neglect in even the very best hotels and restaurants if they don't have vegetarian, and quite often also one or more vegan, options on their menu. You can find pretty much anything you might fancy, from organic veggie burgers, a wide variety of delicious salads and traditional British fare to an all-you-can-eat Chinese buffet and a gourmet fine dining extravaganza.</p>
         <p>See the sights of London, such as Trafalgar Square, Tower Bridge and the Tower of London, Buckingham Palace, St James's Park, the London Eye, St Paul's Cathedral, Big Ben and the Houses of Parliament. Visit the London Dungeon, Madame Tussauds, the National Gallery, the Science Museum and many other great museums housing unique treasures. London's acclaimed theatres offer everything from Shakespeare to musicals, drama and comedy, opera and ballet. Whatever you are interested in, you can find it in London!</p>
       </div>
-
+      <hr />
       <section class=accommodation>
         <h2>Accommodation</h2>
 
@@ -199,21 +199,19 @@ require('php/main.php');
             <?php echo $entry['address']; ?>. &nbsp;
             <?php
             $codeExplanations = []; ?>
-            <div class="code-explanation">
-
+            <!-- <div class="code-explanation"> -->
+            <button type="button" name="button" class="code-explanation">
             <?php foreach($entry['codes'] as $code) {
-              // array_push($codeExplanations, $code);
               $codeExplanations[$code] = $allCodes[$code];
               echo "$code ";
             }; ?>
               <span class="code-definition-text">
-                <!-- <?php //foreach($codeExplanations as $codeExplanation) { ?> -->
                 <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
-                  <!-- <p><?php //echo "$codeExplanation\n" ?></p> -->
                   <p><strong class="green-code"><?php echo "$codeKey " ?></strong><?php echo " $codeExplanation\n" ?></p>
                 <?php } ?>
               </span>
-              </div>
+              <!-- </div> -->
+              </button>
           </article>
         <?php }; ?>
           <!-- End test -->

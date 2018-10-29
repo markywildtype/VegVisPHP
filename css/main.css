@@ -52,6 +52,8 @@ hr {
 }
 
 section h2 {
+    font-family: 'Satisfy', cursive;
+    font-size: 3em;
     color: lightgreen;
     margin-bottom: 3%;
 }
@@ -63,6 +65,10 @@ section a {
 section a:hover {
     color: lightgreen;
     text-decoration: none;
+}
+
+section h4 {
+  margin-bottom: 1rem;
 }
 
 .phone-number {
@@ -118,7 +124,9 @@ section a:hover {
 .code-explanation {
   position: relative;
   display: inline-block;
+  border: 0px;
   border-bottom: 1px dotted black;
+  background-color: inherit;
 }
 
 .code-explanation .code-definition-text {
@@ -135,10 +143,23 @@ section a:hover {
   position: absolute;
   z-index: 1;
   top: 23px;
+  /* left: 60%; */
+  margin-left: -2rem;
 }
 
 .code-explanation:hover .code-definition-text {
   visibility: visible;
+}
+
+.code-explanation .code-definition-text::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 20%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent darkgreen transparent;
 }
 
 .green-code {
