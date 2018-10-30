@@ -55,42 +55,42 @@ require('php/main.php');
             England
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" name="london" id="lo-button">London</a>
-            <a class="dropdown-item" name="southeast" id="se-button">South and South East</a>
-            <a class="dropdown-item" name="southwest" id="sw-button">South West</a>
-            <a class="dropdown-item" name="thamesandchilterns" id="tc-button">Thames and Chilterns</a>
-            <a class="dropdown-item" name="eastanglia" id="ea-button">East Anglia</a>
-            <a class="dropdown-item" name="eastmidlands" id="em-button">East Midlands</a>
-            <a class="dropdown-item" name="heartofengland" id="he-button">Heart of England</a>
-            <a class="dropdown-item" name="northeast" id="ne-button">North East</a>
-            <a class="dropdown-item" name="northwest" id="nw-button">North West</a>
+            <a class="dropdown-item" name="london" id="lo-button" href="#">London</a>
+            <a class="dropdown-item" name="southeast" id="se-button" href="#">South and South East</a>
+            <a class="dropdown-item" name="southwest" id="sw-button" href="#">South West</a>
+            <a class="dropdown-item" name="thamesandchilterns" id="tc-button" href="#">Thames and Chilterns</a>
+            <a class="dropdown-item" name="eastanglia" id="ea-button" href="#">East Anglia</a>
+            <a class="dropdown-item" name="eastmidlands" id="em-button" href="#">East Midlands</a>
+            <a class="dropdown-item" name="heartofengland" id="he-button" href="#">Heart of England</a>
+            <a class="dropdown-item" name="northeast" id="ne-button" href="#">North East</a>
+            <a class="dropdown-item" name="northwest" id="nw-button" href="#">North West</a>
           </div>
         </li>
 
 
         <li class="nav-item">
           <!-- <a class="nav-link" href="@Url.Action("Scotland", "/VegVis")">Scotland</a> -->
-          <a class="nav-link" name="scotland" id="sc-button">Scotland</a>
+          <a class="nav-link" name="scotland" id="sc-button" href="#">Scotland</a>
         </li>
 
         <li class="nav-item">
           <!-- <a class="nav-link" href="@Url.Action("Wales", "/VegVis")">Wales</a> -->
-          <a class="nav-link" name="wales" id="wa-button">Wales</a>
+          <a class="nav-link" name="wales" id="wa-button" href="#">Wales</a>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="@Url.Action("Offers", "/VegVis")">Offers</a>
-        </li>
+        </li> -->
 
         <li class="nav-item">
-          <a class="nav-link" href="@Url.Action("Contact", "/VegVis")">Contact</a>
+          <a class="nav-link contact-button" name="contact" href="#">Contact</a>
         </li>
       </ul>
 
-      <form class="form-inline my-2 my-lg-0">
+      <!-- <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      </form> -->
     </div>
 
   </nav>
@@ -100,7 +100,7 @@ require('php/main.php');
 
   <div class="container body-content">
 
-    <div id="selector-div">
+    <div id="selector-div" hidden>
       <div class="btn-group btn-group-toggle" id="selector" data-toggle="buttons">
         <label class="btn btn-secondary active" id="all-button">
           <input type="radio" name="All" id="all-button" autocomplete="off" checked> All
@@ -120,100 +120,117 @@ require('php/main.php');
 
     <section class="content">
 
-      <h1>London &amp; Middlesex</h1>
-      <hr />
-      <img class="region-photo" alt="Restaurants Hotels eating out in London vegetarian and vegan" src="images/london/london.jpg" />
-      <div class=description>
-        <p>London has a long tradition of vegetarianism, stretching back more than a century to the establishment of the London Vegetarian Society (later VSUK) and it also saw the founding of the Vegan Society in November 1944. But not until 1961, when the first Cranks restaurant was opened in London's trendy Carnaby Street, could vegetarians start to really feel at home. Many other restaurants followed over the next decades.</p>
-        <p>Nowadays it is a sign of neglect in even the very best hotels and restaurants if they don't have vegetarian, and quite often also one or more vegan, options on their menu. You can find pretty much anything you might fancy, from organic veggie burgers, a wide variety of delicious salads and traditional British fare to an all-you-can-eat Chinese buffet and a gourmet fine dining extravaganza.</p>
-        <p>See the sights of London, such as Trafalgar Square, Tower Bridge and the Tower of London, Buckingham Palace, St James's Park, the London Eye, St Paul's Cathedral, Big Ben and the Houses of Parliament. Visit the London Dungeon, Madame Tussauds, the National Gallery, the Science Museum and many other great museums housing unique treasures. London's acclaimed theatres offer everything from Shakespeare to musicals, drama and comedy, opera and ballet. Whatever you are interested in, you can find it in London!</p>
+      <div id="homepage-content">
+        <h2>Welcome to Vegetarian Britain!</h2>
+        <p>Vegetarian Visitor is an annually updated guide to accommodation and eateries in Britain which take catering for vegetarians and vegans seriously.</p>
+        <p>With the increasing emphasis on healthy eating, more and more people are looking for places to stay and eat that provide for vegetarians. Here we list B&Bs, guest houses, hotels, restaurants, cafés and pubs that know what vegetarians' and vegans' requirements are and want to cater for them properly, by providing a variety of tasty and imaginative dishes for breakfast, lunch and evening meals.</p>
+        <p>Britain has been home to many vegetarian VIPs and celebrities - Paul McCartney, Sir Isaac Newton, H.G. Wells, Sting, Tony Benn, Kate Bush, Sir John Gielgud and Jude Law, to name but a few - and its eateries serve a truly international range of food, from simple English 'pub grub' through Caribbean, Mexican, Indian, Thai and Chinese to French haute cuisine.</p>
+        <p>As this guide shows, there is no reason why vegetarians and vegans should miss out!</p>
+        <hr />
+        <p>Vegetarian Visitor was for many years, until 2012, published as an award-winning annual guidebook. Since 2001 it has also been a website.</p>
+        <p>Suggestions for inclusion are very welcome. Please use the <a class="contact-button" name="contact" href="#">contact form</a> and give as many details as possible, particularly the establishment's email address and/or phone number.</p>
       </div>
-      <hr />
-      <section class=accommodation>
-        <h2>Accommodation</h2>
 
-        <article class="entry">
-          <h4>Roseview Alexandra Palace Hotel</h4>
-          <!-- <p>tel 020 8365 2535, fax 020 8365 2686</p> -->
-          <p>tel <a href="tel:02083652535" class="phone-number">020 8365 2535</a>, fax 020 8365 2686</p>
-          <p>2 Queens Avenue, Muswell Hill, Alexandra Palace, London N10 3NR</p>
-          <p>email: <a href="mailto:reception@roseviewhotel.co.uk">reception@roseviewhotel.co.uk</a></p>
-          <p>website: <a target="_blank" href="http://www.roseviewhotel.co.uk">www.roseviewhotel.co.uk</a></p>
-          <a href="http://www.roseviewhotel.co.uk" target=_blank>
-            <img class="accom-photo" alt="Roseview Hotel B&B Alexandra Palace London Vegetarian Friendly" src="images/london/roseview_hotel.jpg" />
-          </a>
-          <div class="description">
-            <p>
-              The Roseview Hotel is a vegetarian-friendly Bed &amp;
-              Breakfast in Alexandra Palace, London, where there are many vegetarian
-              restaurants around including a Planet Organic Store. All rooms are en-suite and
-              offer satellite TV, hair dryer, tea &amp; coffee tray and free WiFi. Check out
-              our competitive tariff.
-            </p>
-          </div>
-          <p>H INS CatA Ve NS Acc50</p>
-        </article>
+      <div id="contact-content" hidden>
+        <h1>CONTACT FORM TO GO HERE!</h1>
+      </div>
 
-        <article class="entry">
-          <h4>One Fanthorpe Street</h4>
-          <p>tel 020 8785 7609, fax 020 8789 5584</p>
-          <p>1 Fanthorpe Street, Putney, London SW15 1DZ</p>
-          <p>email: <a href="mailto:bbputney@gmail.com">bbputney@gmail.com</a></p>
-          <p>website: <a target="_blank" href="http://www.bbputney.com">www.bbputney.com</a></p>
-          <a href="http://www.bbputney.com" target=_blank><img class="accom-photo" alt="One, Fanthorpe Street, Putney, Nr Richmond London B&amp;B Vegetarian friendly" src="images/london/one_fanthorpe.jpg" /></a>
-          <div class="description">
-            <p>
-              Robert and Imogen Taylor welcome you to a unique British
-              experience. Our rooms are comfortable and reasonably priced. There is easy
-              access to the centre of London. Putney has one of the best riverside locations,
-              with attractive walks.
-            </p>
-          </div>
-          <p>PH CatB Ve NS Acc6</p>
-        </article>
-        <article class="entry">
-          <h4>The Temple Lodge Club</h4>
-          <p>tel 020 8748 8388</p>
-          <p>51 Queen Caroline Street, Hammersmith, London W6 9QL</p>
-          <p>email: <a href="mailto:booking@templelodgeclub.com">booking@templelodgeclub.com</a></p>
-          <p>website: <a target="_blank" href="http://www.templelodgeclub.com">www.templelodgeclub.com</a></p>
-          <a href="http://www.templelodgeclub.com" target=_blank><img class="accom-photo" alt="Hammersmith  bed and breakfast Hammersmith London Piccadilly District Line" src="images/london/temple_lodge.jpg" /></a>
-          <div class=description>
-            <p>Our newest room - luxury double fully en-suite - is called after the artist Frank Brangwyn whose home was Temple Lodge during the first quarter of the 20th century. His former home has been carefully and tastefully renovated and offers bed and breakfast accommodation to all wanting to share in its quiet ambience and partake of breakfast overlooking lawn and garden. His former studio has been rebuilt as a church.</p>
-          </div>
+      <div id="region-content" hidden>
 
-          <p>G INS CatA V Ve NS Acc17</p>
-        </article>
-      </section>
+        <h1>London &amp; Middlesex</h1>
+        <hr />
+        <img class="region-photo" alt="Restaurants Hotels eating out in London vegetarian and vegan" src="images/london/london.jpg" />
+        <div class=description>
+          <p>London has a long tradition of vegetarianism, stretching back more than a century to the establishment of the London Vegetarian Society (later VSUK) and it also saw the founding of the Vegan Society in November 1944. But not until 1961, when the first Cranks restaurant was opened in London's trendy Carnaby Street, could vegetarians start to really feel at home. Many other restaurants followed over the next decades.</p>
+          <p>Nowadays it is a sign of neglect in even the very best hotels and restaurants if they don't have vegetarian, and quite often also one or more vegan, options on their menu. You can find pretty much anything you might fancy, from organic veggie burgers, a wide variety of delicious salads and traditional British fare to an all-you-can-eat Chinese buffet and a gourmet fine dining extravaganza.</p>
+          <p>See the sights of London, such as Trafalgar Square, Tower Bridge and the Tower of London, Buckingham Palace, St James's Park, the London Eye, St Paul's Cathedral, Big Ben and the Houses of Parliament. Visit the London Dungeon, Madame Tussauds, the National Gallery, the Science Museum and many other great museums housing unique treasures. London's acclaimed theatres offer everything from Shakespeare to musicals, drama and comedy, opera and ballet. Whatever you are interested in, you can find it in London!</p>
+        </div>
+        <hr />
+        <section class=accommodation>
+          <h2>Accommodation</h2>
 
-      <section class="eating">
-        <h2>Eating</h2>
-
-        <h4><a name="_Central_London"></a>Central London</h4>
-
-        <!-- Test for looping through an array of entries in a separate php document -->
-        <?php foreach($lonArray as $entry) { ?>
           <article class="entry">
-            <?php echo $entry['name']; ?>,
-            tel <a href='tel:+44<?php echo (int)str_replace(' ', '', $entry['tel']) ?>' class="phone-number"><?php echo $entry['tel']; ?></a>,
-            <?php echo $entry['address']; ?>. &nbsp;
-            <?php
-            $codeExplanations = []; ?>
-            <!-- <div class="code-explanation"> -->
-            <button type="button" name="button" class="code-explanation">
-            <?php foreach($entry['codes'] as $code) {
-              $codeExplanations[$code] = $allCodes[$code];
-              echo "$code ";
-            }; ?>
-              <span class="code-definition-text">
-                <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
-                  <p><strong class="green-code"><?php echo "$codeKey " ?></strong><?php echo " $codeExplanation\n" ?></p>
-                <?php } ?>
-              </span>
-              <!-- </div> -->
-              </button>
+            <h4>Roseview Alexandra Palace Hotel</h4>
+            <!-- <p>tel 020 8365 2535, fax 020 8365 2686</p> -->
+            <p>tel <a href="tel:02083652535" class="phone-number">020 8365 2535</a>, fax 020 8365 2686</p>
+            <p>2 Queens Avenue, Muswell Hill, Alexandra Palace, London N10 3NR</p>
+            <p>email: <a href="mailto:reception@roseviewhotel.co.uk">reception@roseviewhotel.co.uk</a></p>
+            <p>website: <a target="_blank" href="http://www.roseviewhotel.co.uk">www.roseviewhotel.co.uk</a></p>
+            <a href="http://www.roseviewhotel.co.uk" target=_blank>
+              <img class="accom-photo" alt="Roseview Hotel B&B Alexandra Palace London Vegetarian Friendly" src="images/london/roseview_hotel.jpg" />
+            </a>
+            <div class="description">
+              <p>
+                The Roseview Hotel is a vegetarian-friendly Bed &amp;
+                Breakfast in Alexandra Palace, London, where there are many vegetarian
+                restaurants around including a Planet Organic Store. All rooms are en-suite and
+                offer satellite TV, hair dryer, tea &amp; coffee tray and free WiFi. Check out
+                our competitive tariff.
+              </p>
+            </div>
+            <p>H INS CatA Ve NS Acc50</p>
           </article>
-        <?php }; ?>
+
+          <article class="entry">
+            <h4>One Fanthorpe Street</h4>
+            <p>tel 020 8785 7609, fax 020 8789 5584</p>
+            <p>1 Fanthorpe Street, Putney, London SW15 1DZ</p>
+            <p>email: <a href="mailto:bbputney@gmail.com">bbputney@gmail.com</a></p>
+            <p>website: <a target="_blank" href="http://www.bbputney.com">www.bbputney.com</a></p>
+            <a href="http://www.bbputney.com" target=_blank><img class="accom-photo" alt="One, Fanthorpe Street, Putney, Nr Richmond London B&amp;B Vegetarian friendly" src="images/london/one_fanthorpe.jpg" /></a>
+            <div class="description">
+              <p>
+                Robert and Imogen Taylor welcome you to a unique British
+                experience. Our rooms are comfortable and reasonably priced. There is easy
+                access to the centre of London. Putney has one of the best riverside locations,
+                with attractive walks.
+              </p>
+            </div>
+            <p>PH CatB Ve NS Acc6</p>
+          </article>
+          <article class="entry">
+            <h4>The Temple Lodge Club</h4>
+            <p>tel 020 8748 8388</p>
+            <p>51 Queen Caroline Street, Hammersmith, London W6 9QL</p>
+            <p>email: <a href="mailto:booking@templelodgeclub.com">booking@templelodgeclub.com</a></p>
+            <p>website: <a target="_blank" href="http://www.templelodgeclub.com">www.templelodgeclub.com</a></p>
+            <a href="http://www.templelodgeclub.com" target=_blank><img class="accom-photo" alt="Hammersmith  bed and breakfast Hammersmith London Piccadilly District Line" src="images/london/temple_lodge.jpg" /></a>
+            <div class=description>
+              <p>Our newest room - luxury double fully en-suite - is called after the artist Frank Brangwyn whose home was Temple Lodge during the first quarter of the 20th century. His former home has been carefully and tastefully renovated and offers bed and breakfast accommodation to all wanting to share in its quiet ambience and partake of breakfast overlooking lawn and garden. His former studio has been rebuilt as a church.</p>
+            </div>
+
+            <p>G INS CatA V Ve NS Acc17</p>
+          </article>
+        </section>
+
+        <section class="eating">
+          <h2>Eating</h2>
+
+          <h4><a name="_Central_London"></a>Central London</h4>
+
+          <!-- Test for looping through an array of entries in a separate php document -->
+          <?php foreach($lonArray as $entry) { ?>
+            <article class="entry">
+              <?php echo $entry['name']; ?>,
+              tel <a href='tel:+44<?php echo (int)str_replace(' ', '', $entry['tel']) ?>' class="phone-number"><?php echo $entry['tel']; ?></a>,
+              <?php echo $entry['address']; ?>. &nbsp;
+              <?php
+              $codeExplanations = []; ?>
+              <!-- <div class="code-explanation"> -->
+              <button type="button" name="button" class="code-explanation">
+                <?php foreach($entry['codes'] as $code) {
+                  $codeExplanations[$code] = $allCodes[$code];
+                  echo "$code ";
+                }; ?>
+                <span class="code-definition-text">
+                  <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
+                    <p><strong class="green-code"><?php echo "$codeKey " ?></strong><?php echo " $codeExplanation\n" ?></p>
+                  <?php } ?>
+                </span>
+                <!-- </div> -->
+              </button>
+            </article>
+          <?php }; ?>
           <!-- End test -->
 
           <!-- <article class="entry">Carnevale Restaurant,&nbsp;tel 020 7250 3452, 135 Whitecross Street, London EC1Y 8JL. &nbsp; R L c org F</article>
@@ -299,17 +316,17 @@ require('php/main.php');
           <article class="entry">Pradip’s Vegetarian Restaurant, tel 020 8909 2232, 154-156 Kenton Road, Harrow HA3 8AZ. &nbsp; R c</article>
         </section>
 
-        <!-- End View file -->
-
-        <section id="footer">
-          <footer>
-            <hr />
-            <p>&copy; Annemarie Weitzel 2000 - 2018, All rights reserved.</p>
-          </footer>
-        </section>
       </div>
 
-    </section>
+      <section id="footer">
+        <footer>
+          <hr />
+          <p>&copy; Annemarie Weitzel 2000 - <?php echo date('Y')?>, All rights reserved.</p>
+        </footer>
+      </section>
+    </div>
 
-  </body>
-  </html>
+  </section>
+
+</body>
+</html>

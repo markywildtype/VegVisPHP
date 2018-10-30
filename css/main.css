@@ -21,6 +21,17 @@ hr {
 #homepage-content {
   padding-top: 6rem;
   height: 100%;
+  font-size: 0.8em;
+}
+
+#contact-content {
+  padding-top: 6rem;
+  height: 100%;
+  font-size: 0.8em;
+}
+
+.homepage-content .contact-button {
+  cursor: pointer; !important
 }
 
 #selector-div {
@@ -132,7 +143,8 @@ section h4 {
 .code-explanation .code-definition-text {
   visibility: hidden;
   width: 10rem;
-  background-color: black;
+  /* background-color: black; */
+  background-color: #092807;
   color: #fff;
   font-size: 0.8em;
   text-align: left;

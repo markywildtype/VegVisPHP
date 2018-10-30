@@ -4,9 +4,9 @@
     const accommodationButton = document.querySelector('#accommodation-button');
     const eatingButton = document.querySelector('#eating-button');
 
-    allButton.addEventListener('click', buttonClicked);
-    accommodationButton.addEventListener('click', buttonClicked);
-    eatingButton.addEventListener('click', buttonClicked);
+    allButton.addEventListener('click', selectorButtonClicked);
+    accommodationButton.addEventListener('click', selectorButtonClicked);
+    eatingButton.addEventListener('click', selectorButtonClicked);
 
     //Nav buttons:
     const homeButton = document.getElementById('home-button');
@@ -44,31 +44,40 @@
 
     const waButton = document.getElementById('wa-button');
     waButton.addEventListener('click', regionButtonClicked);
+
+    const contactButton = document.querySelector('.contact-button');
+    // const contactButton = document.getElementsByClassName('.contact-button');
+    contactButton.addEventListener('click', contactButtonClicked);
 }
 
 const homeButtonClicked = function() {
+
   const selector = document.getElementById('selector-div')
   selector.hidden = true;
 
-  const body = document.querySelector('.content');
-  body.innerHTML = '';
+  const homepageContent = document.getElementById('homepage-content');
+  homepageContent.style.display = 'block';
 
-  const homePageContent = document.createElement('div');
-  homePageContent.id = 'homepage-content';
-  homePageContent.innerHTML = '<h1>I AM HOOOOOOME!</h1>';
+  const regionContent = document.getElementById('region-content');
+  regionContent.hidden = true;
 
-  const footer = document.createElement('section');
-  footer.id = "footer";
-  footer.innerHTML = "<footer><hr /><p>&copy; Annemarie Weitzel 2000 - 2018, All rights reserved.</p></footer>";
-
-  body.appendChild(homePageContent);
-  body.appendChild(footer);
+  const contactContent = document.getElementById('contact-content');
+  contactContent.hidden = true;
 }
 
 //Region button handling - currently doing its thang effectively!
 const regionButtonClicked = function() {
+  const homepageContent = document.getElementById('homepage-content');
+  homepageContent.style.display = 'none';
+
   const selector = document.getElementById('selector-div')
   selector.hidden = false;
+
+  const regionContent = document.getElementById('region-content');
+  regionContent.hidden = false;
+
+  const contactContent = document.getElementById('contact-content');
+  contactContent.hidden = true;
 
   const regions = ['london', 'southeast', 'southwest', 'thamesandchilterns', 'eastanglia', 'eastmidlands', 'heartofengland', 'northeast', 'northwest', 'scotland', 'wales']
   regions.forEach(function(region){
@@ -84,7 +93,7 @@ const regionButtonClicked = function() {
   }.bind(this));
 }
 
-const buttonClicked = function() {
+const selectorButtonClicked = function() {
     const accomElements = document.querySelector('.accommodation');
     const eatingElements = document.querySelector('.eating');
 
@@ -107,6 +116,20 @@ const buttonClicked = function() {
 
 }
 
+const contactButtonClicked = function() {
+console.log('NOW?');
+  const selector = document.getElementById('selector-div')
+  selector.hidden = true;
+
+  const contactContent = document.getElementById('contact-content');
+  contactContent.hidden = false;
+
+  const regionContent = document.getElementById('region-content');
+  regionContent.hidden = true;
+
+  const homepageContent = document.getElementById('homepage-content');
+  homepageContent.style.display = 'none';
+}
 
 
 document.addEventListener('DOMContentLoaded', app);
