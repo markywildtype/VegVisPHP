@@ -20,17 +20,17 @@ hr {
 
 #homepage-content {
   padding-top: 6rem;
-  height: 100%;
+  height: 100vh;
   font-size: 0.8em;
 }
 
 #contact-content {
   padding-top: 6rem;
-  height: 100%;
+  height: 100vh;
   font-size: 0.8em;
 }
 
-.homepage-content .contact-button {
+.contact-button {
   cursor: pointer; !important
 }
 
@@ -60,6 +60,12 @@ hr {
     font-family: "Merriweather Sans", sans-serif;
     text-justify: newspaper;
     z-index: 0;
+}
+
+#contact-link {
+  font-family: "Merriweather Sans", sans-serif;
+  color: #fffdd0;
+  border-bottom: 1px white dotted;
 }
 
 section h2 {

@@ -45,9 +45,9 @@
     const waButton = document.getElementById('wa-button');
     waButton.addEventListener('click', regionButtonClicked);
 
-    const contactButton = document.querySelector('.contact-button');
-    // const contactButton = document.getElementsByClassName('.contact-button');
-    contactButton.addEventListener('click', contactButtonClicked);
+    const contactButtons = document.getElementsByClassName('contact-button');
+    contactButtons[0].addEventListener('click', contactButtonClicked);
+    contactButtons[1].addEventListener('click', contactButtonClicked);
 }
 
 const homeButtonClicked = function() {
