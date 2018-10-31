@@ -85,10 +85,8 @@ const regionButtonClicked = function() {
     // regionDiv = document.getElementById(region); //To be implemented
     if(region !== this.name){
       // regionDiv.style.display = 'none';
-      console.log(`You did not click ${region}`);
     } else {
       // regionDiv.style.display = 'block';
-      console.log(`You clicked ${region}, you crazy guy!`);
     }
   }.bind(this));
 }
@@ -117,7 +115,6 @@ const selectorButtonClicked = function() {
 }
 
 const contactButtonClicked = function() {
-console.log('NOW?');
   const selector = document.getElementById('selector-div')
   selector.hidden = true;
 

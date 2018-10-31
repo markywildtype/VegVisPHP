@@ -20,8 +20,10 @@ hr {
 
 #homepage-content {
   padding-top: 6rem;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 100%;
   font-size: 0.8em;
+  margin-bottom: 1rem;
 }
 
 #contact-content {
@@ -40,6 +42,7 @@ hr {
     width: 100%;
     max-width: 1000px;
     margin: auto;
+    font-family: 'Merriweather Sans'
 }
 
 #selector {
@@ -62,6 +65,12 @@ hr {
     z-index: 0;
 }
 
+#region-content h1 {
+  font-family: 'Satisfy';
+  font-size: 3.5em;
+  margin-left: 0.5rem;
+}
+
 #contact-link {
   font-family: "Merriweather Sans", sans-serif;
   color: #fffdd0;
@@ -73,6 +82,7 @@ section h2 {
     font-size: 3em;
     color: lightgreen;
     margin-bottom: 3%;
+    margin-left: 0.5rem;
 }
 
 section a {
@@ -86,6 +96,7 @@ section a:hover {
 
 section h4 {
   margin-bottom: 1rem;
+  margin-left: 0.5rem;
 }
 
 .phone-number {
@@ -149,7 +160,6 @@ section h4 {
 .code-explanation .code-definition-text {
   visibility: hidden;
   width: 10rem;
-  /* background-color: black; */
   background-color: #092807;
   color: #fff;
   font-size: 0.8em;
@@ -161,7 +171,6 @@ section h4 {
   position: absolute;
   z-index: 1;
   top: 23px;
-  /* left: 60%; */
   margin-left: -2rem;
 }
 

@@ -26,7 +26,7 @@ require('php/main.php');
 
 
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #003100; font-family: Merriweather Sans, sans-serif;">
-    <a class="navbar-brand" name="home" id="home-button">
+    <a class="navbar-brand" name="home" id="home-button" href="#">
       <div id="logo-name">
         <div><img id="logo-full" src="images/vv_logo.png" alt="Vegetarian Visitor"></div>
         <div id="site-name">
