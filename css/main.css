@@ -15,22 +15,11 @@ body {
 }
 
 hr {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     background: #999;
 }
 
-#homepage-content {
-  padding-top: 6rem;
-  /* height: 100vh; */
-  height: 100%;
-  font-size: 0.8em;
-  margin-bottom: 1rem;
-}
-
-#contact-content {
-  padding-top: 6rem;
-  height: 100vh;
-  font-size: 0.8em;
-}
 
 .contact-button {
   cursor: pointer; !important
@@ -63,6 +52,19 @@ hr {
     font-family: "Merriweather Sans", sans-serif;
     text-justify: newspaper;
     z-index: 0;
+}
+
+#homepage-content {
+  padding-top: 6rem;
+  padding-bottom: 0.01rem;
+  /* height: 100vh; */
+  font-size: 0.8em;
+}
+
+#contact-content {
+  padding-top: 6rem;
+  /* height: 100vh; */
+  font-size: 0.8em;
 }
 
 #region-content h1 {

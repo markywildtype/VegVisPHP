@@ -69,12 +69,10 @@ require('php/main.php');
 
 
         <li class="nav-item">
-          <!-- <a class="nav-link" href="@Url.Action("Scotland", "/VegVis")">Scotland</a> -->
           <a class="nav-link" name="scotland" id="sc-button" href="#">Scotland</a>
         </li>
 
         <li class="nav-item">
-          <!-- <a class="nav-link" href="@Url.Action("Wales", "/VegVis")">Wales</a> -->
           <a class="nav-link" name="wales" id="wa-button" href="#">Wales</a>
         </li>
 
@@ -95,9 +93,6 @@ require('php/main.php');
 
 </nav>
 
-
-
-
 <div class="container body-content">
 
   <div id="selector-div" hidden>
@@ -114,12 +109,10 @@ require('php/main.php');
     </div>
   </div>
 
-  <!-- View file -->
-
-
-
   <section class="content">
+
     <div id="homepage-content">
+
       <h2>Welcome to Vegetarian Britain!</h2>
       <p>Vegetarian Visitor is an annually updated guide to accommodation and eateries in Britain which take catering for vegetarians and vegans seriously.</p>
       <p>With the increasing emphasis on healthy eating, more and more people are looking for places to stay and eat that provide for vegetarians. Here we list B&Bs, guest houses, hotels, restaurants, cafés and pubs that know what vegetarians' and vegans' requirements are and want to cater for them properly, by providing a variety of tasty and imaginative dishes for breakfast, lunch and evening meals.</p>
