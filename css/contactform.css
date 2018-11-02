@@ -1,10 +1,10 @@
 .contactform {
-  margin: auto;
   width: 95%;
   font-family: 'Merriweather Sans';
-  padding:10px;
+  /* padding:10px; */
   padding-bottom: 4rem;
-  margin-bottom: 1rem;
+  margin: auto;
+  margin-bottom: 2rem;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -14,7 +14,7 @@
   font-family: 'Satisfy', cursive;
   font-size: 3em;
   font-weight: bold;
-  padding-top: 10px;
+  /* padding-top: 10px; */
   padding-bottom: 10px;
   text-align: center;
 }
@@ -61,10 +61,19 @@
 }
 .antispammessage {
   padding:10px;
-  border-top:1px solid #AAA;
-  border-bottom:1px solid #AAA;
+  color: #fffdd0;
   font-weight:bold
 }
 .antispamquestion {
   font-weight:normal;
+  color: inherit;
+}
+
+#submit-button {
+  padding: 0.5rem;
+  color: #fffdd0;
+  background-color: #092807;
+  border: 2px darkgreen solid;
+  border-radius: 5px;
+  cursor: pointer;
 }

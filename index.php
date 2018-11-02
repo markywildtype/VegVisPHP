@@ -138,7 +138,7 @@ require('php/main.php');
       <!-- <h1>CONTACT FORM TO GO HERE!</h1> -->
 
       <form name="contactform" method="post" action="contactformprocess.php" onsubmit="return validate.check(this)">
-        <table style="background-color: rgb(0, 102, 0);" class="contactform">
+        <table class="contactform">
           <tbody id="contact-form">
             <tr style="color: rgb(153, 255, 153);">
               <td>
@@ -146,48 +146,41 @@ require('php/main.php');
               </td>
             </tr>
             <tr>
-              <!-- <td valign="top"> -->
               <td>
-                <input name="Full_Name" id="Full_Name" maxlength="80" class="input" type="text" placeholder="Name (Required)" required>
+                <input name="Full_Name" id="Full_Name" maxlength="80" class="input" type="text" placeholder="--Name--" required>
               </td>
             </tr>
             <tr>
-              <!-- <td valign="top"> -->
               <td>
-                <input name="Email_Address" id="Email_Address" maxlength="100" class="input" type="text" placeholder="Email Address (Required)" required>
+                <input name="Email_Address" id="Email_Address" maxlength="100" class="input" type="text" placeholder="--Email Address--" required>
               </td>
             </tr>
             <tr>
-              <!-- <td valign="top"> -->
               <td>
-                <!-- <input name="Telephone_Number" id="Telephone_Number" maxlength="100" class="input" type="text" placeholder="Phone Number"> -->
-                <input maxlength="100" class="input" type="text" placeholder="Phone Number">
+                <input name="Telephone_Number" id="Telephone_Number" maxlength="100" class="input" type="text" placeholder="--Phone Number--">
               </td>
             </tr>
             <tr>
-              <!-- <td valign="top"> -->
               <td>
-                <textarea class="input-text" name="Your_Message" id="Your_Message" maxlength="2000" placeholder="Your Message (Required)" required></textarea>
+                <textarea class="input-text" name="Your_Message" id="Your_Message" maxlength="2000" placeholder="--Message--" required></textarea>
               </td>
             </tr>
             <tr style="color: rgb(153, 255, 153);">
-              <!-- <td colspan="2" style="text-align: center;"> -->
               <td style="text-align: center;">
                 <div class="antispammessage">
-                  To help prevent automated spam, please answer this question
+                  To help prevent automated spam, please answer this question:
                   <br><br>
                   <div class="antispamquestion">
                     <span class="required_star"> * </span>
-                    Using only numbers, what is 10 plus 15? &nbsp;
-                    <input name="AntiSpam" id="AntiSpam" maxlength="100" style="width: 30px;" type="text">
+                    Using only numbers, what is 10 plus 15? &nbsp; &nbsp;
+                    <input name="AntiSpam" id="AntiSpam" maxlength="100" style="width: 3em; margin-top: 1rem;" type="text">
                   </div>
                 </div>
               </td>
             </tr>
             <tr style="color: rgb(153, 255, 153);">
               <td colspan="2" style="text-align: center;">
-                <br><br>
-                <input value=" Submit Form " type="submit">
+                <input value="Submit Form" type="submit" id="submit-button">
               </td>
             </tr>
           </tbody></table>
