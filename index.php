@@ -135,7 +135,6 @@ require('php/main.php');
     </div>
 
     <div id="contact-content" hidden>
-      <!-- <h1>CONTACT FORM TO GO HERE!</h1> -->
 
       <form name="contactform" method="post" action="contactformprocess.php" onsubmit="return validate.check(this)">
         <table class="contactform">
@@ -168,12 +167,11 @@ require('php/main.php');
             <tr style="color: rgb(153, 255, 153);">
               <td style="text-align: center;">
                 <div class="antispammessage">
-                  To help prevent automated spam, please answer this question:
-                  <br><br>
+                  To help prevent automated spam, please answer the following:
+                  <br>
                   <div class="antispamquestion">
-                    <span class="required_star"> * </span>
                     Using only numbers, what is 10 plus 15? &nbsp; &nbsp;
-                    <input name="AntiSpam" id="AntiSpam" maxlength="100" style="width: 3em; margin-top: 1rem;" type="text">
+                    <input name="AntiSpam" id="AntiSpam" maxlength="100" style="width: 3em; margin-top: 1rem;" type="text" required>
                   </div>
                 </div>
               </td>
