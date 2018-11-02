@@ -1,19 +1,37 @@
 .contactform {
-  width: 460px;
-  font-family: arial;
-  border: 1px solid #AAA;
+  margin: auto;
+  width: 95%;
+  font-family: 'Merriweather Sans';
   padding:10px;
+  padding-bottom: 4rem;
+  margin-bottom: 1rem;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
+
 .contactformheader {
-  font-size:18px;
-  font-weight:bold;
-  padding-top:10px;
-  padding-bottom:10px;
-  text-align:center;
+  font-family: 'Satisfy', cursive;
+  font-size: 3em;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
 }
+
+.input {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.input-text {
+  height: 5rem;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .contactformmessage {
   text-align:center;
   padding-bottom:10px;

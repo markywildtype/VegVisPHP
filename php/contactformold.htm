@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><!--
+URL: www.freecontactform.com
+Version: FreeContactForm Free V2
+Copyright (c) 2012 Stuart Cochrane
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Contact Us</title><script src="freecontactformvalidation.js"></script>
+	<script>
+	required.add('Full_Name','NOT_EMPTY','Full Name');
+	required.add('Email_Address','EMAIL','Email Address');
+	required.add('Your_Message','NOT_EMPTY','Your Message');
+	required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
+	</script>
+	<link rel="stylesheet" type="text/css" href="freecontactform.css"></head>
+
+
+	<body>
+	
+	<form name="freecontactform" method="post" action="freecontactformprocess.php" onsubmit="return validate.check(this)">
+	<table style="background-color: rgb(0, 102, 0);" class="freecontactform" width="400">
+	<tbody><tr style="color: rgb(153, 255, 153);">
+	 <td colspan="2">
+	  
+	 <div class="freecontactformheader">Vegetarian Visitor<br>Contact Us Form</div>
+	  
+	 <div class="freecontactformmessage">Fields marked with <span class="required_star"> * </span> are mandatory.</div>
+	  
+	 </td>
+	</tr>
+	<tr>
+	 <td style="color: rgb(153, 255, 153);" valign="top">
+	  <label for="Full_Name" class="required">Full Name<span class="required_star"> * </span></label>
+	 </td>
+	 <td valign="top">
+	  <input name="Full_Name" id="Full_Name" maxlength="80" style="width: 230px;" type="text">
+	 </td>
+	</tr>
+	<tr>
+	 <td style="color: rgb(153, 255, 153);" valign="top">
+	  <label for="Email_Address" class="required">Email Address<span class="required_star"> * </span></label>
+	 </td>
+	 <td valign="top">
+	  <input name="Email_Address" id="Email_Address" maxlength="100" style="width: 230px;" type="text">
+	 </td>
+	</tr>
+	<tr>
+	 <td style="color: rgb(153, 255, 153);" valign="top">
+	  <label for="Telephone_Number" class="not-required">Telephone Number</label>
+	 </td>
+	 <td valign="top">
+	  <input name="Telephone_Number" id="Telephone_Number" maxlength="100" style="width: 230px;" type="text">
+	 </td>
+	</tr>
+	<tr>
+	 <td style="color: rgb(153, 255, 153);" valign="top">
+	  <label for="Your_Message" class="required">Your Message<span class="required_star"> * </span></label>
+	 </td>
+	 <td valign="top">
+	  <textarea style="width: 230px; height: 160px;" name="Your_Message" id="Your_Message" maxlength="2000"></textarea>
+	 </td>
+	</tr>
+	<tr style="color: rgb(153, 255, 153);">
+	 <td colspan="2" style="text-align: center;">
+	  <div class="antispammessage">
+	  To help prevent automated spam, please answer this question
+	  <br><br>
+		  <div class="antispamquestion">
+		   <span class="required_star"> * </span>
+		   Using only numbers, what is 10 plus 15? &nbsp; 
+		   <input name="AntiSpam" id="AntiSpam" maxlength="100" style="width: 30px;" type="text">
+		  </div>
+	  </div>
+	 </td>
+	</tr>
+	<tr style="color: rgb(153, 255, 153);">
+	 <td colspan="2" style="text-align: center;">
+	 <br><br>
+	  <input value=" Submit Form " type="submit">
+	  <br><br>
+	  <div style="font-size: 0.9em;">Form provided by <a href="http://www.freecontactform.com" target="_blank">Free Contact Form</a></div>
+	  <br><br>
+	 </td>
+	</tr>
+	</tbody></table>
+	</form>
+</body></html>
