@@ -178,7 +178,7 @@ require('php/main.php');
             </tr>
             <tr style="color: rgb(153, 255, 153);">
               <td colspan="2" style="text-align: center;">
-                <input value="Submit Form" type="submit" id="submit-button">
+                <input value="Send Message" type="submit" id="submit-button">
               </td>
             </tr>
           </tbody></table>

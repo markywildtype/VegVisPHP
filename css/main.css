@@ -57,13 +57,13 @@ hr {
 #homepage-content {
   padding-top: 6rem;
   padding-bottom: 0.01rem;
-  /* height: 100vh; */
+  min-height: 100vh;
   font-size: 0.8em;
 }
 
 #contact-content {
-  padding-top: 5rem;
-  height: 100vh;
+  padding-top: 5.5rem;
+  min-height: 100vh;
   margin: auto;
   font-size: 0.8em;
 }
