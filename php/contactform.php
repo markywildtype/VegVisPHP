@@ -1,15 +1,17 @@
 <?php
 
-if (isset($_POST['submit'])) {  //Checks for the submit button
-  $name = $_POST['name']; //Grabs the input with the name 'name' from the form
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
   $mailFrom = $_POST['mail'];
-  $subject = $_POST['subject'];
+  $phone = $_POST['phone'];
+  $subject = 'Vegetarian Visitor Contact Form Message';
   $message = $_POST['message'];
 
-  $mailTo = 'markytorture@hotmail.com';
+  $mailTo = 'a.weitzel@live.co.uk';
   $headers = "From: {$mailFrom}";
+  $txt = "Name: {$name}\nPhone: {$phone}\n\nMessage:\n\n{$message}";
 
-  mail($mailTo, $subject, $message, $headers);
-  header("Location: index.php?mailsend");
+  mail($mailTo, $subject, $txt, $headers);
+  header("Location: ../index.php?mailsend");
 }
 ?>

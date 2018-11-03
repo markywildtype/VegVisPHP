@@ -66,12 +66,12 @@ require('php/main.php');
             England
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" name="london" id="lo-button" href="#">London</a>
+            <a class="dropdown-item" name="london" id="lo-button" href="#"<?php changeRegion($lonArray)?>>London</a>
             <a class="dropdown-item" name="southeast" id="se-button" href="#">South and South East</a>
             <a class="dropdown-item" name="southwest" id="sw-button" href="#">South West</a>
             <a class="dropdown-item" name="thamesandchilterns" id="tc-button" href="#">Thames and Chilterns</a>
             <a class="dropdown-item" name="eastanglia" id="ea-button" href="#">East Anglia</a>
-            <a class="dropdown-item" name="eastmidlands" id="em-button" href="#">East Midlands</a>
+            <a class="dropdown-item" name="eastmidlands" id="em-button" href="#"<?php changeRegion($emArray)?>>East Midlands</a>
             <a class="dropdown-item" name="heartofengland" id="he-button" href="#">Heart of England</a>
             <a class="dropdown-item" name="northeast" id="ne-button" href="#">North East</a>
             <a class="dropdown-item" name="northwest" id="nw-button" href="#">North West</a>
@@ -136,7 +136,7 @@ require('php/main.php');
 
     <div id="contact-content" hidden>
 
-      <form name="contactform" method="post" action="php/contactformprocess.php" onsubmit="return validate.check(this)">
+      <form name="contactform" method="post" action="php/contactform.php" onsubmit="return validate.check(this)">
         <table class="contactform">
           <tbody id="contact-form">
             <tr style="color: rgb(153, 255, 153);">
@@ -146,22 +146,22 @@ require('php/main.php');
             </tr>
             <tr>
               <td>
-                <input name="Full_Name" id="Full_Name" maxlength="80" class="input" type="text" placeholder="--Name--" required>
+                <input name="name" id="Full_Name" maxlength="80" class="input" type="text" placeholder="--Name--" required>
               </td>
             </tr>
             <tr>
               <td>
-                <input name="Email_Address" id="Email_Address" maxlength="100" class="input" type="text" placeholder="--Email Address--" required>
+                <input name="mail" id="Email_Address" maxlength="100" class="input" type="text" placeholder="--Email Address--" required>
               </td>
             </tr>
             <tr>
               <td>
-                <input name="Telephone_Number" id="Telephone_Number" maxlength="100" class="input" type="text" placeholder="--Phone Number--">
+                <input name="phone" id="Telephone_Number" maxlength="100" class="input" type="text" placeholder="--Phone Number--">
               </td>
             </tr>
             <tr>
               <td>
-                <textarea class="input-text" name="Your_Message" id="Your_Message" maxlength="2000" placeholder="--Message--" required></textarea>
+                <textarea class="input-text" name="message" id="Your_Message" maxlength="2000" placeholder="--Message--" required></textarea>
               </td>
             </tr>
             <tr style="color: rgb(153, 255, 153);">
@@ -178,7 +178,8 @@ require('php/main.php');
             </tr>
             <tr style="color: rgb(153, 255, 153);">
               <td colspan="2" style="text-align: center;">
-                <input value="Send Message" type="submit" id="submit-button">
+                <!-- <input value="Send Message" type="submit" id="submit-button"> -->
+                <button type="submit" name="submit" id='submit-button'>Send Message</button>
               </td>
             </tr>
           </tbody></table>
