@@ -105,6 +105,7 @@ section h4 {
 
 .phone-number {
   color: rgb(0, 41, 0);
+  border-bottom: 1px dotted black;
 }
 
 .phone-number:hover {

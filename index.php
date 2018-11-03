@@ -66,12 +66,12 @@ require('php/main.php');
             England
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" name="london" id="lo-button" href="#"<?php changeRegion($lonArray)?>>London</a>
+            <a class="dropdown-item" name="london" id="lo-button" href="#">London</a>
             <a class="dropdown-item" name="southeast" id="se-button" href="#">South and South East</a>
             <a class="dropdown-item" name="southwest" id="sw-button" href="#">South West</a>
             <a class="dropdown-item" name="thamesandchilterns" id="tc-button" href="#">Thames and Chilterns</a>
             <a class="dropdown-item" name="eastanglia" id="ea-button" href="#">East Anglia</a>
-            <a class="dropdown-item" name="eastmidlands" id="em-button" href="#"<?php changeRegion($emArray)?>>East Midlands</a>
+            <a class="dropdown-item" name="eastmidlands" id="em-button" href="#">East Midlands</a>
             <a class="dropdown-item" name="heartofengland" id="he-button" href="#">Heart of England</a>
             <a class="dropdown-item" name="northeast" id="ne-button" href="#">North East</a>
             <a class="dropdown-item" name="northwest" id="nw-button" href="#">North West</a>

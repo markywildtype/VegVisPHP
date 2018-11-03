@@ -69,9 +69,10 @@ const homeButtonClicked = function() {
   contactContent.hidden = true;
 }
 
-//Region button handling - currently doing its thang effectively!
 const regionButtonClicked = function() {
-  const toggle = document.querySelector('.navbar-toggler').click()
+  if(document.documentElement.clientWidth < 992) {
+    const toggle = document.querySelector('.navbar-toggler').click();
+  }
 
   const homepageContent = document.getElementById('homepage-content');
   homepageContent.style.display = 'none';
@@ -121,7 +122,9 @@ const selectorButtonClicked = function() {
 }
 
 const contactButtonClicked = function() {
-  const toggle = document.querySelector('.navbar-toggler').click()
+  if(document.documentElement.clientWidth < 992) {
+    const toggle = document.querySelector('.navbar-toggler').click();
+  }
   contactLinkClicked();
 }
 
@@ -141,7 +144,7 @@ const contactLinkClicked = function() {
 
 const contactSubmitButtonClicked = function() {
   if (checkRequiredFields()) {
-    alert("Thanks for getting touch! We'll get back to you soon!");
+    alert("Thanks for getting in touch - we'll get back to you soon!");
   }
 }
 
@@ -153,9 +156,6 @@ const checkRequiredFields = function() {
   inputsArray.push(document.getElementById('Your_Message').value);
 
   let allFieldsFilled = false;
-
-  const antiSpamAnswer = 25;
-
 
   if(inputsArray.includes("")) {
     allFieldsFilled = false;
