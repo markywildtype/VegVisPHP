@@ -136,7 +136,7 @@ require('php/main.php');
 
     <div id="contact-content" hidden>
 
-      <form name="contactform" method="post" action="contactformprocess.php" onsubmit="return validate.check(this)">
+      <form name="contactform" method="post" action="php/contactformprocess.php" onsubmit="return validate.check(this)">
         <table class="contactform">
           <tbody id="contact-form">
             <tr style="color: rgb(153, 255, 153);">
