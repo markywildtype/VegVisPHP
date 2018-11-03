@@ -7,7 +7,8 @@ if (isset($_POST['submit'])) {
   $subject = 'Vegetarian Visitor Contact Form Message';
   $message = $_POST['message'];
 
-  $mailTo = 'a.weitzel@live.co.uk';
+  $mailTo = 'markytorture@hotmail.com';
+  // $mailTo = 'a.weitzel@live.co.uk';
   $headers = "From: {$mailFrom}";
   $txt = "Name: {$name}\nPhone: {$phone}\n\nMessage:\n\n{$message}";
 

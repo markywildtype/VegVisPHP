@@ -22,7 +22,7 @@ require('php/main.php');
   required.add('Your_Message','NOT_EMPTY','Your Message');
   required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
   </script>
-  <link rel="stylesheet" href="css/contactform.css">
+  <link rel="stylesheet" href="css/contactform.css?version=2">
   <!-- End contact form scripts -->
 
   <link rel="stylesheet" href="css/main.css?version=2">
@@ -126,15 +126,17 @@ require('php/main.php');
 
       <h2>Welcome to Vegetarian Britain!</h2>
       <p>Vegetarian Visitor is an annually updated guide to accommodation and eateries in Britain which take catering for vegetarians and vegans seriously.</p>
-      <p>With the increasing emphasis on healthy eating, more and more people are looking for places to stay and eat that provide for vegetarians. Here we list B&Bs, guest houses, hotels, restaurants, cafés and pubs that know what vegetarians' and vegans' requirements are and want to cater for them properly, by providing a variety of tasty and imaginative dishes for breakfast, lunch and evening meals.</p>
+      <p>With the increasing emphasis on healthy eating, more and more people are looking for places to stay and eat that provide for vegetarians. Here we list B&Bs, guest houses, hotels, restaurants, cafés and pubs that understand vegetarian and vegan requirements and want to cater for them properly, by providing a variety of tasty and imaginative dishes for breakfast, lunch and evening meals.</p>
       <p>Britain has been home to many vegetarian VIPs and celebrities - Paul McCartney, Sir Isaac Newton, H.G. Wells, Sting, Tony Benn, Kate Bush, Sir John Gielgud and Jude Law, to name but a few - and its eateries serve a truly international range of food, from simple English 'pub grub' through Caribbean, Mexican, Indian, Thai and Chinese to French haute cuisine.</p>
       <p>As this guide shows, there is no reason why vegetarians and vegans should miss out!</p>
       <hr />
       <p>Vegetarian Visitor was for many years, until 2012, published as an award-winning annual guidebook. Since 2001 it has also been a website.</p>
-      <p>Suggestions for inclusion are very welcome. Please use the <a class="contact-button" id="contact-link" href="#">contact form</a> and give as many details as possible, particularly the establishment's email address and/or phone number.</p>
+      <p>Suggestions or requests for inclusion are very welcome. Please use the <a class="contact-button" id="contact-link" href="#">contact form</a> giving as many details as possible, particularly the establishment's email address and/or phone number.</p>
     </div>
 
     <div id="contact-content" hidden>
+
+
 
       <form name="contactform" method="post" action="php/contactform.php" onsubmit="return validate.check(this)">
         <table class="contactform">
@@ -146,39 +148,31 @@ require('php/main.php');
             </tr>
             <tr>
               <td>
-                <input name="name" id="Full_Name" maxlength="80" class="input" type="text" placeholder="--Name--" required>
+                <input name="name" id="Full_Name" maxlength="80" class="input" type="text" placeholder="*Name" required>
               </td>
             </tr>
             <tr>
               <td>
-                <input name="mail" id="Email_Address" maxlength="100" class="input" type="text" placeholder="--Email Address--" required>
+                <input name="mail" id="Email_Address" maxlength="100" class="input" type="text" placeholder="*Email Address" required>
               </td>
             </tr>
             <tr>
               <td>
-                <input name="phone" id="Telephone_Number" maxlength="100" class="input" type="text" placeholder="--Phone Number--">
+                <input name="phone" id="Telephone_Number" maxlength="100" class="input" type="text" placeholder="Phone Number">
               </td>
             </tr>
             <tr>
               <td>
-                <textarea class="input-text" name="message" id="Your_Message" maxlength="2000" placeholder="--Message--" required></textarea>
+                <textarea class="input-text" name="message" id="Your_Message" maxlength="2000" placeholder="*Message" required></textarea>
               </td>
             </tr>
-            <tr style="color: rgb(153, 255, 153);">
-              <td style="text-align: center;">
-                <div class="antispammessage">
-                  To help prevent automated spam, please answer the following:
-                  <br>
-                  <div class="antispamquestion">
-                    Using only numbers, what is 10 plus 15? &nbsp; &nbsp;
-                    <input name="AntiSpam" id="AntiSpam" maxlength="100" style="width: 3em; margin-top: 1rem;" type="text" required>
-                  </div>
-                </div>
+            <tr hidden>
+              <td>
+                <input name="antispam" id="AntiSpam" type="text" value="25">
               </td>
             </tr>
             <tr style="color: rgb(153, 255, 153);">
               <td colspan="2" style="text-align: center;">
-                <!-- <input value="Send Message" type="submit" id="submit-button"> -->
                 <button type="submit" name="submit" id='submit-button'>Send Message</button>
               </td>
             </tr>
