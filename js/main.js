@@ -47,7 +47,7 @@ const app = function() {
 
   const contactButtons = document.getElementsByClassName('contact-button');
   contactButtons[0].addEventListener('click', contactButtonClicked);
-  contactButtons[1].addEventListener('click', contactButtonClicked);
+  contactButtons[1].addEventListener('click', contactLinkClicked);
 
   const contactSubmitButton = document.getElementById('submit-button');
   contactSubmitButton.addEventListener('click', contactSubmitButtonClicked);
@@ -56,7 +56,6 @@ const app = function() {
 }
 
 const homeButtonClicked = function() {
-
   const selector = document.getElementById('selector-div')
   selector.hidden = true;
 
@@ -72,6 +71,8 @@ const homeButtonClicked = function() {
 
 //Region button handling - currently doing its thang effectively!
 const regionButtonClicked = function() {
+  const toggle = document.querySelector('.navbar-toggler').click()
+
   const homepageContent = document.getElementById('homepage-content');
   homepageContent.style.display = 'none';
 
@@ -120,6 +121,11 @@ const selectorButtonClicked = function() {
 }
 
 const contactButtonClicked = function() {
+  const toggle = document.querySelector('.navbar-toggler').click()
+  contactLinkClicked();
+}
+
+const contactLinkClicked = function() {
   const selector = document.getElementById('selector-div')
   selector.hidden = true;
 
