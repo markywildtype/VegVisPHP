@@ -69,6 +69,10 @@ hr {
   font-size: 0.8em;
 }
 
+.region-div {
+  padding-bottom: 8rem;;
+}
+
 #region-content h1 {
   font-family: 'Satisfy';
   font-size: 3.5em;

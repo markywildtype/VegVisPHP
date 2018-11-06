@@ -99,26 +99,37 @@ const regionButtonClicked = function() {
 }
 
 const selectorButtonClicked = function() {
-  const accomElements = document.querySelector('.accommodation');
-  const eatingElements = document.querySelector('.eating');
+  const accomElements = document.querySelectorAll('.accommodation');
+  const eatingElements = document.querySelectorAll('.eating');
 
   switch (this.id) {
     case 'all-button':
-    accomElements.style.display = 'block';
-    eatingElements.style.display = 'block';
+    for(let accomElement of accomElements) {
+      accomElement.style.display = 'block';
+    }
+    for(let eatingElement of eatingElements) {
+      eatingElement.style.display = 'block';
+    }
     break;
     case 'accommodation-button':
-    accomElements.style.display = 'block';
-    eatingElements.style.display = 'none';
+    for(let accomElement of accomElements) {
+      accomElement.style.display = 'block';
+    }
+    for(let eatingElement of eatingElements) {
+      eatingElement.style.display = 'none';
+    }
     break;
     case 'eating-button':
-    accomElements.style.display = 'none';
-    eatingElements.style.display = 'block';
+    for(let accomElement of accomElements) {
+      accomElement.style.display = 'none';
+    }
+    for(let eatingElement of eatingElements) {
+      eatingElement.style.display = 'block';
+    }
     break;
     default:
     break;
   }
-
 }
 
 const contactButtonClicked = function() {
