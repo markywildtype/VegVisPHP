@@ -212,7 +212,6 @@ section h4 {
 .offers-button {
   padding: 0.5rem;
   color: darkgreen;
-  /* color: black; */
   background-color: #fffdd0;
   border: 2px green solid;
   border-radius: 5px;
@@ -223,7 +222,7 @@ section h4 {
   display: none;
   position: relative;
   font-size: 0.8em;
-  color: #fffdd0;
+  color: white;
   background-color: #092807;
   margin-top: 1rem;
   padding: 1rem;

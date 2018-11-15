@@ -13,28 +13,20 @@ require('php/main.php');
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script src="js/animation.js"></script>
 
+  <script src="php/main.php"></script>
+
+  <!-- Contact form scripts -->
+  <script src="js/contactformvalidation.js"></script>
   <script>
-  $(document).ready(function(){
-    $(".offers-button").click(function(){
-      $(".offer").slideToggle(300);
-    });
-  });
-</script>
-
-<script src="php/main.php"></script>
-
-<!-- Contact form scripts -->
-<script src="js/contactformvalidation.js"></script>
-<script>
-required.add('Full_Name','NOT_EMPTY','Full Name');
-required.add('Email_Address','EMAIL','Email Address');
-required.add('Your_Message','NOT_EMPTY','Your Message');
-required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
+  required.add('Full_Name','NOT_EMPTY','Full Name');
+  required.add('Email_Address','EMAIL','Email Address');
+  required.add('Your_Message','NOT_EMPTY','Your Message');
+  required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
 </script>
 <link rel="stylesheet" href="css/contactform.css?version=2">
 <!-- End contact form scripts -->
@@ -276,16 +268,21 @@ required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
 
                       <?php } else { ?>
 
-                        <?php echo $eatingListing['name']; ?>,
-                        tel <a href='tel:+44<?php echo (int)str_replace(' ', '', $eatingListing['tel']) ?>' class="phone-number"><?php echo $eatingListing['tel']; ?></a>,
-                        <?php echo $eatingListing['address']; ?>. &nbsp;
-                        <?php
-                        $codeExplanations = []; ?>
-                        <button type="button" name="button" class="code-explanation">
-                          <?php foreach($eatingListing['codes'] as $code) {
-                            $codeExplanations[$code] = $allCodes[$code];
-                            echo "$code ";
-                          }; ?>
+                        <div>
+
+                          <?php echo $eatingListing['name']; ?>,
+                          tel <a href='tel:+44<?php echo (int)str_replace(' ', '', $eatingListing['tel']) ?>' class="phone-number"><?php echo $eatingListing['tel']; ?></a>,
+                          <?php echo $eatingListing['address']; ?>. &nbsp;
+                          <?php
+                          $codeExplanations = []; ?>
+                          <button type="button" name="button" class="code-explanation">
+                            <?php foreach($eatingListing['codes'] as $code) {
+                              $codeExplanations[$code] = $allCodes[$code];
+                              echo "$code ";
+                            }; ?>
+
+                          </div>
+
                           <span class="code-definition-text">
                             <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
                               <p><strong class="green-code"><?php echo "$codeKey " ?></strong><?php echo " $codeExplanation\n" ?></p>
