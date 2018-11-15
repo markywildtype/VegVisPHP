@@ -15,7 +15,8 @@ $regionArray = [
       'image' => '',
       'description' => '<p></p>',
       'codes' => [''],
-      'offers' => '<p></p>'],
+      'offers' => 'Offers Available',
+      'offer text' => '<p></p>'],
 
       ['name' => '',
       'tel' => '',

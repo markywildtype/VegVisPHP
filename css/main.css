@@ -70,7 +70,7 @@ hr {
 }
 
 .region-div {
-  padding-bottom: 8rem;;
+  padding-bottom: 35rem;;
 }
 
 #region-content h1 {
@@ -91,6 +91,13 @@ section h2 {
     color: lightgreen;
     margin-bottom: 3%;
     margin-left: 0.5rem;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -7rem;
+    visibility: hidden;
 }
 
 section a {
@@ -200,6 +207,35 @@ section h4 {
 
 .green-code {
   color: green;
+}
+
+.offers-button {
+  padding: 0.5rem;
+  color: darkgreen;
+  /* color: black; */
+  background-color: #fffdd0;
+  border: 2px green solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.offer {
+  display: none;
+  position: relative;
+  font-size: 0.8em;
+  color: #fffdd0;
+  background-color: #092807;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.offer a {
+  color: lightgreen;
+}
+
+.offer a:hover {
+  text-decoration: underline;
 }
 
 #footer {

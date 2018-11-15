@@ -8,29 +8,43 @@ require('php/main.php');
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
-  <script src="php/main.php"></script>
 
-  <!-- Contact form scripts -->
-  <script src="js/contactformvalidation.js"></script>
   <script>
-  required.add('Full_Name','NOT_EMPTY','Full Name');
-  required.add('Email_Address','EMAIL','Email Address');
-  required.add('Your_Message','NOT_EMPTY','Your Message');
-  required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
-  </script>
-  <link rel="stylesheet" href="css/contactform.css?version=2">
-  <!-- End contact form scripts -->
+  $(document).ready(function(){
+    $(".offers-button").click(function(){
+      $(".offer").slideToggle(300);
+    });
+  });
+</script>
 
-  <link rel="stylesheet" href="css/main.css?version=2">
-  <link rel="stylesheet" href="css/nav.css?version=2">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Satisfy|Merriweather+Sans" rel="stylesheet">
-  <link rel="icon" href="images/vv_logo.png">
-  <title>Vegetarian Visitor 2018</title>
+<script src="php/main.php"></script>
+
+<!-- Contact form scripts -->
+<script src="js/contactformvalidation.js"></script>
+<script>
+required.add('Full_Name','NOT_EMPTY','Full Name');
+required.add('Email_Address','EMAIL','Email Address');
+required.add('Your_Message','NOT_EMPTY','Your Message');
+required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
+</script>
+<link rel="stylesheet" href="css/contactform.css?version=2">
+<!-- End contact form scripts -->
+
+<link rel="stylesheet" href="css/main.css?version=2">
+<link rel="stylesheet" href="css/nav.css?version=2">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Markazi+Text|Satisfy|Merriweather+Sans" rel="stylesheet">
+<link rel="icon" href="images/vv_logo.png">
+<title>Vegetarian Visitor 2018</title>
 </head>
 <body>
 
@@ -136,8 +150,6 @@ require('php/main.php');
 
     <div id="contact-content" hidden>
 
-
-
       <form name="contactform" method="post" action="php/contactform.php" onsubmit="return validate.check(this)">
         <table class="contactform">
           <tbody id="contact-form">
@@ -180,11 +192,7 @@ require('php/main.php');
         </form>
       </div>
 
-
       <div id="region-content" hidden>
-
-
-
 
         <div id="eastmidlands" class="region-div">
           <h1>East Midlands</h1>
@@ -196,14 +204,16 @@ require('php/main.php');
           <hr />
           <?php foreach ($regions['East Midlands']['subregions'] as $subRegion) { ?>
             <a href="#<?php echo $subRegion ?>"><?php echo $subRegion ?></a>
-          <?php }
-          foreach ($emArray as $subRegionName => $regionListings) { ?>
-            <h4><a name="<?php echo $subRegionName ?>"></a><?php echo $subRegionName ?></h4>
+          <?php } ?>
+          <h2 id="hidden-accommodation-heading" hidden>Accommodation</h2>
+          <h2 id="hidden-eating-heading" hidden>Eating</h2>
+          <?php foreach ($emArray as $subRegionName => $regionListings) { ?>
             <?php if (count($regionListings['Accommodation']) > 0) { ?>
+              <h4 class="accommodation-subregion-heading"><a name="<?php echo $subRegionName ?>" class="anchor"></a><?php echo $subRegionName ?></h4>
 
               <div class="accommodation">
 
-                <h2>Accommodation</h2>
+                <h2 class="subregion-accommodation-heading">Accommodation</h2>
                 <?php foreach ($regionListings['Accommodation'] as $accommodationListing) { ?>
                   <article class="entry">
                     <h4><?php echo $accommodationListing['name'] ?></h4>
@@ -230,13 +240,20 @@ require('php/main.php');
                         </span>
                       </button>
                     </p>
+
+                    <button type="button" class="offers-button"><?php echo $accommodationListing['offers']?></button>
+
+                    <div class="offer"><?php echo $accommodationListing['offer text']?></div>
+
                   </article>
                 </div>
               <?php }
             }
-            if ($regionListings['Eating']) { ?>
+            if (count($regionListings['Eating']) > 0) { ?>
+              <h4 class="eating-subregion-heading"><a name="<?php echo $subRegionName ?>" class="anchor"></a><?php echo $subRegionName ?></h4>
+
               <div class="eating">
-                <h2>Eating</h2>
+                <h2 class="subregion-eating-heading">Eating</h2>
                 <?php foreach ($regionListings['Eating'] as $eatingListing) { ?>
                   <article class="entry">
                     <?php if ($eatingListing['multiline']) { ?>
@@ -282,7 +299,7 @@ require('php/main.php');
               <?php }
             }
             ?>
-          <!-- </div> -->
+          </div>
 
 
 

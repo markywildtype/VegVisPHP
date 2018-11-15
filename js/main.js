@@ -102,31 +102,73 @@ const selectorButtonClicked = function() {
   const accomElements = document.querySelectorAll('.accommodation');
   const eatingElements = document.querySelectorAll('.eating');
 
+  const hiddenAccomHeading = document.getElementById('hidden-accommodation-heading');
+  const hiddenEatingHeading = document.getElementById('hidden-eating-heading');
+
+  const subregionAccomHeadings = document.getElementsByClassName('subregion-accommodation-heading');
+  const subregionEatingHeadings = document.getElementsByClassName('subregion-eating-heading');
+
+  const eatingSubregionHeadings = document.getElementsByClassName('eating-subregion-heading');
+  const accomSubregionHeadings = document.getElementsByClassName('accommodation-subregion-heading');
+
   switch (this.id) {
     case 'all-button':
-    for(let accomElement of accomElements) {
-      accomElement.style.display = 'block';
-    }
-    for(let eatingElement of eatingElements) {
-      eatingElement.style.display = 'block';
-    }
-    break;
+      for(let accomElement of accomElements) {
+        accomElement.style.display = 'block';
+      }
+      for(let eatingElement of eatingElements) {
+        eatingElement.style.display = 'block';
+      }
+      for(let subregionAccomHeading of subregionAccomHeadings) {
+        subregionAccomHeading.hidden = false;
+      }
+      for(let subregionEatingHeading of subregionEatingHeadings) {
+        subregionEatingHeading.hidden = false;
+      }
+      for(let eatingSubregionHeading of eatingSubregionHeadings) {
+        eatingSubregionHeading.hidden = false;
+      }
+      for(let accomSubregionHeading of accomSubregionHeadings) {
+        accomSubregionHeading.hidden = false;
+      }
+      hiddenAccomHeading.hidden = true;
+      hiddenEatingHeading.hidden = true;
+      break;
     case 'accommodation-button':
-    for(let accomElement of accomElements) {
-      accomElement.style.display = 'block';
-    }
-    for(let eatingElement of eatingElements) {
-      eatingElement.style.display = 'none';
-    }
-    break;
+      for(let accomElement of accomElements) {
+        accomElement.style.display = 'block';
+      }
+      for(let eatingElement of eatingElements) {
+        eatingElement.style.display = 'none';
+      }
+      for(let subregionAccomHeading of subregionAccomHeadings) {
+        subregionAccomHeading.hidden = true;
+      }
+      for(let eatingSubregionHeading of eatingSubregionHeadings) {
+        eatingSubregionHeading.hidden = true;
+      }
+      hiddenAccomHeading.hidden = false;
+      hiddenEatingHeading.hidden = true;
+      break;
     case 'eating-button':
-    for(let accomElement of accomElements) {
-      accomElement.style.display = 'none';
-    }
-    for(let eatingElement of eatingElements) {
-      eatingElement.style.display = 'block';
-    }
-    break;
+      for(let accomElement of accomElements) {
+        accomElement.style.display = 'none';
+      }
+      for(let eatingElement of eatingElements) {
+        eatingElement.style.display = 'block';
+      }
+      for(let subregionEatingHeading of subregionEatingHeadings) {
+        subregionEatingHeading.hidden = true;
+      }
+      for(let eatingSubregionHeading of eatingSubregionHeadings) {
+        eatingSubregionHeading.hidden = false;
+      }
+      for(let accomSubregionHeading of accomSubregionHeadings) {
+        accomSubregionHeading.hidden = true;
+      }
+      hiddenAccomHeading.hidden = true;
+      hiddenEatingHeading.hidden = false;
+      break;
     default:
     break;
   }

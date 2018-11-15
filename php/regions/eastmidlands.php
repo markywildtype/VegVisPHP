@@ -10,8 +10,9 @@ $emArray = [
     'website' => 'www.glendonbandb.co.uk',
     'image' => 'images/eastmidlands/glendon_guest_house.jpg',
     'description' => '<p>Each en-suite bedroom at Glendon is individually-styled to provide a restful ambience and exceptional standard of accommodation. Breakfast is served in the Victorian dining room with all menu items cooked and served to order and includes varied vegetarian options. Glendon is situated in the centre of Matlock, with good train and bus links, and ideally placed to explore the Peak District, including Chatsworth House, Haddon Hall, Cromford Mills (the site of the Industrial Revolution) and the Lumsdale Valley Heritage site.</p>',
-    'codes' => ['G', 'INS', 'CatA', 'Ve', 'NS', 'Acc12'],
-    'offers' => '<p>Discounted stays when booking four nights or more - see our website for full details.</p>']
+    'codes' => ['G', 'INS', 'CatA', 'Ve', 'NS', 'Acc2'],
+    'offers' => 'Offers Available',
+    'offer text' => '<p>Discounted stays when booking four nights or more - see our <a href="http://www.glendonbandb.co.uk" target="_blank">website</a> for full details.</p>']
   ],
 
     'Eating' => [
