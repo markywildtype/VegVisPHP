@@ -69,10 +69,6 @@ hr {
   font-size: 0.8em;
 }
 
-.region-div {
-  padding-bottom: 35rem;;
-}
-
 #region-content h1 {
   font-family: 'Satisfy';
   font-size: 3.5em;
@@ -173,7 +169,7 @@ section h4 {
   background-color: inherit;
 }
 
-.code-explanation .code-definition-text {
+/* .code-explanation .code-definition-text {
   visibility: hidden;
   width: 10rem;
   background-color: #092807;
@@ -188,22 +184,25 @@ section h4 {
   z-index: 1;
   top: 23px;
   margin-left: -2rem;
-}
+} */
 
-.code-explanation:hover .code-definition-text {
+/* .code-explanation:hover .code-definition-text {
   visibility: visible;
 }
 
 .code-explanation .code-definition-text::after {
     content: " ";
     position: absolute;
-    bottom: 100%;  /* At the top of the tooltip */
+    bottom: 100%;
     left: 20%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent darkgreen transparent;
-}
+} */
+/* h3 {
+  font-style: 'Satisfy'; !important
+} */
 
 .green-code {
   color: green;

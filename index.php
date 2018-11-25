@@ -16,6 +16,7 @@ require('php/main.php');
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script src="js/modals.js"></script>
   <script src="js/animation.js"></script>
 
   <script src="php/main.php"></script>
@@ -33,6 +34,7 @@ require('php/main.php');
 
 <link rel="stylesheet" href="css/main.css?version=2">
 <link rel="stylesheet" href="css/nav.css?version=2">
+<link rel="stylesheet" href="css/modals.css?version=2">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Satisfy|Merriweather+Sans" rel="stylesheet">
 <link rel="icon" href="images/vv_logo.png">
@@ -220,17 +222,23 @@ require('php/main.php');
                     <p>
                       <?php
                       $codeExplanations = []; ?>
-                      <button type="button" name="button" class="code-explanation">
+                      <button type="button" name="<?php echo $accommodationListing['name'] ?>" class="code-explanation">
                         <?php foreach($accommodationListing['codes'] as $code) {
                           $codeExplanations[$code] = $allCodes[$code];
                           echo "$code ";
                         }; ?>
-                        <span class="code-definition-text">
+
+                      </button>
+
+                      <div id="<?php echo $accommodationListing['name'] ?>" class="modal code-modal">
+                        <div class="modal-content">
+                          <h2><?php echo $accommodationListing['name'] ?> <span class="close">&times;</span></h2>
                           <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
                             <p><strong class="green-code"><?php echo "$codeKey " ?></strong><?php echo " $codeExplanation\n" ?></p>
                           <?php } ?>
-                        </span>
-                      </button>
+                        </div>
+                      </div>
+
                     </p>
 
                     <button type="button" class="offers-button"><?php echo $accommodationListing['offers']?></button>
@@ -254,17 +262,21 @@ require('php/main.php');
                       <p><?php echo $eatingListing['address']?></p>
                       <p><?php echo $eatingListing['description'] ?></p>
                       <p><?php $codeExplanations = []; ?>
-                        <button type="button" name="button" class="code-explanation">
+                        <button type="button" name="<?php echo $eatingListing['name'] ?>" class="code-explanation">
                           <?php foreach($eatingListing['codes'] as $code) {
                             $codeExplanations[$code] = $allCodes[$code];
                             echo "$code ";
                           }; ?>
-                          <span class="code-definition-text">
+                        </button></p>
+
+                        <div id="<?php echo $eatingListing['name'] ?>" class="modal code-modal">
+                          <div class="modal-content">
+                            <h2><?php echo $eatingListing['name'] ?> <span class="close">&times;</span></h2>
                             <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
                               <p><strong class="green-code"><?php echo "$codeKey " ?></strong><?php echo " $codeExplanation\n" ?></p>
                             <?php } ?>
-                          </span>
-                        </button></p>
+                          </div>
+                        </div>
 
                       <?php } else { ?>
 
@@ -273,18 +285,22 @@ require('php/main.php');
                           <?php echo $eatingListing['address']; ?>. &nbsp;
                           <?php
                           $codeExplanations = []; ?>
-                          <button type="button" name="button" class="code-explanation">
+                          <button type="button" name="<?php echo $eatingListing['name'] ?>" class="code-explanation">
                             <?php foreach($eatingListing['codes'] as $code) {
                               $codeExplanations[$code] = $allCodes[$code];
                               echo "$code ";
                             }; ?>
+                        </button>
 
-                          <span class="code-definition-text">
+                        <div id="<?php echo $eatingListing['name'] ?>" class="modal code-modal">
+                          <div class="modal-content">
+                            <h2><?php echo $eatingListing['name'] ?> <span class="close">&times;</span></h2>
                             <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
                               <p><strong class="green-code"><?php echo "$codeKey " ?></strong><?php echo " $codeExplanation\n" ?></p>
                             <?php } ?>
-                          </span>
-                        </button>
+                          </div>
+                        </div>
+
                       <?php } ?>
                     </article>
                   <?php }; ?>

@@ -152,7 +152,7 @@ $emArray = [
       'codes' => ['R', 'L', 'a', 'org']],
 
       ['multiline' => false,
-      'name' => 'Thailand No 1',
+      'name' => 'Thailand No. 1',
       'tel' => '0115 958 2222',
       'address' => '16 Carlton Street, Nottingham NG1 1NN',
       'codes' => ['R', 'L', 'a']]
