@@ -24,15 +24,18 @@
   padding: 10px;
   width: 80%;
   margin: auto;
+  overflow-y: scroll;
+  max-height: 90%;
 }
 
 /* The Close Button */
 .modal .modal-content .close {
     color: white;
     float: right;
-    font-style: 'Merriweather Sans'; !important
-    font-size: 28px;
+    font-style: 'Merriweather Sans'; !important;
+    font-size: 1em; !important;
     font-weight: bold;
+    margin-right: 0.5rem;
 }
 
 .modal .modal-content .close:hover,
@@ -40,4 +43,8 @@
     color: lightgreen;
     text-decoration: none;
     cursor: pointer;
+}
+
+.code-explanation {
+  cursor: pointer;
 }

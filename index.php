@@ -196,9 +196,12 @@ require('php/main.php');
             <?php echo $regions['East Midlands']['introduction'] ?>
           </div>
           <hr />
-          <?php foreach ($regions['East Midlands']['subregions'] as $subRegion) { ?>
-            <a href="#<?php echo $subRegion ?>"><?php echo $subRegion ?></a>
-          <?php } ?>
+          <div class="subregion-links">
+            <?php foreach ($regions['East Midlands']['subregions'] as $subRegion) { ?>
+              <button class="subregion-link" onclick="location.href='#<?php echo $subRegion ?>'"><?php echo $subRegion ?></button>
+            <?php } ?>
+          </div>
+          <hr />
           <h2 id="hidden-accommodation-heading" hidden>Accommodation</h2>
           <h2 id="hidden-eating-heading" hidden>Eating</h2>
           <?php foreach ($emArray as $subRegionName => $regionListings) { ?>
@@ -222,7 +225,7 @@ require('php/main.php');
                     <p>
                       <?php
                       $codeExplanations = []; ?>
-                      <button type="button" name="<?php echo $accommodationListing['name'] ?>" class="code-explanation">
+                      <button type="button" name="<?php echo $accommodationListing['name'] . $accommodationListing['tel'] ?>" class="code-explanation">
                         <?php foreach($accommodationListing['codes'] as $code) {
                           $codeExplanations[$code] = $allCodes[$code];
                           echo "$code ";
@@ -230,7 +233,7 @@ require('php/main.php');
 
                       </button>
 
-                      <div id="<?php echo $accommodationListing['name'] ?>" class="modal code-modal">
+                      <div id="<?php echo $accommodationListing['name'] . $accommodationListing['tel'] ?>" class="modal code-modal">
                         <div class="modal-content">
                           <h2><?php echo $accommodationListing['name'] ?> <span class="close">&times;</span></h2>
                           <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
@@ -262,14 +265,14 @@ require('php/main.php');
                       <p><?php echo $eatingListing['address']?></p>
                       <p><?php echo $eatingListing['description'] ?></p>
                       <p><?php $codeExplanations = []; ?>
-                        <button type="button" name="<?php echo $eatingListing['name'] ?>" class="code-explanation">
+                        <button type="button" name="<?php echo $eatingListing['name'] . $eatingListing['tel'] ?>" class="code-explanation">
                           <?php foreach($eatingListing['codes'] as $code) {
                             $codeExplanations[$code] = $allCodes[$code];
                             echo "$code ";
                           }; ?>
                         </button></p>
 
-                        <div id="<?php echo $eatingListing['name'] ?>" class="modal code-modal">
+                        <div id="<?php echo $eatingListing['name'] . $eatingListing['tel'] ?>" class="modal code-modal">
                           <div class="modal-content">
                             <h2><?php echo $eatingListing['name'] ?> <span class="close">&times;</span></h2>
                             <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
@@ -280,19 +283,19 @@ require('php/main.php');
 
                       <?php } else { ?>
 
-                          <?php echo $eatingListing['name']; ?>,
-                          tel <a href='tel:+44<?php echo (int)str_replace(' ', '', $eatingListing['tel']) ?>' class="phone-number"><?php echo $eatingListing['tel']; ?></a>,
-                          <?php echo $eatingListing['address']; ?>. &nbsp;
-                          <?php
-                          $codeExplanations = []; ?>
-                          <button type="button" name="<?php echo $eatingListing['name'] ?>" class="code-explanation">
-                            <?php foreach($eatingListing['codes'] as $code) {
-                              $codeExplanations[$code] = $allCodes[$code];
-                              echo "$code ";
-                            }; ?>
+                        <?php echo $eatingListing['name']; ?>,
+                        tel <a href='tel:+44<?php echo (int)str_replace(' ', '', $eatingListing['tel']) ?>' class="phone-number"><?php echo $eatingListing['tel']; ?></a>,
+                        <?php echo $eatingListing['address']; ?>. &nbsp;
+                        <?php
+                        $codeExplanations = []; ?>
+                        <button type="button" name="<?php echo $eatingListing['name'] . $eatingListing['tel'] ?>" class="code-explanation">
+                          <?php foreach($eatingListing['codes'] as $code) {
+                            $codeExplanations[$code] = $allCodes[$code];
+                            echo "$code ";
+                          }; ?>
                         </button>
 
-                        <div id="<?php echo $eatingListing['name'] ?>" class="modal code-modal">
+                        <div id="<?php echo $eatingListing['name']  . $eatingListing['tel']?>" class="modal code-modal">
                           <div class="modal-content">
                             <h2><?php echo $eatingListing['name'] ?> <span class="close">&times;</span></h2>
                             <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>

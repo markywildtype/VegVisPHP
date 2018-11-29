@@ -16,6 +16,7 @@ require('php/main.php');
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script src="js/modals.js"></script>
   <script src="js/animation.js"></script>
 
   <script src="php/main.php"></script>
@@ -33,6 +34,7 @@ require('php/main.php');
 
 <link rel="stylesheet" href="css/main.css?version=2">
 <link rel="stylesheet" href="css/nav.css?version=2">
+<link rel="stylesheet" href="css/modals.css?version=2">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Satisfy|Merriweather+Sans" rel="stylesheet">
 <link rel="icon" href="images/vv_logo.png">
@@ -186,129 +188,23 @@ require('php/main.php');
 
       <div id="region-content" hidden>
 
-        <div id="eastmidlands" class="region-div">
-          <h1>East Midlands</h1>
-          <hr />
-          <img class="region-photo" alt="Restaurants Hotels eating out in East Midlands vegetarian and vegan" src="images/eastmidlands/eastmidlands.jpg" />
-          <div class=description>
-            <?php echo $regions['East Midlands']['introduction'] ?>
-          </div>
-          <hr />
-          <?php foreach ($regions['East Midlands']['subregions'] as $subRegion) { ?>
-            <a href="#<?php echo $subRegion ?>"><?php echo $subRegion ?></a>
-          <?php } ?>
-          <h2 id="hidden-accommodation-heading" hidden>Accommodation</h2>
-          <h2 id="hidden-eating-heading" hidden>Eating</h2>
-          <?php foreach ($emArray as $subRegionName => $regionListings) { ?>
-            <?php if (count($regionListings['Accommodation']) > 0) { ?>
-              <h4 class="accommodation-subregion-heading"><a name="<?php echo $subRegionName ?>" class="anchor"></a><?php echo $subRegionName ?></h4>
 
-              <div class="accommodation">
-
-                <h2 class="subregion-accommodation-heading">Accommodation</h2>
-                <?php foreach ($regionListings['Accommodation'] as $accommodationListing) { ?>
-                  <article class="entry">
-                    <h4><?php echo $accommodationListing['name'] ?></h4>
-                    <p>tel: <a href='tel:+44<?php echo (int)str_replace(' ', '', $accommodationListing['tel']) ?>' class="phone-number"><?php echo $accommodationListing['tel']; ?></a></p>
-                    <p><?php echo $accommodationListing['address']?></p>
-                    <p>email: <a href="mailto:<?php echo $accommodationListing['email'] ?>"><?php echo $accommodationListing['email'] ?></a></p>
-                    <p>website: <a target="_blank" href="http://<?php echo $accommodationListing['website']?>"><?php echo $accommodationListing['website']?></a></p>
-                    <a href="http://<?php echo $accommodationListing['website']?>" target=_blank><img class="accom-photo" alt="<?php echo $accommodationListing['name']?>" src="<?php echo $accommodationListing['image']?>" /></a>
-                    <div class="description">
-                      <?php echo $accommodationListing['description'] ?>
-                    </div>
-                    <p>
-                      <?php
-                      $codeExplanations = []; ?>
-                      <button type="button" name="button" class="code-explanation">
-                        <?php foreach($accommodationListing['codes'] as $code) {
-                          $codeExplanations[$code] = $allCodes[$code];
-                          echo "$code ";
-                        }; ?>
-                        <span class="code-definition-text">
-                          <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
-                            <p><strong class="green-code"><?php echo "$codeKey " ?></strong><?php echo " $codeExplanation\n" ?></p>
-                          <?php } ?>
-                        </span>
-                      </button>
-                    </p>
-
-                    <button type="button" class="offers-button"><?php echo $accommodationListing['offers']?></button>
-
-                    <div class="offer"><?php echo $accommodationListing['offer text']?></div>
-
-                  </article>
-                </div>
-              <?php }
-            }
-            if (count($regionListings['Eating']) > 0) { ?>
-              <h4 class="eating-subregion-heading"><a name="<?php echo $subRegionName ?>" class="anchor"></a><?php echo $subRegionName ?></h4>
-
-              <div class="eating">
-                <h2 class="subregion-eating-heading">Eating</h2>
-                <?php foreach ($regionListings['Eating'] as $eatingListing) { ?>
-                  <article class="entry">
-                    <?php if ($eatingListing['multiline']) { ?>
-                      <p><?php echo $eatingListing['name'] ?></p>
-                      <p>tel: <?php echo $eatingListing['tel']?></p>
-                      <p><?php echo $eatingListing['address']?></p>
-                      <p><?php echo $eatingListing['description'] ?></p>
-                      <p><?php $codeExplanations = []; ?>
-                        <button type="button" name="button" class="code-explanation">
-                          <?php foreach($eatingListing['codes'] as $code) {
-                            $codeExplanations[$code] = $allCodes[$code];
-                            echo "$code ";
-                          }; ?>
-                          <span class="code-definition-text">
-                            <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
-                              <p><strong class="green-code"><?php echo "$codeKey " ?></strong><?php echo " $codeExplanation\n" ?></p>
-                            <?php } ?>
-                          </span>
-                        </button></p>
-
-                      <?php } else { ?>
-
-                          <?php echo $eatingListing['name']; ?>,
-                          tel <a href='tel:+44<?php echo (int)str_replace(' ', '', $eatingListing['tel']) ?>' class="phone-number"><?php echo $eatingListing['tel']; ?></a>,
-                          <?php echo $eatingListing['address']; ?>. &nbsp;
-                          <?php
-                          $codeExplanations = []; ?>
-                          <button type="button" name="button" class="code-explanation">
-                            <?php foreach($eatingListing['codes'] as $code) {
-                              $codeExplanations[$code] = $allCodes[$code];
-                              echo "$code ";
-                            }; ?>
-
-                          <span class="code-definition-text">
-                            <?php foreach($codeExplanations as $codeKey => $codeExplanation) { ?>
-                              <p><strong class="green-code"><?php echo "$codeKey " ?></strong><?php echo " $codeExplanation\n" ?></p>
-                            <?php } ?>
-                          </span>
-                        </button>
-                      <?php } ?>
-                    </article>
-                  <?php }; ?>
-                </div>
-              <?php }
-            }
-            ?>
-          </div>
+        <?php// echo printRegion($emArray, 'East Midlands') ?>
+        <?php $region = new RegionTools($emArray, 'East Midlands');
+        echo $region->printRegion() ?>
 
 
-
-
-
-        </div>
-
-        <section id="footer">
-          <footer>
-            <hr />
-            <p>&copy; Annemarie Weitzel 2000 - <?php echo date('Y')?>, All rights reserved.</p>
-          </footer>
-        </section>
       </div>
 
-    </section>
+      <section id="footer">
+        <footer>
+          <hr />
+          <p>&copy; Annemarie Weitzel 2000 - <?php echo date('Y')?>, All rights reserved.</p>
+        </footer>
+      </section>
+    </div>
 
-  </body>
-  </html>
+  </section>
+
+</body>
+</html>

@@ -65,7 +65,7 @@ $emArray = [
       'codes' => ['P', 'L', 'd', 'F']],
 
       ['multiline' => false,
-      'name' => 'Thailand No 1',
+      'name' => 'Thailand No. 1',
       'tel' => '01629 584444',
       'address' => '43 Dale Road, Matlock DE4 3LT',
       'codes' => ['R', 'L', 'a']],
@@ -114,7 +114,7 @@ $emArray = [
       'codes' => ['C', 'c']],
 
       ['multiline' => false,
-      'name' => 'Thailand No 1',
+      'name' => 'Thailand No. 1',
       'tel' => '01522 537000',
       'address' => '80-81 Bailgate, Lincoln LN1 3AR',
       'codes' => ['R', 'L', 'a']]

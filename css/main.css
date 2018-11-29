@@ -5,6 +5,7 @@
 
 html, body {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -73,6 +74,23 @@ hr {
   font-family: 'Satisfy';
   font-size: 3.5em;
   margin-left: 0.5rem;
+}
+
+.subregion-links {
+  margin-top: 1.5rem;
+  display: inline;
+  margin-bottom: 0.5rem;
+}
+
+.subregion-link {
+  padding: 0.5rem;
+  color: #fffdd0;
+  font-size: 0.8em;
+  background-color: #092807;
+  border: 2px darkgreen solid;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
 }
 
 #contact-link {

@@ -20,6 +20,7 @@ $allCodes = [
   'C' => 'Café',
   'P' => 'Pub',
   'R/P' => 'Restaurant/Pub',
+  'R/C' => 'Restaurant/Café',
   'a' => 'A selection of vegetarian dishes daily, as well as non-vegetarian food; quite often at least one vegan dish is also on the menu',
   'b' => 'Vegetarian food only',
   'c' => 'Vegetarian and vegan food only',
