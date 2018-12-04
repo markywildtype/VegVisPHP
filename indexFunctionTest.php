@@ -189,8 +189,7 @@ require('php/main.php');
       <div id="region-content" hidden>
 
 
-        <?php// echo printRegion($emArray, 'East Midlands') ?>
-        <?php $region = new RegionTools($emArray, 'East Midlands');
+        <?php $region = new RegionTools($emArray, 'East Midlands', 'eastmidlands');
         echo $region->printRegion() ?>
 
 

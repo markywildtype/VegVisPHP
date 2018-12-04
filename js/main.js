@@ -165,6 +165,7 @@ const selectorButtonClicked = function() {
       }
       for(let accomSubregionHeading of accomSubregionHeadings) {
         accomSubregionHeading.hidden = true;
+        // console.log(accomSubregionHeading.hidden);
       }
       hiddenAccomHeading.hidden = true;
       hiddenEatingHeading.hidden = false;
