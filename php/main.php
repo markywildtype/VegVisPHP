@@ -23,7 +23,6 @@ class RegionTools
 
    public function printRegion()
    {
-//       $regionHtml = '';
        $regionHtml = $this->printRegionHeader();
 
        foreach ($this->regionArray as $subRegion => $regionListings) {
@@ -41,12 +40,12 @@ class RegionTools
                $this->regionName);
 
               foreach (Regions::$allRegions[$this->regionName]['subregions'] as $subRegion) {
-                $headerHtml = $headerHtml . sprintf(
-                    "<button class='subregion-link' onclick='location.href=%s'>
-                    %s</button>",
-                    "#{$subRegion}",
-                    $subRegion
-                );
+                  $headerHtml = $headerHtml
+                      . '<button class="subregion-link" onclick=\'location.href="#'
+                      . $subRegion
+                      . '"\'>'
+                      . $subRegion
+                      . '</button>';
               }
 
         $headerHtml = $headerHtml . sprintf(
@@ -83,17 +82,16 @@ class RegionTools
            $eatingSection = $this->printEatingListings($eatingListings, $subregionName);
        }
 
-
-       return $accommodationSection . $eatingSection;
+       return sprintf("<a name='%s' class='anchor'></a>", $subregionName) . $accommodationSection . $eatingSection;
    }
+
 
    protected function printAccommodationListings($listing, $subRegionName)
    {
-       $accommodationListings = sprintf("<h4 class='accommodation-subregion-heading><a name='%s' class='anchor'></a>%s</h4>
+       $accommodationListings = sprintf("<h4 class='accommodation-subregion-heading'>%s</h4>
             <div class='accommodation'>
             <h2 class='subregion-accommodation-heading'>Accommodation</h2>",
-            $subRegionName,
-            $subRegionName);
+           $subRegionName);
 
        foreach($listing as $entry) {
            $accommodationListings = $accommodationListings . $this->printAccommodationEntry($entry);
@@ -103,13 +101,11 @@ class RegionTools
 
    protected function printEatingListings($listing, $subRegionName)
    {
-       $eatingListings = sprintf("<h4 class='eating-subregion-heading'>
-                 <a name='%s' class='anchor'></a>%s</h4>
-                 <div class='eating'>
-                <h2 class='subregion-eating-heading'>Eating</h2>",
-                $subRegionName,
-                $subRegionName
-           );
+       $eatingListings = sprintf("<h4 class='eating-subregion-heading'>%s</h4>
+           <div class='eating'>
+           <h2 class='subregion-eating-heading'>Eating</h2>",
+           $subRegionName
+       );
 
        foreach($listing as $entry) {
            $eatingListings = $eatingListings . $this->printEatingEntry($entry);
