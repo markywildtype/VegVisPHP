@@ -147,6 +147,9 @@ const selectorButtonClicked = function() {
       for(let eatingSubregionHeading of eatingSubregionHeadings) {
         eatingSubregionHeading.hidden = true;
       }
+      for(let accomSubregionHeading of accomSubregionHeadings) {
+          accomSubregionHeading.hidden = false;
+      }
       hiddenAccomHeading.hidden = false;
       hiddenEatingHeading.hidden = true;
       break;

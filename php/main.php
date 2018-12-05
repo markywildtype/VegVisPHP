@@ -3,10 +3,12 @@
 require('regions/london.php');
 require('regions/southeast.php');
 require('regions/eastmidlands.php');
-//require('codes.php');
 require('CodesClass.php');
 require('regions/RegionsClass.php');
-//require('regions.php');
+
+//TODO obsolete - to remove:
+require('regions.php');
+require('codes.php');
 
 class RegionTools
 {
