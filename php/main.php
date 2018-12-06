@@ -38,8 +38,10 @@ class RegionTools
    protected function printRegionHeader()
    {
        $headerHtml = sprintf(
-               "<h1>%s</h1><div class='subregion-links'>",
-               $this->regionName);
+               "<h1>%s&nbsp;<img class='info-button' name='%s' src='images/info.png' /></h1><div class='subregion-links'>",
+                $this->regionName,
+                $this->regionName
+           );
 
               foreach (Regions::$allRegions[$this->regionName]['subregions'] as $subRegion) {
                   $headerHtml = $headerHtml
@@ -57,7 +59,7 @@ class RegionTools
                 <div class=description>%s</div>
                 <hr />",
                    Regions::$allRegions[$this->regionName]['image'],
-                   Regions::$allRegions['East Midlands']['introduction']
+                   Regions::$allRegions[$this->regionName]['introduction']
            );
 
         $headerHtml = $headerHtml . "</div>

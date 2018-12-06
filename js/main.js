@@ -53,6 +53,12 @@ const app = function() {
   contactSubmitButton.addEventListener('click', contactSubmitButtonClicked);
 
   let submitButtonClicked = false;
+
+  const infoButtons = document.querySelectorAll('.info-button');
+  infoButtons.forEach(function(infoButton){
+      infoButton.addEventListener('click', infoButtonClicked)
+  });
+
 }
 
 const homeButtonClicked = function() {
@@ -97,6 +103,25 @@ const regionButtonClicked = function() {
     }
   }.bind(this));
 }
+
+
+
+let clicked = false;
+
+const infoButtonClicked = function() {
+    const infoButtons = document.querySelectorAll('.info-button');
+    infoButtons.forEach(function(infoButton) {
+        if(!clicked) {
+            infoButton.src = 'images/info-clicked.png';
+            clicked = true;
+        } else {
+            infoButton.src = 'images/info.png';
+            clicked = false;
+        }
+    });
+}
+
+
 
 const selectorButtonClicked = function() {
   const accomElements = document.querySelectorAll('.accommodation');

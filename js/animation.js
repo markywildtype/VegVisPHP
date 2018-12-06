@@ -1,5 +1,5 @@
 $(document).ready(function(){
   $(".offers-button").click(function(){
-    $(".offer").slideToggle(300);
+    $(".offer").slideToggle(200);
   });
 });

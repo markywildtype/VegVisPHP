@@ -90,12 +90,19 @@ hr {
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 0.5rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
 }
 
 #contact-link {
   font-family: "Merriweather Sans", sans-serif;
   color: #fffdd0;
   border-bottom: 1px white dotted;
+}
+
+.info-button {
+    height: 3.5rem;
+    cursor: pointer;
 }
 
 section h2 {
@@ -185,41 +192,6 @@ section h4 {
   border-bottom: 1px dotted black;
   background-color: inherit;
 }
-
-/* .code-explanation .code-definition-text {
-  visibility: hidden;
-  width: 10rem;
-  background-color: #092807;
-  color: #fff;
-  font-size: 0.8em;
-  text-align: left;
-  border: solid 2px darkgreen;
-  border-radius: 6px;
-  padding: 10px;
-
-  position: absolute;
-  z-index: 1;
-  top: 23px;
-  margin-left: -2rem;
-} */
-
-/* .code-explanation:hover .code-definition-text {
-  visibility: visible;
-}
-
-.code-explanation .code-definition-text::after {
-    content: " ";
-    position: absolute;
-    bottom: 100%;
-    left: 20%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent darkgreen transparent;
-} */
-/* h3 {
-  font-style: 'Satisfy'; !important
-} */
 
 .green-code {
   color: green;
