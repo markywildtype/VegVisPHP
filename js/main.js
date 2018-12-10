@@ -92,15 +92,38 @@ const regionButtonClicked = function() {
   const contactContent = document.getElementById('contact-content');
   contactContent.hidden = true;
 
-  const regions = ['london', 'southeast', 'southwest', 'thamesandchilterns', 'eastanglia', 'eastmidlands', 'heartofengland', 'northeast', 'northwest', 'scotland', 'wales']
-  regions.forEach(function(region){
-    //change all sections other than the one matching this.name to hidden
-    // regionDiv = document.getElementById(region); //To be implemented
-    if(region !== this.name){
-      // regionDiv.style.display = 'none';
-    } else {
-      // regionDiv.style.display = 'block';
-    }
+  const emDiv = document.getElementById('eastmidlands');
+  const londonDiv = document.getElementById('london');
+  const southEastDiv = document.getElementById('southeast');
+  const southWestDiv = document.getElementById('southwest');
+  const eastAngliaDiv = document.getElementById('eastanglia');
+  const thamesAndChilternsDiv = document.getElementById('thamesandchilterns');
+  const northEastDiv = document.getElementById('northeast');
+  const northWestDiv = document.getElementById('northwest');
+  const heartOfEnglandDiv = document.getElementById('heartofengland');
+  const scotlandDiv = document.getElementById('scotland');
+  const walesDiv = document.getElementById('wales');
+
+  const regionDivs = [
+      emDiv,
+      londonDiv,
+      southEastDiv,
+      southWestDiv,
+      eastAngliaDiv,
+      thamesAndChilternsDiv,
+      northEastDiv,
+      northWestDiv,
+      heartOfEnglandDiv,
+      scotlandDiv,
+      walesDiv
+  ];
+
+  regionDivs.forEach(function(regionDiv) {
+      if(regionDiv.id !== this.name) {
+          regionDiv.hidden = true;
+      } else {
+          regionDiv.hidden = false;
+      }
   }.bind(this));
 }
 
