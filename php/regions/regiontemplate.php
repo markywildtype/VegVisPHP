@@ -5,73 +5,89 @@
 //Do two internal foreaches on these to print the accommodation/eating details
 
 $regionArray = [
-  'subRegion1' => [
-    'Accommodation' => [
-      ['name' => '',
-      'tel' => '',
-      'address' => '',
-      'email' => '',
-      'website' => '',
-      'image' => '',
-      'description' => '<p></p>',
-      'codes' => [''],
-      'offers' => 'Offers Available',
-      'offer text' => '<p></p>'],
+    'subRegion1' => [
+        'Accommodation' => [
+            ['name' => '',
+                'tel' => '',
+                'address' => '',
+                'email' => '',
+                'website' => '',
+                'image' => '',
+                'description' => "<p></p>",
+                'codes' => [''],
+                'offers' => 'Offers Available',
+                'offer text' => "<p></p>"],
 
-      ['name' => '',
-      'tel' => '',
-      'address' => '',
-      'email' => '',
-      'website' => '',
-      'image' => '',
-      'description' => '<p></p>',
-      'codes' => [''],]
+            ['name' => '',
+                'tel' => '',
+                'address' => '',
+                'email' => '',
+                'website' => '',
+                'image' => '',
+                'description' => "<p></p>",
+                'codes' => [''],]
+        ],
+
+        'Eating' => [
+            ['multiline' => false,
+                'name' => '',
+                'tel' => '',
+                'address' => '',
+                'codes' => ['']],
+
+            ['multiline' => true,
+                'name' => '',
+                'tel' => '',
+                'address' => '',
+                'description' => "<p></p>",
+                'codes' => ['']],
+
+            ['advert' => true,
+                'image' => '',
+                'name' => '',
+                'description' => '<p></p>',
+                'tel' => '',
+                'address' => '',
+                'codes' => ['']]
+        ]
     ],
 
-    'Eating' => [
-      ['multiline' => false,
-      'name' => '',
-      'tel' => '',
-      'address' => '',
-      'codes' => ['']],
+    'subRegion2' => [
+        'Accommodation' => [
+            ['name' => '',
+                'tel' => '',
+                'address' => '',
+                'email' => '',
+                'website' => '',
+                'image' => '',
+                'description' => "<p></p>",
+                'codes' => [''],
+                'offers' => 'Offers Available',
+                'offer text' => "<p></p>"]
+        ],
 
-      ['multiline' => true,
-      'name' => '',
-      'tel' => '',
-      'address' => '',
-      'description' => '<p></p>',
-      'codes' => ['']]
+        'Eating' => [
+            ['multiline' => false,
+                'name' => '',
+                'tel' => '',
+                'address' => '',
+                'codes' => ['']],
+
+            ['multiline' => true,
+                'name' => '',
+                'tel' => '',
+                'address' => '',
+                'description' => "<p></p>",
+                'codes' => ['']],
+
+            ['advert' => true,
+                'image' => '',
+                'name' => '',
+                'description' => "<p></p>",
+                'tel' => '',
+                'address' => '',
+                'codes' => ['']]
+        ]
     ]
-  ],
-
-  'subRegion2' => [
-    'Accommodation' => [
-      ['name' => '',
-      'tel' => '',
-      'address' => '',
-      'email' => '',
-      'website' => '',
-      'image' => '',
-      'description' => '<p></p>',
-      'codes' => [''],
-      'offers' => true,
-      'offertext' => '<p></p>']
-    ],
-
-    'Eating' => [
-      ['multiline' => false,
-      'name' => '',
-      'tel' => '',
-      'address' => '',
-      'codes' => ['']],
-
-      ['multiline' => true,
-      'name' => '',
-      'tel' => '',
-      'address' => '',
-      'description' => '<p></p>',
-      'codes' => ['']]
-    ]
-  ]
 ];
 ?>

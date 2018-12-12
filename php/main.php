@@ -4,6 +4,14 @@ require('regions/london.php');
 require('regions/southeast.php');
 require('regions/eastmidlands.php');
 require('regions/scotland.php');
+require('regions/wales.php');
+require('regions/southwest.php');
+require('regions/eastanglia.php');
+require('regions/northwest.php');
+require('regions/northeast.php');
+require('regions/thamesandchilterns.php');
+ require('regions/heartofengland.php');
+
 require('CodesClass.php');
 require('regions/RegionsClass.php');
 
@@ -115,17 +123,28 @@ class RegionTools
        return $eatingListings . '</div>';
    }
 
-    protected function printAccommodationEntry($entry)
+    protected function printAccommodationEntry($entry, $entryHtml = null)
     {
         $entryHtml = '<article class="entry">';
         $entryHtml = $entryHtml . sprintf("<h4>%s</h4>", $entry['name']);
-        if($entry['tel2']) {
+        if($entry['tel'] && $entry['fax'] && $entry['tel2']) {
+            $entryHtml = $entryHtml . sprintf("<p>tel and fax: <a href='tel:+44%d' class='phone-number'>%s</a>, mobile: <a href='tel:+44%d' class='phone-number'>%s</a></p>",
+                    (int)str_replace(' ', '', $entry['tel']),
+                    $entry['tel'],
+                    (int)str_replace(' ', '', $entry['tel2']),
+                    $entry['tel2']);
+        } elseif($entry['tel2']) {
             $entryHtml = $entryHtml . sprintf("<p>tel: <a href='tel:+44%d' class='phone-number'>%s</a>, mobile: <a href='tel:+44%d' class='phone-number'>%s</a></p>",
                     (int)str_replace(' ', '', $entry['tel']),
                     $entry['tel'],
                     (int)str_replace(' ', '', $entry['tel2']),
                     $entry['tel2']);
-        } else {
+        } elseif($entry['fax']) {
+            $entryHtml = $entryHtml . sprintf("<p>tel: <a href='tel:+44%d' class='phone-number'>%s</a>, fax: %s</p>",
+                    (int)str_replace(' ', '', $entry['tel']),
+                    $entry['tel'],
+                    $entry['fax']);
+        } elseif($entry['tel']) {
             $entryHtml = $entryHtml . sprintf("<p>tel: <a href='tel:+44%d' class='phone-number'>%s</a></p>",
                     (int)str_replace(' ', '', $entry['tel']),
                     $entry['tel']);
@@ -134,15 +153,32 @@ class RegionTools
                 $entry['address']);
         $entryHtml = $entryHtml . sprintf("<p>email: <a href='mailto:%s'>%s</a></p>",
                 $entry['email'], $entry['email']);
-        $entryHtml = $entryHtml . sprintf("<p>website: <a target='_blank' href='http://%s'>%s</a></p>",
-                $entry['website'],
-                $entry['website']);
-        $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo' alt='%s' src='%s' /></a>",
-                $entry['website'],
-                $entry['name'],
-                $entry['image']);
-        $entryHtml = $entryHtml . sprintf("<div class='description'>%s</div>", $entry['description']);
-        $entryHtml = $entryHtml . $this->printCodes($entry);
+        if($entry['website']) {
+          $entryHtml = $entryHtml . sprintf("<p>website: <a target='_blank' href='http://%s'>%s</a></p>",
+          $entry['website'],
+          $entry['website']);
+
+        }
+        if($entry['video']) {
+            $entryHtml = $entryHtml . sprintf("<p>video: <a target='_blank' href='http://%s'>%s</a></p>",
+                    $entry['video'],
+                    $entry['video']);
+        }
+
+        if(!$entry['website']){
+          $entryHtml = $entryHtml . sprintf("<img class='accom-photo' alt='%s' src='%s' />",
+          $entry['name'],
+          $entry['image']);
+          $entryHtml = $entryHtml . sprintf("<div class='description'>%s</div>", $entry['description']);
+          $entryHtml = $entryHtml . $this->printCodes($entry);
+        } else {
+          $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo' alt='%s' src='%s' /></a>",
+          $entry['website'],
+          $entry['name'],
+          $entry['image']);
+          $entryHtml = $entryHtml . sprintf("<div class='description'>%s</div>", $entry['description']);
+          $entryHtml = $entryHtml . $this->printCodes($entry);
+        }
 
         if($entry['offers'] !== null) {
             $entryHtml = $entryHtml . '<p></p>' . sprintf("<button type='button' class='offers-button'>%s</button>
@@ -161,6 +197,8 @@ class RegionTools
             $entryHtml = $this->printMultilineEatingEntry($entry, $entryHtml);
         } elseif($entry['advert']) {
             $entryHtml = $this->printAdvertEntry($entry, $entryHtml);
+        } elseif($entry['special']) {
+            $entryHtml = $this->printAccommodationEntry($entry, $entryHtml);
         } else {
             $entryHtml = $this->printOnelineEatingEntry($entry, $entryHtml);
         }
@@ -177,12 +215,22 @@ class RegionTools
     protected function printMultilineEatingEntry($entry, $entryHtml)
     {
         $entryHtml = $entryHtml . sprintf('<p>%s</p>', $entry['name']);
-        $entryHtml = $entryHtml . sprintf("<p>tel: <a href='tel:+44%d' class='phone-number'>%s</a></p>",
-                (int)str_replace(' ', '', $entry['tel']),
-                $entry['tel']);
-        $entryHtml = $entryHtml . sprintf('<p>%s</p>', $entry['address']);
-        $entryHtml = $entryHtml . sprintf('<p>%s</p>', $entry['description']);
-        $entryHtml = $entryHtml . $this->printCodes($entry);
+        if($entry['tel2']) {
+            $entryHtml = $entryHtml . sprintf("<p>tel: <a href='tel:+44%d' class='phone-number'>%s</a>, mobile: <a href='tel:+44%d' class='phone-number'>%s</a></p>",
+                    (int)str_replace(' ', '', $entry['tel']),
+                    $entry['tel'],
+                    (int)str_replace(' ', '', $entry['tel2']),
+                    $entry['tel2']);
+        } else {
+            $entryHtml = $entryHtml . sprintf("<p>tel: <a href='tel:+44%d' class='phone-number'>%s</a></p>",
+                    (int)str_replace(' ', '', $entry['tel']),
+                    $entry['tel']);
+        }
+            $entryHtml = $entryHtml . sprintf('<p>%s</p>', $entry['address']);
+            $entryHtml = $entryHtml . sprintf("<div class='description'>%s</div>", $entry['description']);
+            $entryHtml = $entryHtml . $this->printCodes($entry);
+
+
         return $entryHtml;
     }
 
@@ -193,18 +241,32 @@ class RegionTools
      */
     protected function printAdvertEntry($entry, $entryHtml)
     {
-        $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo' alt='%s' src='%s' /></a>",
-                $entry['website'],
-                $entry['name'],
-                $entry['image']);
-        $entryHtml = $entryHtml . sprintf(
-                "<p>%s, tel <a href='tel:+44%d' class='phone-number'>%s</a>, %s.</p>",
-                $entry['name'],
-                (int)str_replace(' ', '', $entry['tel']),
-                $entry['tel'],
-                $entry['address']);
-        $entryHtml = $entryHtml . sprintf('<p>%s</p>', $entry['description']);
-        $entryHtml = $entryHtml . $this->printCodes($entry);
+        if($entry['name'] === 'Garden Café'){
+            $entryHtml = $entryHtml . sprintf("<p><img alt='%s' src='%s' /></a> ",
+                    $entry['name'],
+                    $entry['image']);
+            $entryHtml = $entryHtml . sprintf(
+                    "%s, tel <a href='tel:+44%d' class='phone-number'>%s</a>, %s.</p>",
+                    $entry['name'],
+                    (int)str_replace(' ', '', $entry['tel']),
+                    $entry['tel'],
+                    $entry['address']);
+            $entryHtml = $entryHtml . sprintf("<div class='description'>%s</div>", $entry['description']);
+            $entryHtml = $entryHtml . $this->printCodes($entry);
+        } else {
+            $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo' alt='%s' src='%s' /></a>",
+                    $entry['website'],
+                    $entry['name'],
+                    $entry['image']);
+            $entryHtml = $entryHtml . sprintf(
+                    "<p>%s, tel <a href='tel:+44%d' class='phone-number'>%s</a>, %s.</p>",
+                    $entry['name'],
+                    (int)str_replace(' ', '', $entry['tel']),
+                    $entry['tel'],
+                    $entry['address']);
+            $entryHtml = $entryHtml . sprintf("<div class='description'>%s</div>", $entry['description']);
+            $entryHtml = $entryHtml . $this->printCodes($entry);
+        }
 
         return $entryHtml;
     }
@@ -216,7 +278,18 @@ class RegionTools
      */
     protected function printOnelineEatingEntry($entry, $entryHtml)
     {
-        if($entry['tel2']) {
+       if($entry['name'] === 'Saffron Contemporary Indian Cuisine' || $entry['name'] === 'Tin Tin Restaurant' || $entry['tel2'] === '020 7482 1773') {
+         $entryHtml = $entryHtml . sprintf(
+                 "%s, tel <a href='tel:+44%d' class='phone-number'>%s/<a href='tel:+44%d' class='phone-number'>%s</a>, %s. &nbsp; %s",
+                 $entry['name'],
+                 (int)str_replace(' ', '', $entry['tel']),
+                 $entry['tel'],
+                 (int)str_replace(' ', '', $entry['tel2']),
+                 $entry['tel2'],
+                 $entry['address'],
+                 $this->printCodes($entry)
+             );
+       } elseif($entry['tel2']) {
             $entryHtml = $entryHtml . sprintf(
                     "%s, tel <a href='tel:+44%d' class='phone-number'>%s</a> (office), and <a href='tel:+44%d' class='phone-number'>%s</a> (café), %s. &nbsp; %s",
                     $entry['name'],
@@ -237,14 +310,6 @@ class RegionTools
                     $this->printCodes($entry)
                 );
         }
-//        $entryHtml = $entryHtml . sprintf(
-//                "%s, tel <a href='tel:+44%d' class='phone-number'>%s</a>, %s. &nbsp; %s",
-//                $entry['name'],
-//                (int)str_replace(' ', '', $entry['tel']),
-//                $entry['tel'],
-//                $entry['address'],
-//                $this->printCodes($entry)
-//            );
         return $entryHtml;
     }
 
@@ -276,4 +341,3 @@ class RegionTools
         return $codeHtml . '</div></div>';
     }
 }
-

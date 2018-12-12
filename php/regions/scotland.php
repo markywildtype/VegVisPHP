@@ -34,9 +34,9 @@ $scotlandArray = [
       ['advert' => true,
       'image' => 'images/scotland/damascus_drum.jpg',
       'name' => 'Damascus Drum Café & Bookshop',
-      'description' => 'Website: <a href="www.damascusdrum.co.uk" target="_blank">www.damascusdrum.co.uk</a>, email: <a href="mailto:damascus_drum@yahoo.com">damascus_drum@yahoo.com</a>. See display advert above.',
+      'description' => '<p>Award-winning Café and Bookshop – Delicious Mediterranean dishes, salads, vegi-burgers, chillies, filled bagels and paninis;  large choice of home-made cakes. <a href="www.damascusdrum.co.uk" target="_blank">www.damascusdrum.co.uk</a>, email: <a href="mailto:damascus_drum@yahoo.com">damascus_drum@yahoo.com</a>.</p>',
       'tel' => '07707 856123',
-      'address' => '2 Silver Street, Hawick TD9 0AD',
+      'address' => '2 Silver Street, Hawick (just behind Heart of Hawick Cinema/Theatre) TD9 0AD',
       'codes' => ['R/C', 'a', 'w', 'org', 'F']],
 
       ['multiline' => false,
@@ -112,14 +112,14 @@ $scotlandArray = [
       'name' => 'Hendersons Vegan',
       'tel' => '0131 225 2605',
       'address' => '25 Thistle Street, Edinburgh EH2 1DX',
-      'description' => '<p>We are happy that vegans can be at home here and know that everything we serve is 100% vegan including all of our wines, beers, delicious cakes and Fair Trade coffees but we are not exclusive. Our food packs a tasty punch and if you are simply looking for a great place to eat in a lovely environment, this is the place. Open seven days from noon. Book a table: <a href="https://www.quandoo.co.uk/place/hendersons-vegan-restaurant-23593" target="_blank">https://www.quandoo.co.uk/place/hendersons-vegan-restaurant-23593</a>, email: <a href="mailto:vegan@hendersonsofedinburgh.co.uk">vegan@hendersonsofedinburgh.co.uk</a>, website: <a href="http://www.hendersonsofedinburgh.co.uk" target="_blank">www.hendersonsofedinburgh.co.uk</a>, Facebook: <a href="http://www.facebook.com/hendersonsvegan" target="_blank">@hendersonsvegan</a>, Instagram: <a href="www.instagram.com/hendersonsvegan/" target="_blank">@hendersonsvegan</a>.</p>',
+      'description' => '<p>We are happy that vegans can be at home here and know that everything we serve is 100% vegan including all of our wines, beers, delicious cakes and Fair Trade coffees but we are not exclusive. Our food packs a tasty punch and if you are simply looking for a great place to eat in a lovely environment, this is the place. Open seven days from noon. Book a table at <a href="https://www.quandoo.co.uk/place/hendersons-vegan-restaurant-23593" target="_blank">Quandoo</a>, email: <a href="mailto:vegan@hendersonsofedinburgh.co.uk">vegan@hendersonsofedinburgh.co.uk</a>, website: <a href="http://www.hendersonsofedinburgh.co.uk" target="_blank">www.hendersonsofedinburgh.co.uk</a>, Facebook: <a href="http://www.facebook.com/hendersonsvegan" target="_blank">@hendersonsvegan</a>, Instagram: <a href="www.instagram.com/hendersonsvegan/" target="_blank">@hendersonsvegan</a>.</p>',
       'codes' => ['R', 'L', 'd', 'w', 'org', 'F']],
 
       ['multiline' => true,
       'name' => 'Hendersons Salad Table Restaurant',
       'tel' => '0131 225 2131',
       'address' => '94 Hanover Street, Edinburgh EH2 1DR',
-      'description' => '<p>Freshly delivered organic vegetables, fruit, pulses and grains are peeled, soaked, steamed and sautéed to create over a dozen fresh salads, hot dishes and desserts, ready for our busy day that begins at 8.30am every morning til late (10.30am-4pm on Sundays). Book a table: <a href="https://www.quandoo.co.uk/place/hendersons-salad-table-restaurant-23596" target="_blank">https://www.quandoo.co.uk/place/hendersons-salad-table-restaurant-23596</a>, email: <a href="mailto:mail@hendersonsofedinburgh.co.uk">mail@hendersonsofedinburgh.co.uk</a>, website: <a href="http://www.hendersonsofedinburgh.co.uk" target="_blank">www.hendersonsofedinburgh.co.uk</a>, Instagram: <a href="http://www.instagram.com/hendersonsofedi/" target="_blank">@hendersonsofedi</a>.</p>',
+      'description' => '<p>Freshly delivered organic vegetables, fruit, pulses and grains are peeled, soaked, steamed and sautéed to create over a dozen fresh salads, hot dishes and desserts, ready for our busy day that begins at 8.30am every morning til late (10.30am-4pm on Sundays). Book a table at <a href="https://www.quandoo.co.uk/place/hendersons-salad-table-restaurant-23596" target="_blank">Quandoo</a>, email: <a href="mailto:mail@hendersonsofedinburgh.co.uk">mail@hendersonsofedinburgh.co.uk</a>, website: <a href="http://www.hendersonsofedinburgh.co.uk" target="_blank">www.hendersonsofedinburgh.co.uk</a>, Instagram: <a href="http://www.instagram.com/hendersonsofedi/" target="_blank">@hendersonsofedi</a>.</p>',
       'codes' => ['R', 'L', 'c', 'w', 'org', 'F']],
 
       ['multiline' => true,
@@ -237,7 +237,7 @@ $scotlandArray = [
       'image' => 'images/scotland/the_old_croft_house.jpg',
       'description' => "<p>Come for a relaxing stay in our beautiful 19th-century croft house. We aim to provide a B&B experience that is a bit special, with stunning views, breakfasts that are truly indulgent and great hosts, who will really look after you.</p>
       <p>Alternatively, tuck yourself away in our cosy cabin, sleeps 2. Just 4 miles away from the Island Capital, with its restaurants and bars, but remote enough to enjoy the peace and tranquillity of Skye. Created with Love, there is all you need for a get-away. We provide a breakfast pack for your first night, which includes fresh coffee, milk, juice, eggs from our hens, butter and homemade bread. You will find a microwave, toaster and kettle to make light meals throughout your stay.</p>",
-      'codes' => ['PH', 'CatB', 'V', 'Ve', 'NS', 'CN', 'Acc2+child and self-catering']]
+      'codes' => ['PH', 'CatB', 'V', 'Ve', 'NS', 'CN', 'Acc2+SC']]
     ],
 
     'Eating' => [

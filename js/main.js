@@ -104,7 +104,7 @@ const regionButtonClicked = function() {
   const scotlandDiv = document.getElementById('scotland');
   const walesDiv = document.getElementById('wales');
 
-  const regionDivs = [
+  let regionDivs = [
       emDiv,
       londonDiv,
       southEastDiv,
@@ -118,7 +118,10 @@ const regionButtonClicked = function() {
       walesDiv
   ];
 
-  regionDivs.forEach(function(regionDiv) {
+  console.log(londonDiv.id);
+  console.log(this.name);
+
+    regionDivs.forEach(function(regionDiv) {
       if(regionDiv.id !== this.name) {
           regionDiv.hidden = true;
       } else {

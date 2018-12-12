@@ -188,16 +188,60 @@ require('php/main.php');
 
       <div id="region-content" hidden>
 
-        <div id="eastmidlands">
-            <?php $region = new RegionTools($emArray, 'East Midlands', 'eastmidlands');
-            echo $region->printRegion() ?>
-        </div>
+          <div id="london">
+              <?php $region = new RegionTools($lonArray, 'London and Middlesex', 'london');
+              echo $region->printRegion() ?>
+          </div>
 
-      <div id="scotland">
-          <?php $region = new RegionTools($scotlandArray, 'Scotland', 'scotland');
+          <div id="thamesandchilterns">
+              <?php $region = new RegionTools($tcArray, 'Thames and Chilterns', 'thamesandchilterns');
+              echo $region->printRegion() ?>
+          </div>
+
+          <div id="southeast">
+              <?php $region = new RegionTools($seArray, 'South and South East England', 'southeast');
           echo $region->printRegion() ?>
-      </div>
+          </div>
 
+          <div id="southwest">
+              <?php $region = new RegionTools($swArray, 'South West England', 'southwest');
+          echo $region->printRegion() ?>
+          </div>
+
+          <div id="eastanglia">
+              <?php $region = new RegionTools($eaArray, 'East Anglia', 'eastanglia');
+          echo $region->printRegion() ?>
+          </div>
+
+          <div id="eastmidlands">
+              <?php $region = new RegionTools($emArray, 'East Midlands', 'eastmidlands');
+              echo $region->printRegion() ?>
+          </div>
+
+          <div id="heartofengland">
+              <?php $region = new RegionTools($heArray, 'Heart of England', 'heartofengland');
+              echo $region->printRegion() ?>
+          </div>
+
+          <div id="northeast">
+              <?php $region = new RegionTools($neArray, 'North East England', 'northeast');
+          echo $region->printRegion() ?>
+          </div>
+
+          <div id="northwest">
+              <?php $region = new RegionTools($nwArray, 'North West England', 'northwest');
+          echo $region->printRegion() ?>
+          </div>
+
+          <div id="scotland">
+              <?php $region = new RegionTools($scotlandArray, 'Scotland', 'scotland');
+          echo $region->printRegion() ?>
+          </div>
+
+          <div id="wales">
+              <?php $region = new RegionTools($walesArray, 'Wales', 'wales');
+              echo $region->printRegion() ?>
+          </div>
 
       </div>
 
