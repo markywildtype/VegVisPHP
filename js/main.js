@@ -49,9 +49,6 @@ const app = function() {
   contactButtons[0].addEventListener('click', contactButtonClicked);
   contactButtons[1].addEventListener('click', contactLinkClicked);
 
-  const contactSubmitButton = document.getElementById('submit-button');
-  contactSubmitButton.addEventListener('click', contactSubmitButtonClicked);
-
   let submitButtonClicked = false;
 
   const infoButtons = document.querySelectorAll('.info-button');
@@ -118,9 +115,6 @@ const regionButtonClicked = function() {
       walesDiv
   ];
 
-  console.log(londonDiv.id);
-  console.log(this.name);
-
     regionDivs.forEach(function(regionDiv) {
       if(regionDiv.id !== this.name) {
           regionDiv.hidden = true;
@@ -135,16 +129,25 @@ const regionButtonClicked = function() {
 let clicked = false;
 
 const infoButtonClicked = function() {
+
     const infoButtons = document.querySelectorAll('.info-button');
-    infoButtons.forEach(function(infoButton) {
-        if(!clicked) {
-            infoButton.src = 'images/info-clicked.png';
-            clicked = true;
-        } else {
-            infoButton.src = 'images/info.png';
-            clicked = false;
-        }
-    });
+
+    console.log(clicked);
+    console.log();
+    console.log();
+
+    infoButtons.forEach(function(infoButton){
+      if(infoButton.id === this.id) {
+          if(!clicked) {
+              infoButton.src = 'images/info-clicked.png';
+              clicked = true;
+          } else {
+              infoButton.src = 'images/info.png';
+              clicked = false;
+          }
+      }
+
+    }.bind(this));
 }
 
 
@@ -219,7 +222,6 @@ const selectorButtonClicked = function() {
       }
       for(let accomSubregionHeading of accomSubregionHeadings) {
         accomSubregionHeading.hidden = true;
-        // console.log(accomSubregionHeading.hidden);
       }
       hiddenAccomHeading.hidden = true;
       hiddenEatingHeading.hidden = false;
@@ -249,30 +251,5 @@ const contactLinkClicked = function() {
   const homepageContent = document.getElementById('homepage-content');
   homepageContent.style.display = 'none';
 }
-
-const contactSubmitButtonClicked = function() {
-  if (checkRequiredFields()) {
-    alert("Thanks for getting in touch - we'll get back to you soon!");
-  }
-}
-
-const checkRequiredFields = function() {
-  let inputsArray = []
-
-  inputsArray.push(document.getElementById('Full_Name').value);
-  inputsArray.push(document.getElementById('Email_Address').value);
-  inputsArray.push(document.getElementById('Your_Message').value);
-
-  let allFieldsFilled = false;
-
-  if(inputsArray.includes("")) {
-    allFieldsFilled = false;
-  } else {
-    allFieldsFilled = true;
-  }
-
-  return allFieldsFilled;
-}
-
 
 document.addEventListener('DOMContentLoaded', app);

@@ -12,6 +12,9 @@ if (isset($_POST['submit'])) {
   $headers = "From: {$mailFrom}";
   $txt = "Name: {$name}\nPhone: {$phone}\n\nMessage:\n\n{$message}";
 
+  // Sleep for modal:
+  sleep(3);
+
   mail($mailTo, $subject, $txt, $headers);
   header("Location: ../index.php?mailsend");
 }

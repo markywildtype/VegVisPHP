@@ -37,6 +37,37 @@ const modalApp = function() {
       }
     });
 
-  }
+    // Contact Submit button modal
+    const contactSubmitButton = document.getElementById('submit-button');
+    contactSubmitButton.addEventListener('click', contactSubmitButtonClicked);
 
-  document.addEventListener('DOMContentLoaded', modalApp);
+}
+
+const contactSubmitButtonClicked = function() {
+    if (checkRequiredFields()) {
+        // alert("Thanks for getting in touch - we'll get back to you soon!");
+        const submitButtonModal = document.querySelector('#submit-modal');
+
+        submitButtonModal.style.display = "block";
+    }
+}
+
+const checkRequiredFields = function() {
+    let inputsArray = []
+
+    inputsArray.push(document.getElementById('Full_Name').value);
+    inputsArray.push(document.getElementById('Email_Address').value);
+    inputsArray.push(document.getElementById('Your_Message').value);
+
+    let allFieldsFilled = false;
+
+    if(inputsArray.includes("")) {
+        allFieldsFilled = false;
+    } else {
+        allFieldsFilled = true;
+    }
+
+    return allFieldsFilled;
+}
+
+document.addEventListener('DOMContentLoaded', modalApp);

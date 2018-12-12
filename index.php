@@ -86,7 +86,6 @@ require('php/main.php');
           </div>
         </li>
 
-
         <li class="nav-item">
           <a class="nav-link" name="scotland" id="sc-button" href="#">Scotland</a>
         </li>
@@ -95,19 +94,11 @@ require('php/main.php');
           <a class="nav-link" name="wales" id="wa-button" href="#">Wales</a>
         </li>
 
-        <!-- <li class="nav-item">
-        <a class="nav-link" href="@Url.Action("Offers", "/VegVis")">Offers</a>
-      </li> -->
-
       <li class="nav-item">
         <a class="nav-link contact-button" name="contact" href="#">Contact</a>
       </li>
     </ul>
 
-    <!-- <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form> -->
 </div>
 
 </nav>
@@ -184,7 +175,16 @@ require('php/main.php');
             </tr>
           </tbody></table>
         </form>
-      </div>
+
+        <div id="submit-modal">
+            <div id="submit-modal-content">
+                <h1>Thanks for your message</h1>
+                <h2>We'll be in touch soon!</h2>
+            </div>
+        </div>
+
+
+    </div>
 
       <div id="region-content" hidden>
 

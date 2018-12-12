@@ -43,9 +43,9 @@ class RegionTools
    protected function printRegionHeader()
    {
        $headerHtml = sprintf(
-               "<h1>%s&nbsp;<img class='info-button' name='%s' src='images/info.png' hidden /></h1><div class='subregion-links'>",
+               "<h1>%s&nbsp;<img class='info-button' id='%s' src='images/info.png' hidden /></h1><div class='subregion-links'>",
                 $this->regionName,
-                $this->regionName
+                $this->regionIdentifier
            );
 
               foreach (Regions::$allRegions[$this->regionName]['subregions'] as $subRegion) {
