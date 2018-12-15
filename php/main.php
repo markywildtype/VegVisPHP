@@ -43,10 +43,38 @@ class RegionTools
    protected function printRegionHeader()
    {
        $headerHtml = sprintf(
-               "<h1>%s&nbsp;<img class='info-button' id='%s' src='images/info.png' hidden /></h1><div class='subregion-links'>",
-                $this->regionName,
-                $this->regionIdentifier
+               "<h1>%s&nbsp;<img class='info-button' id='%s' src='images/info.png' /></h1>",
+               $this->regionName,
+               $this->regionIdentifier
            );
+
+       $headerHtml = $headerHtml . sprintf(
+           "<img class='region-photo' alt='Restaurants Hotels eating out vegetarian and vegan' src='%s' />",
+           Regions::$allRegions[$this->regionName]['image']
+       );
+
+
+//       $headerHtml = sprintf(
+//               "<img class='region-photo' alt='Restaurants Hotels eating out vegetarian and vegan' src='%s' />",
+//               Regions::$allRegions[$this->regionName]['image']
+//           );
+//
+//       $headerHtml = $headerHtml . sprintf(
+//               "<h1>%s&nbsp;<img class='info-button' id='%s' src='images/info.png' /></h1>",
+//                $this->regionName,
+//                $this->regionIdentifier
+//           );
+
+
+
+       $headerHtml = $headerHtml . sprintf(
+               "<div class=description >%s</div>
+                <hr />",
+               Regions::$allRegions[$this->regionName]['introduction']
+           );
+
+
+       $headerHtml = $headerHtml . "<div class='subregion-links'>";
 
               foreach (Regions::$allRegions[$this->regionName]['subregions'] as $subRegion) {
                   $headerHtml = $headerHtml
@@ -56,16 +84,16 @@ class RegionTools
                       . $subRegion
                       . '</button>';
               }
-
-        $headerHtml = $headerHtml . sprintf(
-                "
-                <p></p>
-                <img class='region-photo' alt='Restaurants Hotels eating out vegetarian and vegan' src='%s' />
-                <div class=description >%s</div>
-                <hr />",
-                   Regions::$allRegions[$this->regionName]['image'],
-                   Regions::$allRegions[$this->regionName]['introduction']
-           );
+//
+//        $headerHtml = $headerHtml . sprintf(
+//                "
+//                <p></p>
+//                <img class='region-photo' alt='Restaurants Hotels eating out vegetarian and vegan' src='%s' />
+//                <div class=description >%s</div>
+//                <hr />",
+//                   Regions::$allRegions[$this->regionName]['image'],
+//                   Regions::$allRegions[$this->regionName]['introduction']
+//           );
 
         $headerHtml = $headerHtml . "</div>
           <h2 id='hidden-accommodation-heading' hidden>Accommodation</h2>

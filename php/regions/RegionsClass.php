@@ -8,7 +8,7 @@ class Regions
 <p>Nowadays it is a sign of neglect in even the very best hotels and restaurants if they don't have vegetarian, and quite often also one or more vegan, options on their menu. You can find pretty much anything you might fancy, from organic veggie burgers, a wide variety of delicious salads and traditional British fare to an all-you-can-eat Chinese buffet and a gourmet fine dining extravaganza.</p>
 <p>See the sights of London, such as Trafalgar Square, Tower Bridge and the Tower of London, Buckingham Palace, St James's Park, the London Eye, St Paul's Cathedral, Big Ben and the Houses of Parliament. Visit the London Dungeon, Madame Tussauds, the National Gallery, the Science Museum and many other great museums housing unique treasures. London's acclaimed theatres offer everything from Shakespeare to musicals, drama and comedy, opera and ballet. Whatever you are interested in, you can find it in London!</p>",
             'subregions' => ['Central London', 'East London', 'North London', 'South London', 'West London', 'Middlesex'],
-            'image' => 'images/london/london.jpg'
+            'image' => 'images/london/london.png'
         ],
         'East Midlands' => [
             'introduction' => "<p>Derbyshire's Peak District consists of moors in the north and a central limestone plateau crossed by rivers such as the Wye, which have cut gorges and caves in the rock and produced potholes. In a sheltered valley of the Wye lies Bakewell with its medieval bridge and famous for its Bakewell Tarts, where Jane Austen stayed while working on Pride and Prejudice. Not far away is Chatsworth House, home to the Dukes of Devonshire. Immediately south of the Peak District's highest area, Edale offers good walking country.</p>
@@ -27,7 +27,7 @@ class Regions
       <p>The birthday of Scotland's national poet Robert Burns (1759-96) , of Auld Lang Syne fame, is celebrated each year on 25 January with Burns Night and references to him can be found everywhere, while Sir Walter Scott (1771-1832), whose Ivanhoe is perhaps the best-known of his many novels, is particularly connected with the Borders, where he spent much of his leisure time exploring because of his great interest in the old Border tales and ballads.</p>
       <p>And then there are the distilleries, many of which can be visited, the galleries and museums, the abbeys, the bagpipes, the seals and dolphins ...</p>",
             'subregions' => ['Aberdeenshire and Moray', 'Scottish Borders', 'Dumfries & Galloway', 'Edinburgh', 'Glasgow and Central Scotland', 'Scottish Highlands', 'Western Isles, Mull & Skye'],
-            'image' => 'images/scotland/scotland.jpg'
+            'image' => 'images/scotland/scotland.png'
         ],
         'Wales' => [
             'introduction' => "<p>Modern Wales is famed for its beautiful scenery, world-renowned male voice choirs, history of coal mining and the resilience of its native language – Welsh is still widely spoken and many (if not all) road and other signs are in both Welsh and English.</p>

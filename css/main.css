@@ -32,7 +32,7 @@ hr {
     width: 100%;
     max-width: 1000px;
     margin: auto;
-    font-family: 'Merriweather Sans'
+    font-family: 'Merriweather Sans';
 }
 
 #selector {
@@ -69,10 +69,20 @@ hr {
   font-size: 0.8em;
 }
 
+/*#region-content h1 {*/
+  /*font-family: 'Satisfy';*/
+  /*font-size: 3.5em;*/
+  /*text-align: center;*/
+  /*margin-left: 0.5rem;*/
+  /*text-shadow: 5px 5px 10px black;*/
+/*}*/
+
 #region-content h1 {
-  font-family: 'Satisfy';
-  font-size: 3.5em;
-  margin-left: 0.5rem;
+    font-family: 'Satisfy';
+    font-size: 3.5em;
+    text-align: center;
+    margin-left: 0.5rem;
+    text-shadow: 5px 5px 15px black;
 }
 
 .subregion-links {
@@ -159,6 +169,7 @@ section h4 {
 
 .description {
     font-size: 0.8em;
+    margin-top: 10%;
 }
 
 .accom-photo {
@@ -210,11 +221,17 @@ section h4 {
 
 .region-photo {
     width: 100%;
-    max-width: 311px;
+    max-width: 1050px;
     float: left;
-    margin: 1% 3% 3% 0%;
-
+    margin: -17% 3% -3% 0%;
 }
+
+/*.region-photo {*/
+    /*width: 100%;*/
+    /*max-width: 1050px;*/
+    /*float: left;*/
+    /*margin: -3% 3% -20% 0%;*/
+/*}*/
 
 .code-explanation {
   position: relative;
