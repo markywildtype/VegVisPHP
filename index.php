@@ -249,6 +249,7 @@ require('php/main.php');
         <footer>
           <hr />
           <p>&copy; Annemarie Weitzel 2000 - <?php echo date('Y')?>, All rights reserved.</p>
+            <p>Site design by <a href="mailto:blanfordmark@gmail.com">Mark Blanford</a> &copy; 2018</p>
         </footer>
       </section>
     </div>

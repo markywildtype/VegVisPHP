@@ -73,7 +73,7 @@ $swArray = [
             ['multiline' => false,
                 'name' => 'Potager Garden Café',
                 'tel' => '01326 341258',
-                'address' => 'Cross, Constantine, Falmouth TR11 5RF',
+                'address' => 'High Cross, Constantine, Falmouth TR11 5RF',
                 'codes' => ['C', 'L', 'c', 'w', 'org', 'F']],
 
             ['multiline' => false,
@@ -280,7 +280,7 @@ $swArray = [
                 'codes' => ['C', 'c', 'org', 'F']],
 
             ['multiline' => true,
-                'name' => 'The Garden Café and Next Door',
+                'name' => 'The Garden Café and The Shop next Door',
                 'tel' => '01373 454178',
                 'address' => '16/17 Stony Street, Frome BA11 1BU',
                 'description' => "<p>Organic and natural food café, open seven days  and five evenings a week, with delightful covered outside seating area. The shop next door sells all the produce used in the café plus lots more. We have 3 stars from the Soil Association 'organic served here' accreditation. Website: <a href='http://www.gardencafefrome.co.uk' target='_blank'>www.gardencafefrome.co.uk.</a></p>",
@@ -307,6 +307,7 @@ $swArray = [
             ['advert' => true,
                 'image' => 'images/southwest/the_wheatsheaf.jpg',
                 'name' => 'The Wheatsheaf',
+                'website' => 'www.wheatsheafthornbury.co.uk',
                 'description' => '<p>See display advert above. Website <a href="http://www.wheatsheafthornbury.co.uk" target="_blank">www.wheatsheafthornbury.co.uk</a></p>',
                 'tel' => '01454 412356',
                 'address' => 'Chapel Street, Thornbury, near Bristol BS35 2BJ',

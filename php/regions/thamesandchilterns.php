@@ -127,7 +127,7 @@ $tcArray = [
                 'name' => 'Al-Shami',
                 'tel' => '01865 310066',
                 'address' => '25 Walton Crescent, Oxford OX1 2JG',
-                'description' => "<pLebanese restaurant, <a href='http://www.al-shami.co.uk' target='_blank'>www.al-shami.co.uk</a>. Around 75% of our food is vegetarian and 60% vegan. We are very popular with vegetarians in our community.></p>",
+                'description' => "<p>Lebanese restaurant, <a href='http://www.al-shami.co.uk' target='_blank'>www.al-shami.co.uk</a>. Around 75% of our food is vegetarian and 60% vegan. We are very popular with vegetarians in our community.</p>",
                 'codes' => ['R', 'L', 'a']],
 
             ['multiline' => false,

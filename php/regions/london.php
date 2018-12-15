@@ -154,6 +154,7 @@ $lonArray = [
                 'name' => 'Manna Restaurant',
                 'tel' => '020 7722 8028',
                 'address' => '4 Erskine Road, Primrose Hill, London NW3 3AJ',
+                'website' => 'mannaV.com',
                 'description' => "<p>Vegan, full license 100% vegan. Organic, wholefood, Fairtrade when viable and available, certified organic bakery. <a href='http://mannaV.com' target='_blank'>mannaV.com</a>. Also see display advert above.</p>",
                 'codes' => ['R', 'L', 'd', 'w', 'org', 'F']]
         ]

@@ -46,7 +46,7 @@ $walesArray = [
                 'description' => "<p>An 18 acre estate in a quiet Snowdonia valley. We border a lake within a superb mountain landscape that looks up to the west face of Snowdon.</p>
 <p>Trigonos is a vegetarian events venue also providing B&B with optional lunch and dinner. We have accommodation for up to 32 people.</p>
 <p>Excellent food with a wide variety of special diets catered for. Unlicensed but bring your own.</p>
-<p>Full information on accommodation, prices (inc. B&B) and residential courses: <a href='http://www.trigonos.org' target='_blank'></a></p>
+<p>Full information on accommodation, prices (inc. B&B) and residential courses: <a href='http://www.trigonos.org' target='_blank'>www.trigonos.org</a></p>
 <p>Wonderful base for climbing, hill walking, visiting castles, narrow gauge railway and exploring wild Wales.</p>
 <p>Accessible by public transport.</p>",
                 'codes' => ['Venue', 'CatA', 'DA', 'V', 'Ve', 'NS', 'Acc32'],
@@ -148,7 +148,7 @@ For evening meals there are two restaurants and a pub in the village which are a
                 'email' => 'info@tyrosa.com',
                 'website' => 'www.tyrosa.com',
                 'image' => 'images/wales/ty_rosa.jpg',
-                'description' => '<p>A tranquil place to stay just a 15/20 walk between the City centre and Cardiff Bay. With free parking and free wi-fi plus a breakfast you would expect at a five star hotel. A large selection and full vegan menu but also catering for coeliac, gluten- and dairy-free. Come and relax with us in sumptuous rooms and cosy lounge and enjoy a freshly cooked to order breakfast.</p>',
+                'description' => '<p>A tranquil place to stay just a 15/20 minute walk between the City centre and Cardiff Bay. With free parking and free wi-fi plus a breakfast you would expect at a five star hotel. A large selection and full vegan menu but also catering for coeliac, gluten- and dairy-free. Come and relax with us in sumptuous rooms and cosy lounge and enjoy a freshly cooked to order breakfast.</p>',
                 'codes' => ['G', 'CatB', 'Ve', 'pNS', 'Acc20'],
                 'offers' => 'Offers Available',
                 'offer text' => '<p>Stay a minimum of 3 nights and get 10% discount.</p>']

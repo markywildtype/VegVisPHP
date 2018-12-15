@@ -61,7 +61,7 @@ class RegionTools
                 "
                 <p></p>
                 <img class='region-photo' alt='Restaurants Hotels eating out vegetarian and vegan' src='%s' />
-                <div class=description>%s</div>
+                <div class=description >%s</div>
                 <hr />",
                    Regions::$allRegions[$this->regionName]['image'],
                    Regions::$allRegions[$this->regionName]['introduction']
@@ -166,16 +166,29 @@ class RegionTools
         }
 
         if(!$entry['website']){
-          $entryHtml = $entryHtml . sprintf("<img class='accom-photo' alt='%s' src='%s' />",
-          $entry['name'],
-          $entry['image']);
+            $entryHtml = $entryHtml . sprintf("<img class='accom-photo' alt='%s' src='%s' />",
+                        $entry['name'],
+                        $entry['image']);
+
           $entryHtml = $entryHtml . sprintf("<div class='description'>%s</div>", $entry['description']);
           $entryHtml = $entryHtml . $this->printCodes($entry);
         } else {
-          $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo' alt='%s' src='%s' /></a>",
-          $entry['website'],
-          $entry['name'],
-          $entry['image']);
+            if($entry['imagetype'] === 'wide') {
+                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo-wide' alt='%s' src='%s' /></a>",
+                        $entry['website'],
+                        $entry['name'],
+                        $entry['image']);
+            } elseif($entry['imagetype'] === 'tall') {
+                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo-tall' alt='%s' src='%s' /></a>",
+                        $entry['website'],
+                        $entry['name'],
+                        $entry['image']);
+            } else {
+                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo' alt='%s' src='%s' /></a>",
+                        $entry['website'],
+                        $entry['name'],
+                        $entry['image']);
+            }
           $entryHtml = $entryHtml . sprintf("<div class='description'>%s</div>", $entry['description']);
           $entryHtml = $entryHtml . $this->printCodes($entry);
         }
@@ -202,7 +215,6 @@ class RegionTools
         } else {
             $entryHtml = $this->printOnelineEatingEntry($entry, $entryHtml);
         }
-
 
         return $entryHtml . '</article>';
     }
@@ -254,10 +266,16 @@ class RegionTools
             $entryHtml = $entryHtml . sprintf("<div class='description'>%s</div>", $entry['description']);
             $entryHtml = $entryHtml . $this->printCodes($entry);
         } else {
-            $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo' alt='%s' src='%s' /></a>",
-                    $entry['website'],
-                    $entry['name'],
-                    $entry['image']);
+            if($entry['website']){
+                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='advert-photo' alt='%s' src='%s' /></a>",
+                        $entry['website'],
+                        $entry['name'],
+                        $entry['image']);
+            } else {
+                $entryHtml = $entryHtml . sprintf("<img class='advert-photo' alt='%s' src='%s' />",
+                        $entry['name'],
+                        $entry['image']);
+            }
             $entryHtml = $entryHtml . sprintf(
                     "<p>%s, tel <a href='tel:+44%d' class='phone-number'>%s</a>, %s.</p>",
                     $entry['name'],

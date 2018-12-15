@@ -6,7 +6,7 @@ $scotlandArray = [
       ['multiline' => false,
       'name' => 'Chaophraya',
       'tel' => '01224 061180',
-      'address' => '1 Union Terrace, Aberdeen AB110 1NJ',
+      'address' => '1 Union Terrace, Aberdeen AB10 1NJ',
       'codes' => ['R', 'L', 'a']],
 
       ['multiline' => false,
@@ -25,6 +25,7 @@ $scotlandArray = [
       'email' => 'info@hartleap.co.uk',
       'website' => 'www.hartleap.co.uk',
       'image' => 'images/scotland/hartleap.jpg',
+      'imagetype' => 'wide',
       'description' => "<p>Stay in an idyllic rural setting only an hour's drive from Edinburgh. Experience peace and quiet in a 1.5 acre garden; an active break with world-class mountain biking nearby, or walking in the surrounding unspoilt Border hills. Enjoy a delicious dinner using produce from the garden and then relax by a log fire! Comfort and style create a luxurious retreat with just one double room for guests.</p>",
       'codes' => ['PH', 'CatA', 'Ve', 'NS', 'CN', 'Acc2'],
       'offer text' => '<p></p>']
@@ -34,9 +35,10 @@ $scotlandArray = [
       ['advert' => true,
       'image' => 'images/scotland/damascus_drum.jpg',
       'name' => 'Damascus Drum Café & Bookshop',
+      'website' => 'www.damascusdrum.co.uk',
       'description' => '<p>Award-winning Café and Bookshop – Delicious Mediterranean dishes, salads, vegi-burgers, chillies, filled bagels and paninis;  large choice of home-made cakes. <a href="www.damascusdrum.co.uk" target="_blank">www.damascusdrum.co.uk</a>, email: <a href="mailto:damascus_drum@yahoo.com">damascus_drum@yahoo.com</a>.</p>',
       'tel' => '07707 856123',
-      'address' => '2 Silver Street, Hawick (just behind Heart of Hawick Cinema/Theatre) TD9 0AD',
+      'address' => '2 Silver Street (just behind Heart of Hawick Cinema/Theatre), Hawick TD9 0AD',
       'codes' => ['R/C', 'a', 'w', 'org', 'F']],
 
       ['multiline' => false,
@@ -51,10 +53,10 @@ $scotlandArray = [
 
     'Eating' => [
       ['multiline' => false,
-      'name' => 'Abbey Cottage',
+      'name' => 'Abbey Cottage Tearoom',
       'tel' => '01387 850377',
       'address' => '26 Main Street, New Abbey, Dumfries DG2 8BY',
-      'codes' => ['C', 'a', 'org', 'F']],
+      'codes' => ['C', 'a', 'F']],
 
       ['multiline' => false,
       'name' => 'Pink Flamingo Vintage Tea Room',
@@ -72,6 +74,7 @@ $scotlandArray = [
       'email' => 'info@wintercherrybedandbreakfast.co.uk',
       'website' => 'www.wintercherrybedandbreakfast.co.uk',
       'image' => 'images/scotland/winter_cherry.jpg',
+      'imagetype' => 'tall',
       'description' => '<p>You will be given a key to your room on arrival, so that you can come and go as you please. Continental breakfast is served in the kitchen overlooking the back garden and if the weather has been kind, and the season is right, this may include greengages, apples, pears and blackberries from our garden. It will always include delicious artisan bread from Herbies, a renowned Edinburgh delicatessen, a freshly made smoothie, organic home-made Bircher muesli, yoghurt, fruit juices, Scottish cheeses, oatcakes and a selection of cereals and jams, as well as tea and coffee. Please check our website for details and to book. </p>',
       'codes' => ['PH', 'CatB', 'V', 'Ve', 'NS', 'Acc6']]
     ],
@@ -97,7 +100,8 @@ $scotlandArray = [
       'website' => 'www.filmhousecinema.com/cafe-bar',
       'facebook' => 'FilmhouseCafeBar',
       'image' => 'images/scotland/filmhouse.jpg',
-      'description' => '<p>Serving traditional and International food from light snacks and breakfast to full meals, including vegetarian, vegan and gluten-free options, in a relaxed and comfortable environment.</p>',
+      'imagetype' => 'tall',
+      'description' => "<p>Serving traditional and International food from light snacks and breakfast to full meals, including vegetarian, vegan and gluten-free options, in a relaxed and comfortable environment. Facebook: <a href='http://www.facebook.com/FilmhouseCafeBar' target='_blank'>@FilmhouseCafeBar</a></p>",
       'codes' => ['C/Bar', 'L', 'a', 'w', 'org', 'F']
       ],
 
@@ -112,7 +116,7 @@ $scotlandArray = [
       'name' => 'Hendersons Vegan',
       'tel' => '0131 225 2605',
       'address' => '25 Thistle Street, Edinburgh EH2 1DX',
-      'description' => '<p>We are happy that vegans can be at home here and know that everything we serve is 100% vegan including all of our wines, beers, delicious cakes and Fair Trade coffees but we are not exclusive. Our food packs a tasty punch and if you are simply looking for a great place to eat in a lovely environment, this is the place. Open seven days from noon. Book a table at <a href="https://www.quandoo.co.uk/place/hendersons-vegan-restaurant-23593" target="_blank">Quandoo</a>, email: <a href="mailto:vegan@hendersonsofedinburgh.co.uk">vegan@hendersonsofedinburgh.co.uk</a>, website: <a href="http://www.hendersonsofedinburgh.co.uk" target="_blank">www.hendersonsofedinburgh.co.uk</a>, Facebook: <a href="http://www.facebook.com/hendersonsvegan" target="_blank">@hendersonsvegan</a>, Instagram: <a href="www.instagram.com/hendersonsvegan/" target="_blank">@hendersonsvegan</a>.</p>',
+      'description' => "<p>We are happy that vegans can be at home here and know that everything we serve is 100% vegan including all of our wines, beers, delicious cakes and Fair Trade coffees but we are not exclusive. Our food packs a tasty punch and if you are simply looking for a great place to eat in a lovely environment, this is the place. Open seven days from noon. Book a table at <a href='https://www.quandoo.co.uk/place/hendersons-vegan-restaurant-23593' target='_blank'>Quandoo</a>, email: <a href='mailto:vegan@hendersonsofedinburgh.co.uk'>vegan@hendersonsofedinburgh.co.uk</a>, website: <a href='http://www.hendersonsofedinburgh.co.uk' target='_blank'>www.hendersonsofedinburgh.co.uk</a>, Facebook: <a href='http://www.facebook.com/hendersonsvegan' target='_blank'>@hendersonsvegan</a>, Instagram: <a href='http://www.instagram.com/hendersonsvegan/' target='_blank'>@hendersonsvegan</a>.</p>",
       'codes' => ['R', 'L', 'd', 'w', 'org', 'F']],
 
       ['multiline' => true,
@@ -126,7 +130,7 @@ $scotlandArray = [
       'name' => 'Hendersons Shop & Deli',
       'tel' => '0131 225 6694',
       'address' => '92 Hanover Street, Edinburgh EH2 1DR',
-      'description' => "<p>The Shop & Deli offers a large range of Henderson's classic dishes to sit in or take away, whilst also showcasing the best organic produce we can find. Perfectly situated on the corner of Hanover and Thistle Street, the Shop & Deli is the ideal destination to pop into when you are enjoying the centre of Scotland's capital city. Email <a href='mailto:shop@hendersonsofedinburgh.co.uk'>shop@hendersonsofedinburgh.co.uk</a>, website: <a href='http://www.hendersonsofedinburgh.co.uk' target='_blank'>www.hendersonsofedinburgh.co.uk</a>, Instagram: <a href='www.instagram.com/hendersonsofedi/' target='_blank'>@hendersonsofedi</a>.</p>",
+      'description' => "<p>The Shop & Deli offers a large range of Henderson's classic dishes to sit in or take away, whilst also showcasing the best organic produce we can find. Perfectly situated on the corner of Hanover and Thistle Street, the Shop & Deli is the ideal destination to pop into when you are enjoying the centre of Scotland's capital city. Email <a href='mailto:shop@hendersonsofedinburgh.co.uk'>shop@hendersonsofedinburgh.co.uk</a>, website: <a href='http://www.hendersonsofedinburgh.co.uk' target='_blank'>www.hendersonsofedinburgh.co.uk</a>, Instagram: <a href='http://www.instagram.com/hendersonsofedi/' target='_blank'>@hendersonsofedi</a>.</p>",
       'codes' => ['C', 'L', 'c', 'w', 'org', 'F']],
 
       ['multiline' => false,

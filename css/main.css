@@ -162,6 +162,37 @@ section h4 {
 }
 
 .accom-photo {
+    display: block;
+    width: 100%;
+    max-width: 483px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+}
+
+.accom-photo-wide {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+}
+
+.accom-photo-tall {
+    display: block;
+    width: 100%;
+    max-width: 303px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+}
+
+.advert-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     max-width: 483px;
     margin-top: 1%;

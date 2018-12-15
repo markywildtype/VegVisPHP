@@ -45,6 +45,7 @@ $regionArray = [
             ['advert' => true,
                 'image' => '',
                 'name' => '',
+                'website' => '',
                 'description' => '<p></p>',
                 'tel' => '',
                 'address' => '',

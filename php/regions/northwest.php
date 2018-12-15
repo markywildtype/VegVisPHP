@@ -18,13 +18,13 @@ $nwArray = [
                 'email' => 'contact@ambleside-manor.co.uk',
                 'website' => 'www.ambleside-manor.co.uk',
                 'image' => 'images/northwest/ambleside_manor.jpg',
-                'description' => "<p>Our en-suite accommodation in Ambleside offers an ideal base to explore the Lake District, with Lake Windermere only a short walk away. Ambleside Manor caters for couples, walkers and families looking for a relaxing break in the heart of our beautiful National Park</p>
+                'description' => "<p>Our en-suite accommodation in Ambleside offers an ideal base to explore the Lake District, with Lake Windermere only a short walk away. Ambleside Manor caters for couples, walkers and families looking for a relaxing break in the heart of our beautiful National Park.</p>
 <p>Check our availability and book on line, or give us a call on 015394 32062 and we'll be delighted to help you.</p>
 <p>We offer a continental vegetarian buffet including fresh fruits, muesli, cereals, home-baked bread, yoghurt, preserves, including our own honey when available, coffee and teas, followed by a full cooked vegetarian breakfast with a choice of free range eggs cooked to order, baked tomatoes, fried mushrooms, vegan sausage and organic baked beans.</p>
 <p>Vegan and gluten-free options are also available.</p>",
                 'codes' => ['G', 'INS', 'CatA', 'L', 'DA', 'V', 'Ve', 'NS', 'Acc36'],
                 'offers' => 'Offers Available',
-                'offer text' => "<p>Three-night B&B plus 3-course vegetarian dinner at either Zeffirellis or Fellinis on two of the three nights, costing £365 in a standard room, £410 in a superior room and £450 in a suite. Princes valid up to an inclusive 31st March 2019.</p>"],
+                'offer text' => "<p>Three-night B&B plus 3-course vegetarian dinner at either Zeffirellis or Fellinis on two of the three nights, costing £365 in a standard room, £410 in a superior room and £450 in a suite. Princes valid up to and inclusive 31st March 2019.</p>"],
 
             ['name' => 'Nab Cottage',
                 'tel' => '015394 35311',
@@ -65,6 +65,7 @@ $nwArray = [
             ['advert' => true,
                 'image' => 'images/northwest/quince_and_medlar.jpg',
                 'name' => 'Quince & Medlar Restaurant',
+                'website' => 'www.quinceandmedlar.co.uk',
                 'description' => "<p>See display advert above. Website <a href='http://www.quinceandmedlar.co.uk' target='_blank'>www.quinceandmedlar.co.uk</a></p>",
                 'tel' => '01900 823579',
                 'address' => '11-13 Castlegate, Cockermouth CA13 9EU',
@@ -156,6 +157,7 @@ $nwArray = [
             ['advert' => true,
                 'image' => 'images/northwest/the_piazza.jpg',
                 'name' => 'The Piazza Café Bar',
+                'website' => 'www.piazza.org.uk',
                 'description' => "<p>See display advert above. Website: <a href='http://www.piazza.org.uk' target='_blank'>www.piazza.org.uk</a>, email: <a href='mailto:manager.piazza@gmail.com'>manager.piazza@gmail.com</a>.</p>",
                 'tel' => '0151 7073536',
                 'address' => 'Metropolitan Cathedral, Mount Pleasant, Liverpool L3 5TQ',

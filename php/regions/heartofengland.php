@@ -58,7 +58,7 @@ $heArray = [
                 'name' => 'The Pandy Inn',
                 'tel' => '01981 550273',
                 'address' => 'Dorstone, near Hay-on-Wye HR3 6AN',
-                'codes' => ['P', 'L', 'a', 'org']],
+                'codes' => ['P', 'L', 'a', 'org', 'F']],
 
             ['multiline' => false,
                 'name' => 'Café @ All Saints',
@@ -99,7 +99,7 @@ $heArray = [
             ['multiline' => false,
                 'name' => 'The Goodlife Wholefood Restaurant',
                 'tel' => '01743 350455',
-                'address' => '733b+c Barracks Passage, Wyle Cop, Shrewsbury SY1 1XA',
+                'address' => '73b+c Barracks Passage, Wyle Cop, Shrewsbury SY1 1XA',
                 'codes' => ['R/C', 'L', 'c', 'w', 'org', 'F']]
         ]
     ],

@@ -15,7 +15,7 @@ class Codes
     'CN' => 'Car necessary: a car/taxi journey or extended walk is needed from the nearest public transport',
     'SC' => 'Self catering',
     'Acc2' => 'Accommodation for two adults; children travelling with their parents can sometimes be accommodated additionally',
-    'Acc2+SC' => 'Accommodation for two adults + one child',
+    'Acc2+SC' => 'Accommodation for two adults + self catering',
     'Acc3' => 'Accommodation for three adults; children travelling with their parents can sometimes be accommodated additionally',
     'Acc4' => 'Accommodation for four adults; children travelling with their parents can sometimes be accommodated additionally',
     'Acc5' => 'Accommodation for five adults; children travelling with their parents can sometimes be accommodated additionally',
