@@ -252,4 +252,19 @@ const contactLinkClicked = function() {
   homepageContent.style.display = 'none';
 }
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("top-button").style.display = "block";
+    } else {
+        document.getElementById("top-button").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
 document.addEventListener('DOMContentLoaded', app);

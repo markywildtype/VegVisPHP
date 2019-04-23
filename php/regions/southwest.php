@@ -20,7 +20,7 @@ $swArray = [
                 'email' => 'plantedcornwall@gmail.com',
                 'website' => 'www.plantedcornwall.co.uk',
                 'image' => 'images/southwest/planted.jpg',
-                'description' => "<p>Recently renovated vegan self contained studio for two near the centre of St Agnes village. Great for couples or sharers with the option of kingsize/twin beds. Own entrance. Mini kitchen, en-suite shower room and private garden space with table and chairs. Delicious evening meals available by arrangement. Fifteen minutes' walk to Trevaunance Cove.</p>",
+                'description' => "<p>Recently renovated vegan self contained studio for two near the centre of St Agnes village. Great for couples or sharers with the option of kingsize/twin beds. Own entrance. Mini kitchen, en-suite shower room and private garden space with table and chairs. Fifteen minutes' walk to Trevaunance Cove.</p>",
                 'codes' => ['G', 'CatB', 'Vegan', 'pNS', 'CN', 'Acc2']
             ],
 

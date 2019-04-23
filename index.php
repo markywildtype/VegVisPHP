@@ -2,12 +2,16 @@
 require('php/main.php');
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vegetarian and vegan accommodation, guesthouses, B&Bs, cafés, restaurants in the UK, England, Scotland and Wales. London, Middlesex, Derbyshire, Leicestershire, Lincolnshire, Northamptonshire, Nottinghamshire,
+    Aberdeenshire and Moray, Scottish Borders, Dumfries & Galloway, Edinburgh, Glasgow and Central Scotland, Scottish Highlands, Western Isles, Mull & Skye,
+    North Wales, Powys, South Wales, West Wales, Cornwall, Devon, Dorset (West), Somerset, Bath and Bristol, Wiltshire, Cheshire, Cumbria, Isle of Man, Lancashire, Greater Manchester, Merseyside,
+    Dorset (East), Hampshire, Isle of Wight, Kent, Surrey, Sussex, Cambridgeshire, Essex, Norfolk, Suffolk, Northumberland, Tyne & Wear, Yorkshire, Bedfordshire, Berkshire, Hertfordshire, Oxfordshire,
+    Gloucestershire, Herefordshire, Shropshire, Warwickshire, West Midlands, Worcestershire">
   <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -22,14 +26,8 @@ require('php/main.php');
   <script src="php/main.php"></script>
 
   <!-- Contact form scripts -->
-  <script src="js/contactformvalidation.js"></script>
-  <script>
-  required.add('Full_Name','NOT_EMPTY','Full Name');
-  required.add('Email_Address','EMAIL','Email Address');
-  required.add('Your_Message','NOT_EMPTY','Your Message');
-  required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
-</script>
-<link rel="stylesheet" href="css/contactform.css?version=2">
+  <script src="js/captchavalidation.js"></script>
+  <link rel="stylesheet" href="css/contactform.css?version=2">
 <!-- End contact form scripts -->
 
 <link rel="stylesheet" href="css/main.css?version=2">
@@ -37,8 +35,11 @@ require('php/main.php');
 <link rel="stylesheet" href="css/modals.css?version=2">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Markazi+Text|Satisfy|Merriweather+Sans" rel="stylesheet">
+<!--Recaptcha-->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
 <link rel="icon" href="images/vv_logo.png">
-<title>Vegetarian Visitor 2018</title>
+<title>Vegetarian Visitor <?php echo date('Y')?> - A guide to vegetarian and vegan accommodation and eating in the UK</title>
 </head>
 <body>
 
@@ -101,6 +102,20 @@ require('php/main.php');
 
 </div>
 
+<!--      <div id="selector-div" hidden>-->
+<!--          <div class="btn-group btn-group-toggle" id="selector" data-toggle="buttons">-->
+<!--              <label class="btn btn-secondary active" id="all-button">-->
+<!--                  <input type="radio" name="All" id="all-button" autocomplete="off" checked> All-->
+<!--              </label>-->
+<!--              <label class="btn btn-secondary" id="accommodation-button">-->
+<!--                  <input type="radio" name="Accommodation" id="accommodation-button" autocomplete="off"> Accommodation-->
+<!--              </label>-->
+<!--              <label class="btn btn-secondary" id="eating-button">-->
+<!--                  <input type="radio" name="Eating" id="option3" autocomplete="off"> Eating-->
+<!--              </label>-->
+<!--          </div>-->
+<!--      </div>-->
+
 </nav>
 
 <div class="container body-content">
@@ -135,7 +150,7 @@ require('php/main.php');
 
     <div id="contact-content" hidden>
 
-      <form name="contactform" method="post" action="php/contactform.php" onsubmit="return validate.check(this)">
+      <form name="contactform" method="post" action="php/contactform.php" onsubmit="return submitUserForm();">
         <table class="contactform">
           <tbody id="contact-form">
             <tr style="color: rgb(153, 255, 153);">
@@ -163,10 +178,10 @@ require('php/main.php');
                 <textarea class="input-text" name="message" id="Your_Message" maxlength="2000" placeholder="*Message" required></textarea>
               </td>
             </tr>
-            <tr hidden>
-              <td>
-                <input name="antispam" id="AntiSpam" type="text" value="25">
-              </td>
+            <tr>
+                <td>
+                    <div align="center" class="g-recaptcha" data-sitekey="6LfTeXgUAAAAAKDFlzTM2QrxqrZSsKgI_cpftQ0u" data-callback="verifyCaptcha"></div>
+                </td>
             </tr>
             <tr style="color: rgb(153, 255, 153);">
               <td colspan="2" style="text-align: center;">
@@ -244,6 +259,8 @@ require('php/main.php');
           </div>
 
       </div>
+
+      <button onclick="topFunction()" id="top-button" title="Go to top">&#x02191</button>
 
       <section id="footer">
         <footer>

@@ -32,7 +32,6 @@
 .modal .modal-content .close {
     color: white;
     float: right;
-    font-style: 'Merriweather Sans'; !important;
     font-size: 1em; !important;
     font-weight: bold;
     margin-right: 0.5rem;
@@ -47,6 +46,10 @@
 
 .code-explanation {
   cursor: pointer;
+}
+
+body.modal-open {
+    overflow: hidden;
 }
 
 /* Form Submit Modal*/

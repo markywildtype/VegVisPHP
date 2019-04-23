@@ -43,32 +43,19 @@ class RegionTools
    protected function printRegionHeader()
    {
        $headerHtml = sprintf(
-               "<h1>%s&nbsp;<img class='info-button' id='%s' src='images/info.png' /></h1>",
+               "<h1>%s&nbsp;<img class='info-button' id='%s' src='images/info.png' hidden /></h1>",
                $this->regionName,
                $this->regionIdentifier
            );
 
        $headerHtml = $headerHtml . sprintf(
-           "<img class='region-photo' alt='Restaurants Hotels eating out vegetarian and vegan' src='%s' />",
+           "<img class='region-photo' alt='Vegetarian & vegan accommodation, guesthouse, B&B and eating, café, restaurant in %s' src='%s' />",
+           $this->regionName,
            Regions::$allRegions[$this->regionName]['image']
        );
 
-
-//       $headerHtml = sprintf(
-//               "<img class='region-photo' alt='Restaurants Hotels eating out vegetarian and vegan' src='%s' />",
-//               Regions::$allRegions[$this->regionName]['image']
-//           );
-//
-//       $headerHtml = $headerHtml . sprintf(
-//               "<h1>%s&nbsp;<img class='info-button' id='%s' src='images/info.png' /></h1>",
-//                $this->regionName,
-//                $this->regionIdentifier
-//           );
-
-
-
        $headerHtml = $headerHtml . sprintf(
-               "<div class=description >%s</div>
+               "<div class=region-description >%s</div>
                 <hr />",
                Regions::$allRegions[$this->regionName]['introduction']
            );
@@ -84,16 +71,6 @@ class RegionTools
                       . $subRegion
                       . '</button>';
               }
-//
-//        $headerHtml = $headerHtml . sprintf(
-//                "
-//                <p></p>
-//                <img class='region-photo' alt='Restaurants Hotels eating out vegetarian and vegan' src='%s' />
-//                <div class=description >%s</div>
-//                <hr />",
-//                   Regions::$allRegions[$this->regionName]['image'],
-//                   Regions::$allRegions[$this->regionName]['introduction']
-//           );
 
         $headerHtml = $headerHtml . "</div>
           <h2 id='hidden-accommodation-heading' hidden>Accommodation</h2>
@@ -131,7 +108,7 @@ class RegionTools
            $subRegionName);
 
        foreach($listing as $entry) {
-           $accommodationListings = $accommodationListings . $this->printAccommodationEntry($entry);
+           $accommodationListings = $accommodationListings . $this->printAccommodationEntry($entry, null, $subRegionName);
        }
         return $accommodationListings . '</div>';
    }
@@ -145,13 +122,13 @@ class RegionTools
        );
 
        foreach($listing as $entry) {
-           $eatingListings = $eatingListings . $this->printEatingEntry($entry);
+           $eatingListings = $eatingListings . $this->printEatingEntry($entry, $subRegionName);
        }
 
        return $eatingListings . '</div>';
    }
 
-    protected function printAccommodationEntry($entry, $entryHtml = null)
+    protected function printAccommodationEntry($entry, $entryHtml = null, $subRegionName)
     {
         $entryHtml = '<article class="entry">';
         $entryHtml = $entryHtml . sprintf("<h4>%s</h4>", $entry['name']);
@@ -194,27 +171,31 @@ class RegionTools
         }
 
         if(!$entry['website']){
-            $entryHtml = $entryHtml . sprintf("<img class='accom-photo' alt='%s' src='%s' />",
+            $entryHtml = $entryHtml . sprintf("<img class='accom-photo' alt='%s - Vegetarian and vegan accommodation, B&B, Guesthouse in %s' src='%s' />",
                         $entry['name'],
+                        $subRegionName,
                         $entry['image']);
 
           $entryHtml = $entryHtml . sprintf("<div class='description'>%s</div>", $entry['description']);
           $entryHtml = $entryHtml . $this->printCodes($entry);
         } else {
             if($entry['imagetype'] === 'wide') {
-                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo-wide' alt='%s' src='%s' /></a>",
+                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo-wide' alt='%s - Vegetarian and vegan accommodation, B&B, Guesthouse in %s' src='%s' /></a>",
                         $entry['website'],
                         $entry['name'],
+                        $subRegionName,
                         $entry['image']);
             } elseif($entry['imagetype'] === 'tall') {
-                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo-tall' alt='%s' src='%s' /></a>",
+                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo-tall' alt='%s - Vegetarian and vegan accommodation, B&B, Guesthouse in %s' src='%s' /></a>",
                         $entry['website'],
                         $entry['name'],
+                        $subRegionName,
                         $entry['image']);
             } else {
-                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo' alt='%s' src='%s' /></a>",
+                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='accom-photo' alt='%s - Vegetarian and vegan accommodation, B&B, Guesthouse in %s' src='%s' /></a>",
                         $entry['website'],
                         $entry['name'],
+                        $subRegionName,
                         $entry['image']);
             }
           $entryHtml = $entryHtml . sprintf("<div class='description'>%s</div>", $entry['description']);
@@ -231,15 +212,15 @@ class RegionTools
         return $entryHtml . '</article>';
     }
 
-    protected function printEatingEntry($entry)
+    protected function printEatingEntry($entry, $subRegionName)
     {
         $entryHtml = '<article class="entry">';
         if ($entry['multiline']) {
             $entryHtml = $this->printMultilineEatingEntry($entry, $entryHtml);
         } elseif($entry['advert']) {
-            $entryHtml = $this->printAdvertEntry($entry, $entryHtml);
+            $entryHtml = $this->printAdvertEntry($entry, $entryHtml, $subRegionName);
         } elseif($entry['special']) {
-            $entryHtml = $this->printAccommodationEntry($entry, $entryHtml);
+            $entryHtml = $this->printAccommodationEntry($entry, $entryHtml, $subRegionName);
         } else {
             $entryHtml = $this->printOnelineEatingEntry($entry, $entryHtml);
         }
@@ -277,13 +258,15 @@ class RegionTools
     /**
      * @param $entry
      * @param $entryHtml
+     * @param $subRegionName
      * @return string
      */
-    protected function printAdvertEntry($entry, $entryHtml)
+    protected function printAdvertEntry($entry, $entryHtml, $subRegionName)
     {
         if($entry['name'] === 'Garden Café'){
-            $entryHtml = $entryHtml . sprintf("<p><img alt='%s' src='%s' /></a> ",
+            $entryHtml = $entryHtml . sprintf("<p><img alt='%s - Vegetarian and vegan eating, restaurant, café in %s' src='%s' /></a>",
                     $entry['name'],
+                    $subRegionName,
                     $entry['image']);
             $entryHtml = $entryHtml . sprintf(
                     "%s, tel <a href='tel:+44%d' class='phone-number'>%s</a>, %s.</p>",
@@ -295,13 +278,15 @@ class RegionTools
             $entryHtml = $entryHtml . $this->printCodes($entry);
         } else {
             if($entry['website']){
-                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='advert-photo' alt='%s' src='%s' /></a>",
+                $entryHtml = $entryHtml . sprintf("<a href='http://%s' target='_blank'><img class='advert-photo' alt='%s - Vegetarian and vegan eating, restaurant, café in %s' src='%s' /></a>",
                         $entry['website'],
                         $entry['name'],
+                        $subRegionName,
                         $entry['image']);
             } else {
-                $entryHtml = $entryHtml . sprintf("<img class='advert-photo' alt='%s' src='%s' />",
+                $entryHtml = $entryHtml . sprintf("<img class='advert-photo' alt='%s - Vegetarian and vegan eating, restaurant, café in %s' src='%s' />",
                         $entry['name'],
+                        $subRegionName,
                         $entry['image']);
             }
             $entryHtml = $entryHtml . sprintf(

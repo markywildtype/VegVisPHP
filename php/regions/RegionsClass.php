@@ -16,7 +16,7 @@ class Regions
       <p>The ancient part of the historic city of Lincoln is situated on a hill rising 200 feet above the River Witham. It had been settled by Celts, Romans, Anglo-Saxons and Danes before William the Conqueror founded Lincoln Castle in 1068. By 1092 a Cathedral had also been built, which was devastated by an earthquake in 1185. Rebuilding began a few years later and resulted in the glorious triple-towered Cathedral, the third largest in England, that has endured to this day.</p>
       <p>For many people Nottingham stands for only one thing - the legend of Robin Hood and his Merrie Men in Sherwood Forest. The forest still exists, although it is very different from that in the evil sheriff's time. Southwell Minster can be seen for miles around and is well worth a visit, for the beauty of the foliage carvings in the chapter house if nothing else. Southwell is also where the first Bramley apple tree began life in about 1805 as a pip planted in a pot by a Mr Bramley.</p>",
             'subregions' => ['Derbyshire', 'Leicestershire', 'Lincolnshire', 'Northamptonshire', 'Nottinghamshire'],
-            'image' => 'images/eastmidlands/eastmidlands.jpg'
+            'image' => 'images/eastmidlands/eastmidlands.png'
         ],
         'Scotland' => [
             'introduction' => "<p>With over 11,000 km of coastline, hundreds of islands, majestic mountains in the Highlands, delightful canals, rivers and lochs, the sweeping valleys and heather-clad moorlands of the Borders, and a wealth of wildlife, the beauty of Scotland will take your breath away. Enjoy great walks along the shores of Loch Lomond; do some climbing in the Cairngorms, the Grampian mountains, where you will find Ben Nevis, the highest peak in Britain, or the Arrochar Alps; stroll along the pristine rivers and lochs, full of wild salmon and trout.</p>
@@ -37,7 +37,7 @@ class Regions
       <p>Wales has more to offer than just history and nature however; there are plenty of noteworthy cities and towns to visit. Cardiff, the capital of Wales, has industry as well as history, Hay-on-Wye in Powys is a famous book town with an annual literary festival, Caerphilly in Mid-Glamorgan is famous for its cheese and castle and Llandudno in Conwy is a popular seaside resort.</p>
       <p>Wales, land of mountains and castles, Celts, bards and Druidic lore - there is so much to discover, explore and enjoy!</p>",
             'subregions' => ['North Wales', 'Powys', 'South Wales', 'West Wales'],
-            'image' => 'images/wales/wales.jpg'
+            'image' => 'images/wales/wales.png'
         ],
         'South West England' => [
             'introduction' => "<p>The West Country is steeped in history with stories of smuggling, piracy, intrigue and magic.</p>
@@ -45,7 +45,7 @@ class Regions
       <p>According to legend Joseph of Arimathea came to Glastonbury in Somerset, buried the Holy Grail on the slopes of its Tor and built a wattle and daub church on the site where the ruins of the Abbey can now be found. According to a later legend King Arthur and his queen were re-buried in this large abbey.</p>
       <p>Dorset boasts the world-famous Jurassic Coast, the city of Bath with its Roman hot springs is well worth a visit, as is the amazing Eden Project in Cornwall.  There are fantastic beaches, picturesque villages and many other things to enjoy in the West Country. And don't forget to try scrumpy (a rough dry cider), Cornish pasties and cream teas!</p>",
             'subregions' => ['Cornwall', 'Devon', 'Dorset (West)', 'Somerset, Bath and Bristol', 'Wiltshire'],
-            'image' => 'images/southwest/southwest.jpg'
+            'image' => 'images/southwest/southwest.png'
         ],
         'North West England' => [
             'introduction' => "<p>Chester was an important military city for the Romans, which they called Deva. The medieval city walls follow the line of the Roman wall and incorporate parts of it. In Anglo-Saxon times the city had its own mint and in the 13th century the port became prominent. The nave of the cathedral, on the site of a Norman abbey, was begun in the 14th century but not finished until the 16th. Good examples of both medieval and Victorian black-and-white buildings can also be found. The county is relatively rural, but in the north east Altrincham, where the UK Vegetarian Society is based, and Hale are suburbs of Manchester.</p>
@@ -55,7 +55,7 @@ class Regions
 <p>The industrial and commercial centre of Manchester is mainly known for its football teams Manchester United and Manchester City, but it also has a largely 15th-century cathedral, a number of galleries, museums and libraries, and is home to the Hallé orchestra.</p>
 Liverpool is the second largest seaport in Britain, with miles of docks along its waterfront. It has a huge Anglican cathedral, begun in 1904 and completed in 1978, and a modernist Roman Catholic cathedral that was opened in 1968. But apart from its football team, what Liverpool is best known for is its music scene. Who has not heard of the Beatles?</p>",
             'subregions' => ['Cheshire', 'Cumbria', 'Isle of Man', 'Lancashire, Greater Manchester, Merseyside'],
-            'image' => 'images/northwest/northwest.jpg'
+            'image' => 'images/northwest/northwest.png'
         ],
         'South and South East England' => [
             'introduction' => "<p>Have a meal in Brighton, 'the vegetarian capital' of England, full of vegetarian and vegetarian-friendly cafés and restaurants.</p>
@@ -63,7 +63,7 @@ Liverpool is the second largest seaport in Britain, with miles of docks along it
 <p>Laze on the beaches and have a look at the attractions on the Victorian piers. Pop over to the Isle of Wight and visit Carisbrooke Castle, were King Charles I was imprisoned before his execution.</p>
 <p>The glorious rolling landscapes of the Downs and the Weald are an invitation to any walker, while stately homes, ancient abbeys and churches, and signs of Iron Age and Roman occupation can be found everywhere.</p>",
             'subregions' => ['Dorset (East)', 'Hampshire', 'Isle of Wight', 'Kent', 'Surrey', 'Sussex'],
-            'image' => 'images/southeast/southeast.jpg'
+            'image' => 'images/southeast/southeast.png'
         ],
         'East Anglia' => [
             'introduction' => '<p>Cambridge is one of the most beautiful towns in Britain, if not in Europe. There was a Celtic settlement here before the Roman Conquest on what is known as Castle Hill. At the foot of the hill was a ford across the River Cam and the successive Roman developments probably included the building of a bridge at that point - the only one to have given its name to an English county. The 13th century saw the founding of the first college, after groups of scholars migrated from Oxford. Student hostels in the care of one the masters were established and these were the origins of the college system that still exists today. The Fitzwilliam Museum houses a magnificent collection of works of art of all kinds and the Botanical Gardens in Bateman Street date from 1846. Much punting is done on the river in summer, while the Gog Magog (or Grogingog) \'Hills\' just outside the town, on the crest of which stands the Iron Age fort of Wandlebury, are popular with walkers.</p>
@@ -71,7 +71,7 @@ Liverpool is the second largest seaport in Britain, with miles of docks along it
 <p>Along the banks of the Suffolk border river John Constable painted his great series of Stour pictures and many of the churches, lanes, meadows, mills and farms he depicted can still be seen today. Thomas Gainsborough\'s birthplace can be found at Sudbury, further along the same river. A visit to the beautiful small town of Lavenham, with its great church and superb timber-framed Guildhall is also well worthwhile.</p>
 <p>Moving north to Norfolk, a visit to Norwich, with its Norman Castle and Cathedral and many other remarkable features, is a must. But to most people Norfolk means the Broads, vast expanses of water that resulted from centuries of peat working, now explored by many on boating holidays. Also don\'t forget King\'s Lynn, while good beaches can be found along the coast.</p>',
             'subregions' => ['Cambridgeshire', 'Essex', 'Norfolk', 'Suffolk'],
-            'image' => 'images/eastanglia/eastanglia.jpg'
+            'image' => 'images/eastanglia/eastanglia.png'
         ],
         'North East England' => [
             'introduction' => "<p>From Roman times onwards Northumberland was England's frontier county, with the raiding, pillaging and murder that for centuries had ravaged the county as far south as the Tyne valley only ending with the Act of Union between England and Scotland in 1707, although even after that for some time raiding was not unknown. Powerful families lived in castles, lesser folk in peel towers. It is hill country, with the Cheviots perhaps best known, and there are many rivers running in narrow dales. Between Gilsland and Housesteads is one of the best remaining stretches of Hadrian's Wall and Roman remains can be found everywhere. There are good beaches along the lovely coast.</p>
@@ -79,14 +79,14 @@ Liverpool is the second largest seaport in Britain, with miles of docks along it
 <p>Yorkshire is the largest county in England and has everything a visitor can wish for - beaches, moors, dales, castles, ruined abbeys and priories, Wensleydale cheese, pretty market towns, moorland villages, country houses and literary connections. Haworth, where the Brontë sisters lived, is outranked only by Stratford-upon-Avon as a literary shrine.</p>
 <p>The walled city of York was the military capital of Roman Britain, which they called Eboracum. It was burned down by the Danes in 867 AD and they renamed it Jorvic, from which the current name derives. Nothing is left of Anglo-Saxon and Danish York, but the Normans found a thriving little trading centre there. They too burnt it, in 1069, and then rebuilt the walls. It is still possible to walk along top of the walls, an experience not to be missed. Medieval York is everywhere, with The Shambles and Stonegate some of the best preserved examples. But the dominant feature of York is its magnificent Minster, built between 1220 and 1470 and  at least the fourth successive church on this site.</p>",
             'subregions' => ['Northumberland', 'Tyne & Wear', 'Yorkshire'],
-            'image' => 'images/northeast/northeast.jpg'
+            'image' => 'images/northeast/northeast.png'
         ],
         'Thames and Chilterns' => [
             'introduction' => "<p>Oxford, city of the 'dreaming spires', has the second oldest university in Europe (after the Sorbonne in Paris) with organised teaching that can be traced back to the 12th century. The city's history and architecture are amazing. The Ashmolean Museum houses a vast collection of antiquities from numerous countries as well as many Old Master paintings and drawings. The Bodleian Library is one of the oldest in the world, housing many rare manuscripts.</p>
 <p>Reading has always been an important centre, as it is strategically situated on the Thames. Jane Austen went to school there and, more notoriously, Oscar Wilde was imprisoned in Reading Gaol. Windsor Castle, one of the Queen's residences, is the largest inhabited castle in the world and many parts of it are open to the public. Windsor Great Park, a huge area of wooded park with some magnificent gardens, is in effect a vast nature reserve where all kinds of animals can be found. Also in Windsor is Legoland, so you don't have to go to Denmark for a fun-filled day for all the family.</p>
 <p>The countryside in Bedfordshire and Hertfordshire is quiet and gentle. Ampthill is a well-preserved little town of historical interest, with many picturesque cottages and gracious Georgian houses, while Dunstable is a modern town that still retains a few ancient and Victorian buildings. The ancient city of St Albans is a fascinating place to visit, with a wealth of features dating from Roman times to the present day. It was one of the largest and most important Roman towns ever founded in England.</p>",
             'subregions' => ['Bedfordshire', 'Berkshire', 'Hertfordshire', 'Oxfordshire'],
-            'image' => 'images/thamesandchilterns/thamesandchilterns.jpg'
+            'image' => 'images/thamesandchilterns/thamesandchilterns.png'
         ],
         'Heart of England' => [
             'introduction' => "<p>Apart from the West Midlands, the Heart of England has a rural character. The Forest of Dean in Gloucestershire has miles of woodland paths and and abounds in wildlife, while further west are the low hills of the Cotswolds with its picturesque villages and typical stone houses. The city of Gloucester has a magnificent cathedral, and in the spa town of Cheltenham a wealth of Regency houses border elegant squares, crescents and terraces.</p>
@@ -95,7 +95,7 @@ Liverpool is the second largest seaport in Britain, with miles of docks along it
 <p>Warwickshire is Shakespeare country. Stratford-upon-Avon was his birthplace and he lived there for a considerable part of his life. Once he had achieved fame in London he was able to buy New Place, regarded as the finest house in Stratford. His tomb can be found in Holy Trinity Church and there are many buildings in Stratford with a direct association with Shakespeare, not least his wife's home Anne Hathaway's Cottage. The town of Warwick has a magnificent castle and some medieval houses, although a fire that broke out in the centre of the town in 1694 destroyed more than 250 buildings.</p>
 <p>West Midlands is a small 'new' county created out of parts of Worcestershire, Staffordshire and Warwickshire. Apart from Coventry, which was devastatingly bombed in World War II and is famous for its modern cathedral, it mainly consists of Britain's second largest city Birmingham. This is an industrial city, but it also has a thriving cultural life, more miles of canals than Venice, the famous Balti triangle where every variety of Indian curry can be found, and the Bull Ring shopping centre. The headquarters of the UK Vegan Society are also in Birmingham.</p>",
             'subregions' => ['Gloucestershire', 'Herefordshire', 'Shropshire', 'Warwickshire', 'West Midlands', 'Worcestershire'],
-            'image' => 'images/heartofengland/heartofengland.jpg'
+            'image' => 'images/heartofengland/heartofengland.png'
         ]
     ];
 }

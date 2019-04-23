@@ -10,6 +10,8 @@ const modalApp = function() {
 
   let currentModal;
 
+  let body = document.body;
+
   // When the user clicks the button, open the modal
   codeButtons.forEach(function(codeButton){
     codeButton.addEventListener('click', function(){
@@ -17,6 +19,7 @@ const modalApp = function() {
         if (codeButton.name === modal.id){
           currentModal = modal;
           modal.style.display = "block";
+          body.classList.add('modal-open');
         }
       });
     });
@@ -27,13 +30,15 @@ const modalApp = function() {
       closeButton.addEventListener('click', function() {
         currentModal.style.display = "none";
         currentModal = null;
+        body.classList.remove('modal-open');
       });
     });
 
     // When the user clicks anywhere outside of the modal, close it
     window.addEventListener('click', function() {
-      if (event.target == currentModal) {
+      if (event.target === currentModal) {
         currentModal.style.display = "none";
+        body.classList.remove('modal-open');
       }
     });
 
@@ -41,33 +46,34 @@ const modalApp = function() {
     const contactSubmitButton = document.getElementById('submit-button');
     contactSubmitButton.addEventListener('click', contactSubmitButtonClicked);
 
-}
+};
 
 const contactSubmitButtonClicked = function() {
     if (checkRequiredFields()) {
-        // alert("Thanks for getting in touch - we'll get back to you soon!");
         const submitButtonModal = document.querySelector('#submit-modal');
 
         submitButtonModal.style.display = "block";
     }
-}
+};
 
 const checkRequiredFields = function() {
-    let inputsArray = []
+    let inputsArray = [];
 
     inputsArray.push(document.getElementById('Full_Name').value);
     inputsArray.push(document.getElementById('Email_Address').value);
     inputsArray.push(document.getElementById('Your_Message').value);
 
-    let allFieldsFilled = false;
+    return !inputsArray.includes("");
 
-    if(inputsArray.includes("")) {
-        allFieldsFilled = false;
-    } else {
-        allFieldsFilled = true;
-    }
-
-    return allFieldsFilled;
-}
+    // let allFieldsFilled = false;
+    //
+    // if(inputsArray.includes("")) {
+    //     allFieldsFilled = false;
+    // } else {
+    //     allFieldsFilled = true;
+    // }
+    //
+    // return allFieldsFilled;
+};
 
 document.addEventListener('DOMContentLoaded', modalApp);

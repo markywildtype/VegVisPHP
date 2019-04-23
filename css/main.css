@@ -69,14 +69,6 @@ hr {
   font-size: 0.8em;
 }
 
-/*#region-content h1 {*/
-  /*font-family: 'Satisfy';*/
-  /*font-size: 3.5em;*/
-  /*text-align: center;*/
-  /*margin-left: 0.5rem;*/
-  /*text-shadow: 5px 5px 10px black;*/
-/*}*/
-
 #region-content h1 {
     font-family: 'Satisfy';
     font-size: 3.5em;
@@ -169,6 +161,10 @@ section h4 {
 
 .description {
     font-size: 0.8em;
+}
+
+.region-description {
+    font-size: 0.8em;
     margin-top: 10%;
 }
 
@@ -222,8 +218,10 @@ section h4 {
 .region-photo {
     width: 100%;
     max-width: 1050px;
+    /*max-width: 600px;*/
     float: left;
-    margin: -17% 3% -3% 0%;
+    margin: -17% 3% -3% 0;
+    /*margin: -17% auto -3% auto;*/
 }
 
 /*.region-photo {*/
@@ -236,7 +234,7 @@ section h4 {
 .code-explanation {
   position: relative;
   display: inline-block;
-  border: 0px;
+  border: 0;
   border-bottom: 1px dotted black;
   background-color: inherit;
 }
@@ -271,6 +269,21 @@ section h4 {
 
 .offer a:hover {
   text-decoration: underline;
+}
+
+#top-button {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 99;
+    border: 2px darkgreen solid;
+    background-color: #092807;
+    color: #fffdd0;
+    cursor: pointer;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    border-radius: 50%;
+    font-size: 1.5em;
 }
 
 #footer {
