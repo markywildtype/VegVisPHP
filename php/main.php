@@ -43,9 +43,10 @@ class RegionTools
    protected function printRegionHeader()
    {
        $headerHtml = sprintf(
-               "<h1>%s&nbsp;<img class='info-button' id='%s' src='images/info.png' hidden /></h1>",
+               "<h1>%s&nbsp;<a href=%s><img class='info-button' id='%s' src='images/info.png' /></a></h1>",
                $this->regionName,
-               $this->regionIdentifier
+           "#{$this->regionIdentifier}-description",
+           $this->regionIdentifier
            );
 
        $headerHtml = $headerHtml . sprintf(
@@ -55,8 +56,10 @@ class RegionTools
        );
 
        $headerHtml = $headerHtml . sprintf(
-               "<div class=region-description >%s</div>
-                <hr />",
+               "<a name='%s'></a><div class=region-description id='%s'>%s</div>
+                ",
+               "{$this->regionIdentifier}-description",
+               "{$this->regionIdentifier}-description",
                Regions::$allRegions[$this->regionName]['introduction']
            );
 

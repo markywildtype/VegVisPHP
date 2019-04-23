@@ -64,16 +64,6 @@ const checkRequiredFields = function() {
     inputsArray.push(document.getElementById('Your_Message').value);
 
     return !inputsArray.includes("");
-
-    // let allFieldsFilled = false;
-    //
-    // if(inputsArray.includes("")) {
-    //     allFieldsFilled = false;
-    // } else {
-    //     allFieldsFilled = true;
-    // }
-    //
-    // return allFieldsFilled;
 };
 
 document.addEventListener('DOMContentLoaded', modalApp);

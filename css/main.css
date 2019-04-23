@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+/*html {*/
+    /*scroll-behavior: smooth;*/
+/*}*/
+
 html, body {
   height: 100%;
 }
@@ -36,7 +40,45 @@ hr {
 }
 
 #selector {
-    margin-left: 4%;
+    position: fixed;
+    left: 0;
+    /*margin-left: -3%;*/
+    width: 2.7rem;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+#selector input {
+    visibility: hidden;
+}
+
+#selector label {
+    background-color: #fffdd0;
+    color: #003100;
+    border: 2px darkgreen solid;
+}
+
+#all-button {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#all-button:focus {
+    background-color: lightgreen;
+    /*border: lightgreen;*/
+}
+
+#all-button:after {
+    background-color: salmon;
+}
+
+#eating-button {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#eating-button:checked {
+    background-color: salmon;
 }
 
 #logo-full, #veg, #vis, .dropdown-item, .nav-link {
@@ -70,6 +112,7 @@ hr {
 }
 
 #region-content h1 {
+    /*margin-top: 3.5rem;*/
     font-family: 'Satisfy';
     font-size: 3.5em;
     text-align: center;
@@ -132,8 +175,9 @@ section a:hover {
 }
 
 section h4 {
-  margin-bottom: 1rem;
-  margin-left: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    margin-top: 3rem;
 }
 
 .phone-number {
@@ -164,8 +208,10 @@ section h4 {
 }
 
 .region-description {
+    display: none;
     font-size: 0.8em;
     margin-top: 10%;
+    margin-bottom: 1rem;
 }
 
 .accom-photo {

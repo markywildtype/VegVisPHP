@@ -19,7 +19,7 @@ const app = function() {
   seButton.addEventListener('click', regionButtonClicked);
 
   const swButton = document.getElementById('sw-button');
-  swButton.addEventListener('click', regionButtonClicked)
+  swButton.addEventListener('click', regionButtonClicked);
 
   const tcButton = document.getElementById('tc-button');
   tcButton.addEventListener('click', regionButtonClicked);
@@ -56,10 +56,10 @@ const app = function() {
       infoButton.addEventListener('click', infoButtonClicked)
   });
 
-}
+};
 
 const homeButtonClicked = function() {
-  const selector = document.getElementById('selector-div')
+  const selector = document.getElementById('selector-div');
   selector.hidden = true;
 
   const homepageContent = document.getElementById('homepage-content');
@@ -70,7 +70,7 @@ const homeButtonClicked = function() {
 
   const contactContent = document.getElementById('contact-content');
   contactContent.hidden = true;
-}
+};
 
 const regionButtonClicked = function() {
   if(document.documentElement.clientWidth < 992) {
@@ -80,7 +80,7 @@ const regionButtonClicked = function() {
   const homepageContent = document.getElementById('homepage-content');
   homepageContent.style.display = 'none';
 
-  const selector = document.getElementById('selector-div')
+  const selector = document.getElementById('selector-div');
   selector.hidden = false;
 
   const regionContent = document.getElementById('region-content');
@@ -116,13 +116,9 @@ const regionButtonClicked = function() {
   ];
 
     regionDivs.forEach(function(regionDiv) {
-      if(regionDiv.id !== this.name) {
-          regionDiv.hidden = true;
-      } else {
-          regionDiv.hidden = false;
-      }
+      regionDiv.hidden = regionDiv.id !== this.name;
   }.bind(this));
-}
+};
 
 
 
@@ -131,24 +127,30 @@ let clicked = false;
 const infoButtonClicked = function() {
 
     const infoButtons = document.querySelectorAll('.info-button');
-
-    console.log(clicked);
-    console.log();
-    console.log();
+    const descriptions = document.querySelectorAll('.region-description');
 
     infoButtons.forEach(function(infoButton){
       if(infoButton.id === this.id) {
           if(!clicked) {
               infoButton.src = 'images/info-clicked.png';
               clicked = true;
+              descriptions.forEach(function(description){
+                  if(description.id === `${infoButton.id}-description`) {
+                      description.style.display = 'block';
+                }
+              });
           } else {
               infoButton.src = 'images/info.png';
               clicked = false;
+              descriptions.forEach(function(description){
+                  if(description.id === `${infoButton.id}-description`) {
+                      description.style.display = 'none';
+                  }
+              });
           }
       }
-
     }.bind(this));
-}
+};
 
 
 
@@ -229,17 +231,17 @@ const selectorButtonClicked = function() {
     default:
     break;
   }
-}
+};
 
 const contactButtonClicked = function() {
   if(document.documentElement.clientWidth < 992) {
     const toggle = document.querySelector('.navbar-toggler').click();
   }
   contactLinkClicked();
-}
+};
 
 const contactLinkClicked = function() {
-  const selector = document.getElementById('selector-div')
+  const selector = document.getElementById('selector-div');
   selector.hidden = true;
 
   const contactContent = document.getElementById('contact-content');
@@ -250,7 +252,7 @@ const contactLinkClicked = function() {
 
   const homepageContent = document.getElementById('homepage-content');
   homepageContent.style.display = 'none';
-}
+};
 
 window.onscroll = function() {scrollFunction()};
 
