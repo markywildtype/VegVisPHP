@@ -120,8 +120,6 @@ const regionButtonClicked = function() {
   }.bind(this));
 };
 
-
-
 let clicked = false;
 
 const infoButtonClicked = function() {
@@ -151,8 +149,6 @@ const infoButtonClicked = function() {
       }
     }.bind(this));
 };
-
-
 
 const selectorButtonClicked = function() {
   const accomElements = document.querySelectorAll('.accommodation');

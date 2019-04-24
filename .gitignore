@@ -1,3 +1,6 @@
 .idea
 .DS_Store
 london.html
+vendor/
+composer.json
+composer.lock

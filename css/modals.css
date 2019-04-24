@@ -94,3 +94,28 @@ body.modal-open {
     font-size: 4em;
     color: #fffdd0;
 }
+
+#selector-modal-button {
+    position: fixed;
+    top: 45.95%;
+    left: 0;
+    height: 3rem;
+    width: 2rem;
+    font-size: 1.5em;
+    text-align: center;
+    vertical-align: bottom;
+    background-color: #003100;
+    border-top: darkgreen 2px solid;
+    border-right: darkgreen 2px solid;
+    border-bottom: darkgreen 2px solid;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    z-index: 1;
+    transition-property: left;
+    transition-duration: 0.4s;
+}
+
+#selector-modal-button i {
+    position: relative;
+    top: 0.3rem;
+}

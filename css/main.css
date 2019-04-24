@@ -40,9 +40,10 @@ hr {
 }
 
 #selector {
+    display: block;
     position: fixed;
-    left: 0;
-    /*margin-left: -3%;*/
+    left: -2.7rem;
+    top: 40%;
     width: 2.7rem;
     border-radius: 5px;
     z-index: 1;
@@ -338,4 +339,24 @@ section h4 {
     margin-top: -1.5%;
     font-size: 0.6em;
     color: #fffdd0;
+}
+
+@-webkit-keyframes slideIn {
+    from {left: -2.7rem; opacity: 1}
+    to {left: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {left: -2.7rem; opacity: 1; transition-duration: 0.4s}
+    to {left: 0; opacity: 1; transition-duration: 0.4s}
+}
+
+@-webkit-keyframes slideOut {
+    from {left: 0; opacity: 1}
+    to {left: -2.7rem; opacity: 1}
+}
+
+@keyframes slideOut {
+    from {left: 0; opacity: 1; transition-duration: 0.4s}
+    to {left: -2.7rem; opacity: 1; transition-duration: 0.4s}
 }

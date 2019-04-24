@@ -46,6 +46,19 @@ const modalApp = function() {
     const contactSubmitButton = document.getElementById('submit-button');
     contactSubmitButton.addEventListener('click', contactSubmitButtonClicked);
 
+    // Selector modal
+    var selectorModalButton = document.getElementById('selector-modal-button');
+
+    var selector = document.getElementById('selector');
+
+    if (window.innerWidth <= 600) {
+        hideSelector(selectorModalButton, selector)
+    } else {
+
+        selectorModalButton.hidden = true;
+        selector.style.left = '0';
+        selector.style.display = 'block';
+    }
 };
 
 const contactSubmitButtonClicked = function() {
@@ -64,6 +77,36 @@ const checkRequiredFields = function() {
     inputsArray.push(document.getElementById('Your_Message').value);
 
     return !inputsArray.includes("");
+};
+
+const hideSelector = function(selectorModalButton, selector) {
+    var openIcon = document.getElementById('selector-out');
+
+    var closedIcon = document.getElementById('selector-in');
+
+    let modalOut = false;
+
+    selectorModalButton.addEventListener('click', function() {
+        if (!modalOut) {
+            console.log(window.innerWidth);
+            selectorModalButton.style.left = '2.7rem';
+            openIcon.hidden = true;
+            closedIcon.hidden = false;
+            selector.display = 'none';
+            selector.style.webkitAnimation = 'slideIn 0.4s';
+            selector.style.left = '0';
+            modalOut = true;
+        } else {
+            console.log(window.innerWidth);
+            selectorModalButton.style.left = '0';
+            openIcon.hidden = false;
+            closedIcon.hidden = true;
+            selector.style.webkitAnimation = 'slideOut 0.4s';
+            selector.display = 'block';
+            selector.style.left = '-2.7rem';
+            modalOut = false;
+        }
+    })
 };
 
 document.addEventListener('DOMContentLoaded', modalApp);

@@ -110,24 +110,6 @@ require('php/main.php');
                 <a class="nav-link contact-button" name="contact" href="#">Contact</a>
             </li>
         </ul>
-<!--            <li>-->
-<!--                <div id="selector-div" hidden>-->
-<!--                    <div class="btn-group btn-group-toggle" id="selector" data-toggle="buttons">-->
-<!--                        <label class="btn btn-secondary active" id="all-button">-->
-<!--                            <input type="radio" name="All" id="all-button" autocomplete="off" checked> All-->
-<!--                        </label>-->
-<!--                        <label class="btn btn-secondary" id="accommodation-button">-->
-<!--                            <input type="radio" name="Accommodation" id="accommodation-button" autocomplete="off"><i-->
-<!--                                    class="fas fa-bed"></i>-->
-<!--                        </label>-->
-<!--                        <label class="btn btn-secondary" id="eating-button">-->
-<!--                            <input type="radio" name="Eating" id="option3" autocomplete="off"><i-->
-<!--                                    class="fas fa-utensils"></i>-->
-<!--                        </label>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--        </ul>-->
 </nav>
 
 <div class="container body-content">
@@ -290,6 +272,13 @@ require('php/main.php');
                 echo $region->printRegion() ?>
             </div>
 
+        </div>
+
+        <div id="selector-modal-container">
+            <div id="selector-modal-button">
+                <i class="fas fa-chevron-right" id="selector-out"></i>
+                <i class="fas fa-chevron-left" id="selector-in" hidden></i>
+            </div>
         </div>
 
         <button onclick="topFunction()" id="top-button" title="Go to top">&#x02191</button>
